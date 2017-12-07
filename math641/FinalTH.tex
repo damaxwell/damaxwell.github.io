@@ -1,0 +1,81 @@
+\documentclass[minion]{homework}
+\usepackage{cmacros}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[all,cmtip]{xy}
+
+\doclabel{Math F641: Midterm (Take Home Edition)}
+\docdate{Due: 5:00pm December 15, 2017}
+\begin{document}
+\begin{aproblems}
+
+\hproblem Suppose that $(f_n)$ is a sequence of continuous 
+functions from $\Reals$ to $\Reals$ that converges uniformly
+on $\Rats$.  Show that it converges uniformly on $\Reals$.
+
+\hproblem Carothers 10.20 
+
+\hproblem Carothers 8.79 
+
+\hproblem Let
+$$
+X_K = \left\{f\in C([0,1]): \text{$f$ is Lipschitz with constant $K$ and $\int_0^1|f| \le 1$}\right\}.
+$$
+Show that $X_K$ is compact in $C([0,1])$.  Is $X_K$ also compact in $L_1([0,1])$?
+
+\hproblem Let $\{f_n\}$ be a sequence of measurable real-valued functions.
+Let $E=\{x: \text{$(f_n(x))$ converges}\}$.  Show that $E$ is measurable.
+
+
+\hproblem (Riemann integrable functions are continuous almost everywhere.)
+\begin{subproblems}
+  \item Let $(\psi_n)$ be an increasing sequence of step functions with $|\psi_n|\le M$ for some $M$.  Show that $\lim \psi_n$ is continuous almost everywhere.
+  \item Show that Riemann integrable functions are continuous almost everywhere.
+  Hint:  Find functions $g$ and $G$ with $g\le f \le G$ where $G=g$ almost
+  everywhere and where $g$ and $G$ are continuous almost everywhere.
+\end{subproblems}
+
+\hproblem (The approximate with wild abandon problem.)
+
+Suppose $f\in L^1[a,b]$ and $\int_a^b fg=0$ for every
+polynomial $g$.  Show that $f=0$ almost everywhere.
+
+\Hint: First show that $\int_I f = 0$ for every interval in $[a,b]$.
+Then show that $\int_E f=0$ for every measurable set in $[a,b]$. You might
+find Exercise 18.35 (the ``even more is true'' part) to be handy, as well.
+
+\hproblem Compute $\lim_{n\ra\infty} \int_0^\infty \left(1+\frac{x}{n}\right)^{-n}\cos(x/n)\;dx$.
+
+\hproblem Given $f\in L^1(\Reals)$, let $f_t(x)=f(x-t)$.  Show that the
+map taking $t$ to $f_t$ is continuous as a map from $\Reals$ to $L^1(\Reals)$.
+
+\hproblem Consider the series $\sum_{k=1}^\infty a_k \sin(k x)$ on
+the domain $[0,2\pi]$.  Suppose that $\sum_{k=1}^\infty (a_k)^2$ converges.
+Prove that the series converges in $L^2([0,2\pi])$.
+Compare this result with the first problem of the midterm.
+
+\hproblem A sequence $(f_n)$ is Cauchy in measure if for every
+$\epsilon>0$ there is an index $N$ such that if $n,m\ge M$ then
+$m( \{|f_n-f_m|>\epsilon\} ) < \epsilon$.
+
+Show that if $(f_n)$ is Cauchy in measure and has a subsequence
+that is convergent in measure, then the full sequence is Cauchy in measure.
+
+\end{aproblems}
+\newpage
+
+{\bf  Rules and format:}
+\begin{itemize}
+
+\item You are welcome to discuss this exam with me (David Maxwell) to ask for hints and so forth.
+\item You may not discuss the exam with anyone else until after the due date/time.
+\item You are permitted to reference Carothers but no other text, nor
+may you consult the internet.
+\item Each problem is weighted equally.
+\item  If you find a suspected typo, please contact me as soon as possible and I will
+communicate it to the class if needed.
+\item The due date/time is absolutely firm.
+\item We will hold a hint session during finals week, TBA.
+\end{itemize}
+
+\end{document}
