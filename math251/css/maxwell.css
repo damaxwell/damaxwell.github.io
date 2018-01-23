@@ -1,11 +1,50 @@
 <style type="text/css">
-p {margin-left: 20px}
-html {margin-left: 20px; margin-top:20px; margin-right:20px; background: white}
-body {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:120%;line-height:140%;margin:0px;background: #ffffff;}
-table{ font-size:100% }
+* {box-sizing: border-box;}
+html {background: white}
+body {font-family: Verdana, Arial, Helvetica, sans-serif; background: #ffffff;}
 
-#banner p {
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    display: block;
+    font-size: 20px;
+    padding: 20px 0px 0px 20px;
+    /*padding: 0px 0px 0px 20px;*/
+}
 
+.sidenav h1 {
+  font-size: 120%;
+  margin: 0px 0px 10px 0px;
+}
+
+.sidenav h2 {
+  font-size: 100%;  
+  margin: 0px 0px 10px 0px;
+}
+
+.sidenav h2 a {
+  color: black;
+}
+
+
+.sidenav a {
+    padding: 3px 8px 3px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidenav a:hover {
+  background-color: #8bb1ef
+    /*color: #f1f1f1;*/
+}
+
+.main-body {
+	margin-left: 220px;
 }
 
 table.asst-table {
@@ -24,7 +63,4 @@ dd {
   margin: 0 0 0 60px;
   padding: 0 0 0.5em 0;
 }
-
-
-
 </style>
