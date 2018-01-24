@@ -47,7 +47,7 @@ body {
   overflow-x: hidden;
   display: block; }
 
-@media (max-width: 9999px) {
+@media (max-width: 199px) {
   .sidenav {
     width: 0; }
 
@@ -56,7 +56,7 @@ body {
 
   .main-body {
     margin-left: 40px; } }
-@media (min-width: 10000px) {
+@media (min-width: 200px) {
   .hide-large {
     display: none !important; }
 
