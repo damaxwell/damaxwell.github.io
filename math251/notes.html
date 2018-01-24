@@ -6,22 +6,24 @@
    <meta http-equiv="Pragma" content="no-cache">
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
    <meta http-equiv="Expires" content="-1">
-    <link rel="stylesheet" href="css/maxwell.css">
+    <link rel="stylesheet" href="css/site.css">
   </head>
   <body>
 
+<div class="sidenavburger hide-large" onclick="openNav()">&#9776;</div>
 <div id="nav" class="sidenav" ><nav role="navigation">
-<h2><a href="index.html">Math 251: Section F02</a></h2>
-
-<a href="https://sites.google.com/alaska.edu/calculus-one/home" alt="UAF Calculus I">UAF Calculus I</a>
-
-<a href="worksheets.html" alt="Worksheets">Worksheets</a>
-
-<a href="notes.html" alt="Lecture Notes">Lecture Notes</a>
-
+<h1><a href="index.html">Math 251:<br>Section F02</a></h1>
+  
+  <a  class="menuitem" href="https://sites.google.com/alaska.edu/calculus-one/home" alt="UAF Calculus I">UAF Calculus I</a>
+  
+  <a  class="menuitem" href="worksheets.html" alt="Worksheets">Worksheets</a>
+  
+  <a  class="menuitem" href="notes.html" alt="Lecture Notes">Lecture Notes</a>
+  
 </nav></div>
 
-    <div id="main" class="main-body">
+
+    <div id="main" class="main-body" onclick="closeNav()">
     <h2 id="lecture-notes">Lecture Notes</h2>
 
 <p>These notes are what I have in my hands when I begin class.
@@ -59,5 +61,18 @@ especially if you miss a day.</p>
 
     </div>
   </body>
+<script type="text/javascript">
+function openNav() {
+    x = document.getElementById("nav");
+    if(x.className="sidenav") {
+      x.className += " showing";
+    }
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    x = document.getElementById("nav").className = "sidenav"
+}
+</script>
 </html>
 
