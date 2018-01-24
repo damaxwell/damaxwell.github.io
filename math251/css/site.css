@@ -66,11 +66,13 @@ body {
 
   .main-body {
     margin-left: 220px; } }
-.main-body a {
-  color: #4459e2;
-  text-decoration: none; }
-.main-body a:visited {
-  color: #224d93; }
+.main-body {
+  -webkit-tap-highlight-color: transparent; }
+  .main-body a {
+    color: #4459e2;
+    text-decoration: none; }
+  .main-body a:visited {
+    color: #224d93; }
 
 table.asst-table {
   border: 2px solid black;
