@@ -6,23 +6,30 @@
    <meta http-equiv="Pragma" content="no-cache">
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
    <meta http-equiv="Expires" content="-1">
-    <link rel="stylesheet" href="css/maxwell.css">
+   <!-The following magic viewport words are needed for Sarfari on mobile 
+      to make 96px=1in, really-->
+   <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/site.css">
   </head>
+
+<div class="sidenavburger hide-large" onclick="openNav()">&#9776;</div>
+<div id="nav" class="sidenav" ><nav role="navigation">
+<h1>Math F617:<br>Functional Analysis</a></h1>
+  
+  <a onclick="closeNav()" class="menuitem" href="Syllabus.pdf" alt="Syllabus">Syllabus</a>
+  
+  <a onclick="closeNav()" class="menuitem" href="#announcements" alt="Announcements">Announcements</a>
+  
+  <a onclick="closeNav()" class="menuitem" href="#homework-and-readings" alt="Homework">Homework</a>
+  
+  <a onclick="closeNav()" class="menuitem" href="#lecture-notes" alt="Notes">Notes</a>
+  
+</nav></div>
+
+
   <body>
-    <div id="main">
-    <h3 id="math-f617-functional-analysis">Math F617 (Functional Analysis)</h3>
-
-<p><a href="Syllabus.pdf">Syllabus</a></p>
-
-<h3 id="office-hours">Office Hours</h3>
-
-<p>TBA
-<!-- {: cellpadding="2"}
-|---------------:|:------------:|
-| Tuesday        |  10:00-11:00 |
-| Wednesday      |  2:15-3:15   |
-| Thursday       |  9:00-10:00  |
- --></p>
+    <div id="main" class="main-body" onclick="closeNav()">
+    <h3 id="announcements">Announcements</h3>
 
 <dl>
   <dt>1/15</dt>
@@ -57,6 +64,25 @@ for course-related discussions outside of class time.  You’ll need
 to <a href="piazza.com/uaf/spring2018/math617">sign up</a> to start using the service.</dd>
 </dl>
 
+<h3 id="office-hours">Office Hours</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Monday</td>
+      <td>1:00-2:00</td>
+    </tr>
+    <tr>
+      <td>Thursday</td>
+      <td>10:00-11:00</td>
+    </tr>
+    <tr>
+      <td>Friday</td>
+      <td>9:15-10:15</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="readings-and-homework">Readings and Homework</h3>
 
 <table class="asst-table">
@@ -80,8 +106,46 @@ to <a href="piazza.com/uaf/spring2018/math617">sign up</a> to start using the se
   </tbody>
 </table>
 
+<h3 id="lecture-notes">Lecture Notes</h3>
+
+<table class="asst-table">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Topic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1/22</td>
+      <td><a href="2018-01-22.pdf">Metric Spaces</a></td>
+    </tr>
+    <tr>
+      <td>1/19</td>
+      <td><a href="2018-01-19.pdf">Metric Spaces</a></td>
+    </tr>
+    <tr>
+      <td>1/17</td>
+      <td><a href="2018-01-17.pdf">Linear Algebra</a></td>
+    </tr>
+  </tbody>
+</table>
+
 
     </div>
   </body>
+<script type="text/javascript">
+function openNav() {
+    x = document.getElementById("nav");
+    if(x.className="sidenav") {
+      x.className += " showing";
+    }
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    x = document.getElementById("nav").className = "sidenav"
+}
+</script>
 </html>
 
