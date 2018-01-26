@@ -80,13 +80,16 @@ body {
 .table-box {
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
-  margin-right: 50px;
+  margin-right: 5px;
   margin-bottom: 5px; }
 
 table.asst-table {
   border: 2px solid black;
   border-collapse: separate;
   border-spacing: 20px 10px; }
+  table.asst-table td {
+    white-space: nowrap;
+    word-break: break-all; }
 
 dt {
   float: left;
