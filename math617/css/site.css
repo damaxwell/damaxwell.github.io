@@ -6,7 +6,8 @@ html {
 
 body {
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  margin: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
   -webkit-tap-highlight-color: transparent; }
 
 .sidenav {
