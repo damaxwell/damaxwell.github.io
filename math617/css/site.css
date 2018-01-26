@@ -76,6 +76,10 @@ body {
   .main-body a:visited {
     color: #224d93; }
 
+.table-box {
+  width: 100%;
+  overflow-x: auto; }
+
 table.asst-table {
   border: 2px solid black;
   border-collapse: separate;
