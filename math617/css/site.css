@@ -79,7 +79,9 @@ body {
 
 .table-box {
   overflow-x: scroll;
-  -webkit-overflow-scrolling: touch; }
+  -webkit-overflow-scrolling: touch;
+  margin-right: 5px;
+  margin-bottom: 5px; }
 
 table.asst-table {
   border: 2px solid black;
