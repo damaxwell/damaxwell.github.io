@@ -78,7 +78,7 @@ body {
 
 .table-box {
   width: 100%;
-  overflow: hidden; }
+  overflow: auto; }
 
 table.asst-table {
   border: 2px solid black;
