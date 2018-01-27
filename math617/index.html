@@ -12,26 +12,31 @@
     <link rel="stylesheet" href="css/site.css">
   </head>
 
+<body>
+
+<div class="burger-background"></div>
 <div class="sidenavburger hide-large" onclick="openNav()">&#9776;</div>
-<div id="nav" class="sidenav" ><nav role="navigation">
-<h1>Math F617:<br>Functional Analysis</a></h1>
-  
-  <a onclick="closeNav()" class="menuitem" href="Syllabus.pdf" alt="Syllabus">Syllabus</a>
-  
-  <a onclick="closeNav()" class="menuitem" href="#announcements" alt="Announcements">Announcements</a>
-  
-  <a onclick="closeNav()" class="menuitem" href="#office-hours" alt="Office Hours">Office Hours</a>
-  
-  <a onclick="closeNav()" class="menuitem" href="#readings-and-homework" alt="Homework">Homework</a>
-  
-  <a onclick="closeNav()" class="menuitem" href="#lecture-notes" alt="Lecture Notes">Lecture Notes</a>
-  
-</nav></div>
 
+<div id="nav" class="sidenav" >
+<nav role="navigation">
+<div class="sidenav-header"><a href="#page-top" onclick="closeNav()"">Math F617</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="Syllabus.pdf" alt="Syllabus">Syllabus</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="#announcements" alt="Announcements">Announcements</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="#office-hours" alt="Office Hours">Office Hours</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="#readings-and-homework" alt="Homework">Homework</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="#lecture-notes" alt="Lecture Notes">Lecture Notes</a></div>
+  
+</nav>
+</div>
 
-  <body>
-    <div id="main" class="main-body" onclick="closeNav()">
-    <h3 id="announcements">Announcements</h3>
+<div id="main" class="main-body" onclick="closeNav()">
+<div class="page-header" id="page-top">Functional Analysis</a></div>
+<div class="page-content"><h3 id="announcements">Announcements</h3>
 
 <dl>
   <dt>1/15</dt>
@@ -112,7 +117,7 @@ to <a href="piazza.com/uaf/spring2018/math617">sign up</a> to start using the se
 <tr>
 	<td style="text-align: center"><p>1/17 - 1/23</p>
 </td>
-	<td><p>Sections 1.1-1.3</p>
+	<td><p>Secs. 1.1-1.3</p>
 </td>
 	<td><p>No Homework<br />Ask Reading Questions</p>
 </td>
@@ -179,9 +184,11 @@ to <a href="piazza.com/uaf/spring2018/math617">sign up</a> to start using the se
 
 </table>
 </div>
+</div>
+</div>
 
-    </div>
-  </body>
+</body>
+
 <script type="text/javascript">
 function openNav() {
     x = document.getElementById("nav");
