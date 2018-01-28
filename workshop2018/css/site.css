@@ -130,10 +130,10 @@ li {
 .indent {
   padding-left: 20px; }
 
-@media (max-width: 599px) {
-  .hide-small {
-    display: none !important; }
+.hide-small {
+  display: none !important; }
 
+@media (max-width: 599px) {
   .sidenav {
     width: 0; }
 
@@ -149,6 +149,9 @@ li {
   .page-content {
     padding-right: 5px; } }
 @media (min-width: 600px) {
+  .hide-small {
+    display: inline; }
+
   .hide-large {
     display: none !important; }
 
