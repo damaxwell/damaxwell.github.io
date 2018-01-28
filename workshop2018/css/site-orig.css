@@ -47,6 +47,22 @@ body {
   .sidenav-header a:visited {
     color: black; }
 
+h3 {
+  margin-bottom: 10px; }
+
+h4 {
+  margin-bottom: 10px; }
+
+.speaker {
+  font-size: 110%;
+  margin-bottom: 5px;
+  padding-left: 20px; }
+
+.organizer {
+  font-size: 100%;
+  margin-bottom: 5px;
+  padding-left: 20px; }
+
 .page-header {
   height: 50px;
   background-color: #8bb1ef;
@@ -81,39 +97,9 @@ body {
   top: 0px;
   background-color: #8bb1ef; }
 
-h3 {
-  margin-bottom: 10px; }
-
-h4 {
-  margin-bottom: 10px; }
-
-.speaker {
-  font-size: 110%;
-  margin-bottom: 5px;
-  padding-left: 20px; }
-
-.organizer {
-  font-size: 100%;
-  margin-bottom: 5px;
-  padding-left: 20px; }
-
-.lodging {
-  font-size: 110%;
-  margin-top: 0px;
-  margin-bottom: 5px;
-  padding-left: 20px; }
-
-p.announce {
-  font-weight: bold;
-  font-size: 120%;
-  margin-top: 0px;
-  margin-bottom: 0px; }
-
-p.announce.smaller {
-  font-size: 100%; }
-
 .main-body {
   -webkit-tap-highlight-color: transparent;
+  height: 100%;
   overflow-x: hidden; }
   .main-body a {
     color: #4459e2;
