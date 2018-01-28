@@ -56,16 +56,18 @@ body {
   padding-left: 10px; }
 
 .page-content {
-  padding-left: 10px; }
+  padding-left: 10px;
+  padding-bottom: 20px; }
 
 .sidenavburger {
   width: 30px;
+  height: 30px;
   font-size: 20px !important;
   text-align: center;
   line-height: 30px;
   position: fixed;
-  left: 5px;
-  top: 5px;
+  left: 10px;
+  top: 10px;
   z-index: 2;
   display: inline;
   border-radius: 5px;
@@ -84,18 +86,32 @@ body {
 h3 {
   margin-bottom: 10px; }
 
-h4 {
-  margin-bottom: 10px; }
+ul {
+  list-style-type: none;
+  padding-left: 20px; }
+
+li {
+  margin-bottom: 3px; }
+
+.announce {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 120%; }
+  .announce p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px; }
+  .announce p.smaller {
+    font-size: 80%; }
 
 .speaker {
   font-size: 110%;
-  margin-bottom: 5px;
-  padding-left: 20px; }
+  margin-bottom: 5px; }
 
 .organizer {
   font-size: 100%;
-  margin-bottom: 5px;
-  padding-left: 20px; }
+  margin-bottom: 5px; }
 
 .lodging {
   font-size: 110%;
@@ -103,25 +119,21 @@ h4 {
   margin-bottom: 5px;
   padding-left: 20px; }
 
-p.announce {
-  font-weight: bold;
-  font-size: 120%;
-  margin-top: 0px;
-  margin-bottom: 0px; }
-
-p.announce.smaller {
-  font-size: 100%; }
-
 .main-body {
-  -webkit-tap-highlight-color: transparent;
-  overflow-x: hidden; }
+  -webkit-tap-highlight-color: transparent; }
   .main-body a {
     color: #4459e2;
     text-decoration: none; }
   .main-body a:visited {
     color: #224d93; }
 
+.indent {
+  padding-left: 20px; }
+
 @media (max-width: 599px) {
+  .hide-small {
+    display: none !important; }
+
   .sidenav {
     width: 0; }
 
@@ -164,13 +176,3 @@ table.asst-table {
   table.asst-table td {
     white-space: nowrap;
     word-break: break-all; }
-
-dt {
-  float: left;
-  width: 30px;
-  text-align: right;
-  font-weight: bold; }
-
-dd {
-  margin: 0 0 0 60px;
-  padding: 0 0 0.5em 0; }

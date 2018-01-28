@@ -15,11 +15,11 @@
 <body>
 
 <div class="burger-background"></div>
-<div class="sidenavburger hide-large" onclick="openNav()">&#9776;</div>
+<div class="sidenavburger hide-large" onclick="openNav()"><img src="menu.svg" style="height: 20px;" ></div>
 
 <div id="nav" class="sidenav" >
 <nav role="navigation">
-<div class="sidenav-header">Workshop</div>
+<div class="sidenav-header"><a href="#top" onclick="closeNav()">Workshop</a></div>
   
   <div class="entry"><a  onclick="closeNav()" href="#speakers" alt="Speakers">Speakers</a></div>
   
@@ -35,21 +35,25 @@
 </div>
 
 <div id="main" class="main-body" onclick="closeNav()">
-<div class="page-header" id="page-top">Initial Data in General Relativity</div>
+<a id="top"></a>
+<div class="page-header hide-small">Initial Data in General Relativity</div>
+<div class="page-header hide-large">Initial Data in GR</div>
 
 <div class="page-content">
-<div style="margin-top: 20px; margin-bottom: 20px;">
-<p class="announce">May 21&mdash;23, 2018</p>
+<div class="announce">
+<p> May 21&mdash;23, 2018</p>
 <p class="announce smaller">University of Alaska Fairbanks</p>
 </div>
 
-<p style="padding-left:20px">
-This workshop will bring together researchers who study
+<div class="indent">
+<p>This workshop will bring together researchers who study
 mathematical General Relativity, especially elliptic
 aspects of the theory.</p>
+</div>
 
 <a id="speakers"></a><h3> Confirmed Speakers </h3>
 
+<div class="indent">
 
 <div class="speaker">Paul Allen (Lewis &amp; Clark)</div>
 
@@ -69,57 +73,66 @@ aspects of the theory.</p>
 
 <div class="speaker">Iva Stavrov-Allen (Lewis &amp; Clark)</div>
 
+</div>
 
 <a id="organizers"></a><h3> Organizers </h3>
+<div class="indent">
 <div class="organizer">David Maxwell (U Alaska Fairbanks)</div>
 <div class="organizer">Dan Pollack (U Washington)</div>
+</div>
 
 <a id="registration"></a><h3> Registration </h3>
 
-Send an email to <a href="mailto:damaxwell@alaska.edu">David Maxwell</a>.
+<div class="indent">
+<p>Send an email to <a href="mailto:damaxwell@alaska.edu">David Maxwell</a>.</p>
+</div>
 
-<a id="lodging"></a><h3> Lodging </h3>
+<h3 id="lodging"> Lodging </h3>
 
-<p style="margin-top: 10px">Many conference participants will be staying at:
-<div class="speaker"><a href="https://www.pikeslodge.com">Pike's Waterfont Lodge</a></div>
+<div class="indent">
+<p>Many conference participants will be staying at:
+<div class="lodging"><a href="https://www.pikeslodge.com">Pike's Waterfont Lodge</a></div>
 </p>
 
-<p style="margin-top: 10px">Other hotels near the university include:
+<p>Other hotels near the university include:
 <div class="lodging"><a href="http://www.laquintafairbanks.com">La Quinta Inn &amp; and Suites Fairbanks</a></div>
 <div class="lodging"><a href="https://www.bestwestern.com/en_US/book/hotels-in-fairbanks/best-western-plus-chena-river-lodge/propertyCode.02017.html">Best Western Plus Chena River Lodge</a></div>
 </p>
 
-<p style="margin-top: 10px">
-UAF housing rents out 4-bedroom apartments (with kitchen)
+<p>
+UAF student housing rents out 4-bedroom apartments (with kitchen)
 during the summer months for about $120 a night. Reservations
 open starting March 1, 2018.</p>
-<div class="lodging" ><a href="https://uaf.edu/reslife/hall/cutler/">UAF Culter Apartments</a></div>
+<div class="lodging" ><a href="https://uaf.edu/reslife/hall/cutler/">UAF Cutler Apartments</a></div>
+</div>
 
-<a id="travel"></a><h3> Travel Information </h3>
+<h3 id="travel"> Travel Information </h3>
 
-<p style="padding-left:20px">Fairbanks has an international airport minutes from the university
-and is served by direct flights from the lower 48 states
-as well as some direct flights in the summer from Europe (e.g. <a href="http://www.condor.com">Condor Airlines</a>).</p>
-
-<p style="padding-left:20px">Although Fairbanks has a public transit system, service is limited and does
-not permit exploring the surrounding region. Uber just started in Alaska, and there are a number of taxi services.  For participants staying at Pike's Waterfront Lodge, there will be a daily shuttle between the university and 
-the hotel. Particpants may find it convenient to rent a car for other tourism.
+<div class="indent">
+<p>
+Visitor resources are available from <a href="https://www.explorefairbanks.com">Explore Fairbanks</a>.
 </p>
 
-<p style="padding-left: 20px;">
-Tourism destinations in the region include
+<p>Fairbanks has an international airport minutes from the university
+and is served by direct flights from the lower 48 states.  In the summer
+there are also some direct flights from Europe (e.g. <a href="http://www.condor.com">Condor Airlines</a>).</p>
+
+<p>Although Fairbanks has a public transit system, service is limited and
+is restricted to the city core. Uber just started in Alaska, and there are a number of taxi services.  For participants staying at Pike's Waterfront Lodge, there will be a daily shuttle between the university and 
+the hotel. Car rentals are available at the airport.
+</p>
+
+<p>
+Tourism destinations in the region include:
 <ul>
-  <li>University of Alaska Museum of the North</li>
-  <li>Chena Hot Springs</li>
-  <li>Manley Hot Springs</li>
-  <li>Denali National Park</li>
-  <li>Morris Thompson Cultural and Visitors Center</li>
+  <li><a href="https://www.uaf.edu/museum/">University of Alaska Museum of the North</a></li>
+  <li><a href="https://www.morristhompsoncenter.org">Morris Thompson Cultural and Visitors Center</a></li>
+  <li><a href="https://www.nps.gov/dena/index.htm">Denali National Park</a></li>
+  <li><a href="https://chenahotsprings.com">Chena Hot Springs</a></li>
+  <li><a href="https://www.tripadvisor.com/Attraction_Review-g60826-d104790-Reviews-Manley_Hot_Springs-Fairbanks_Alaska.html">Manley Hot Springs</a></li>
 </ul>
 </p>
-
-<p style="padding-left: 20px;">
-Other visitor resources are available from <a href="https://www.explorefairbanks.com">Explore Fairbanks</a>.
-</p>
+</div>
 
 </div></body>
 
