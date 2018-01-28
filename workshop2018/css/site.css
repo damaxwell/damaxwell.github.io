@@ -137,6 +137,9 @@ li {
   .sidenav {
     width: 0px; }
 
+  .sidenav.showing {
+    width: 150px; }
+
   .main-body {
     margin-left: 40px; }
 
