@@ -130,7 +130,7 @@ li {
 .indent {
   padding-left: 20px; }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .hide-small {
     display: none !important; }
 
@@ -145,7 +145,7 @@ li {
 
   .page-content {
     padding-right: 5px; } }
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 601px) {
   .hide-large {
     display: none !important; }
 
