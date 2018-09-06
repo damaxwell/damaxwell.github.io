@@ -1,0 +1,62 @@
+\documentclass[minion]{homework}
+\usepackage{cmacros}
+\newcommand{\maple}[1]{{\tt\bf #1}}
+\doclabel{Math F665: Homework 2}
+\docdate{Due: September 12, 2018}
+
+\begin{document}
+
+\begin{aproblems}
+
+\hproblem [Polarization Identity]
+Let $x\cdot y$ denote the standard dot product in $\Reals^n$ where $n=2$ or $n=3$.
+and let $|x|$ denote the length of $x$, so
+\begin{equation}
+|x| = \sqrt{x\cdot x}.
+\end{equation}
+Show that for all $x,y\in \Reals^n$,
+\begin{equation}
+x\cdot y = \frac{1}{2}\left[ |x+y|^2-|x|^2 - |y|^2\right].
+\end{equation}
+This formula is known as the polarization identity, and it shows that if you
+can compute lengths, then you can also compute the dot product.
+
+\hproblem [Symmetric bilinear maps are determined by their action on the diagonal] 
+A map $B:\Reals^3\times \Reals^3\ra \Reals$ is called symmetric
+if $B(x,y)=B(y,x)$ for all $x,y\in \Reals^3$.  We say $B$ is linear in its
+first argument if $B(x+z,y)=B(x,y)+B(z,y)$ for all $x,y,z$ and if $B(\lambda x,y)=\lambda B(x,y)$
+for all $\lambda\in\Reals$ and all $x,y\in \Reals^3$.  The definition for $B$ 
+being linear with respect to its second argument is similar, and we say
+that $B$ is \textbf{bilinear} if it is linear with respect to both arguments.
+Suppose $B$ and $\hat B$ are both bilinear and symmetric, and that for all $x\in \Reals^3$,
+\begin{equation}
+B(x,x) = \hat B(x,x).
+\end{equation}
+Show that $B(x,y)=\hat B(x,y)$ for all $x,y\in\Reals^3$.
+
+Hint: Try out that polarization trick.
+
+\hproblem  In this problem you may assume that every isometry of $\Reals^3$ that
+sends the origin to itself is a linear map (i.e. there is a $3\times 3$
+matrix $A$ such that $i(x)= Ax$).  Under this assumption (which is true!), show 
+that a map $i:\Reals^3\ra \Reals^3$ is an isometry if and only if there is a matrix
+$A$ such that $A^t A=I$ and a vector $b$ such that
+\begin{equation}
+i(x) = Ax + b.
+\end{equation}
+Hint: Preserving distance is the same as preserving distance squared!  
+And think about polarization.
+
+\hproblem Suppose that $A\in O(3)$.  Show that $A\in SO(3)$ if and only if
+for all vectors $x,y,z\in \Reals^3$ such that $(0,x,y,z)$ is positively oriented,
+so is $(0,Ax, Ay, Az)$.
+
+Bonus:  Show that if for for just one positively oriented $(0,x,y,z)$ we know that
+$(0, Ax, Ay, Az)$, show that we can still conclude that $A\in SO(3)$.
+
+\hproblem SR 4.1 (ii), (iii)
+
+\hproblem SR 4.2
+
+\end{aproblems}
+\end{document}	
