@@ -1,0 +1,192 @@
+\documentclass[minion]{homework}
+\usepackage{cmacros}
+\newcommand{\maple}[1]{{\tt\bf #1}}
+\doclabel{Math F665: Homework 3 Solutions}
+\docdate{Due: October 7, 2018}
+\def\Int{\mathrm{Int}}
+\usepackage{tensor}
+
+\begin{document}
+
+\begin{aproblems}
+
+\hproblem SR 4.3
+
+See text, page 176.
+
+\hproblem SR 4.4
+
+Two light sources are at rest distance $D$ apart 
+and emit photons in the positive
+$x$ direction.  Show that in a frame where the sources have velocity
+$u$ along the $x$-axis, the photons have distance
+\[
+D\sqrt\frac{c-u}{c+u}
+\]
+apart.
+
+\solution
+Let the coordinates of the moving frame be denoted by $(\hat t,\hat x)$
+so we can take
+\[
+\begin{pmatrix} c\hat t \\ \hat x\end{pmatrix} = \gamma \begin{pmatrix} 1 & u/c\\
+u/c & 1\end{pmatrix} \begin{pmatrix} c t \\ x\end{pmatrix}
+\]
+Let $L$ denote this boost.
+
+We will assume that the emissions occur at $t=0$ and
+that source $S_1$ is at $x=0$ and source $S_2$ is at $x=D$.
+In the frame where the sources are moving the emission
+from $S^1$ is at $(0,0)$ again but the emission from $S^2$
+has coordinates
+\[
+L \begin{pmatrix}0\\ D\end{pmatrix} 
+=\gamma D\begin{pmatrix} u/c\\ 1\end{pmatrix}.
+\]
+Note that the emission from $S_2$ occured after the emission
+at $S_1$ in the moving frame at time $c\hat t = \gamma D  (u/c)$.
+At this time, the photon from $S_1$ will be at position
+$c\hat t = \gamma D  (u/c)$ and  hence
+\[
+\Delta \hat x = \gamma D - \gamma D  (u/c) = 
+D \frac{1- (u/c)}{\sqrt{1-(u/c)^2}} = D \sqrt{\frac{c-u}{c+u}}
+\]
+This distance remains constant since the photons are both travelling
+to the right with speed $c$.
+
+\hproblem The interval between events $E_1=(t_1,x_1)$ and $E_2=(t_2,x_2)$ in some inertial coordinate
+system is
+\begin{equation}
+c^2(t_1-t_2)^2 - (x_1-x_2)^2.
+\end{equation}
+Suppose $\iota:\Reals^2\ra\Reals^2$ is a transformation that preserves the interval between any two
+events.  Assuming that $\iota$ is affine, show that there is a (possibly non-proper or non-orthochronus) Lorentz transformation $L$ and a vector $b\in \Reals^2$ such that
+\begin{equation}
+\iota(E) = {\mathcal C}^{-1} L {\mathcal C} E + b.
+\end{equation}
+Here $\mathcal C$ is the $2\times 2$ diagonal matrix with diagonal entries $c$ and $1$.
+Hint: This problem should feel very familiar! And take advantage of problem 4.2!
+
+\solution
+Suppose $\iota$ is affine and preserves the interval. Suppose first that $\iota$ takes the origin
+to the origin, so $\iota$ is linear. So we can write
+\begin{equation}
+\iota( E) = C^{-1} L C E
+\end{equation}
+for some matrix $L$.
+
+Let $E$ be an event.  Then
+\begin{equation}
+\Int(0,E) = E^t C^t G C E
+\end{equation}
+and
+\begin{equation}
+\Int(\iota(0),\iota(E)) = \Int(0,\iota(E)) =  \Int(0,C^{-1} L C E) = E^t C^t L^t G  L C E.
+\end{equation}
+So for all events $E$,
+\begin{equation}
+E^t C^t G C E = E^t C^t L^t G  L C E.
+\end{equation}
+Let $B$ be the symmetric bilinear form
+\begin{equation}
+B(E,F) = E^t C^t G  C F
+\end{equation}
+and let $\hat B$ be the symmetric bilinear form
+\begin{equation}
+\hat B(E,F) = E^t C^t L^t G  L C F.
+\end{equation}
+Since $B$ and $\hat B$ agree on the diagonal they are the same, and we conclude that
+\begin{equation}
+C^t G  C = C^t L^t G  L C.
+\end{equation}
+Multiplying on the right by $C^{-1}$ and on the left by $(C^t)^{-1} = C^{-1}$ we conclude that
+\begin{equation}
+G = L^t G  L.
+\end{equation}
+
+Since $G\indices{^0_0}=1$ we conclude that
+\begin{equation}
+(L\indices{^0_0})^2 - (L\indices{^0_1})^2-(L\indices{^0_2})^2-(L\indices{^0_3})^2=1
+\end{equation}
+and consequently $L\indices{^0_0}\neq 0$.  Moreover, since $\det G\neq 0$ we know that $\det L\neq 0$.
+Thus there are four possibilities for the sign of $L\indices{^0_0}$ and $\det L$ (e.g., both positive, both negative, etc.).  If $L\indices{^0_0}>0$ and $\det L>0$ then we know from problem
+4.2 that $L$ is a proper, orthochronus Lorentz transformation. On the other hand, let 
+\begin{equation}
+F=\begin{pmatrix} -1 & 0\\ 0 & 1 \end{pmatrix}\qquad R=\begin{pmatrix} 1 & 0\\ 0 & -1 \end{pmatrix}\qquad 
+\end{equation}
+It is easy to see that $F^t G F = G$ and hence
+\begin{equation}
+(FL)^t G FL = L^t F^t G F L = L^t G L = G.
+\end{equation}
+Similarly $(RL)^t G RL=G$ and $(RFL)^t G (RFL)=G$.  It is easy to see that one of
+$L$, $RL$, $FL$, and $RFL$ has positive determinant and a positive upper-left entry.
+Hence one of these is a proper orthochronus Lorentz transformation and $L$ is therefore
+the composition of a proper orthochronus Lorentz transformation with a space or time reflection (or both).
+
+
+
+\hproblem For simplicity the following problem is to be done in one space dimension.
+Suppose in the frame of some inertial observer a function has the form
+\begin{equation}
+f(t,x) = \sin(\omega t)
+\end{equation}
+for some angular frequency $\omega$.  Now consider the frame of some observer traveling
+with velocity $v$ relative to the original frame.  Determine the time difference between peaks
+of the function as seen by the boosted observer.
+\solution
+Let $(\hat t, \hat x)$ be inertial coordinates for the boosted observer.  Then
+\begin{equation}
+\begin{pmatrix} ct \\ x \end{pmatrix} = \gamma(v) \begin{pmatrix} 1 & \frac{v}{c} \\ \frac{v}{c} & 1\end{pmatrix} \begin{pmatrix} c\hat t \\ \hat x \end{pmatrix}.
+\end{equation}
+In particular,
+\begin{equation}
+t = \gamma(v) \left[ \hat t + (v/c^2) \hat x\right].
+\end{equation}
+Thus the function for the boosted observer is
+\begin{equation}
+f(\hat t, \hat x) = \sin(\omega \gamma(v) ( \hat t + (v/c^2) \hat x)).
+\end{equation}
+Our observer has coordinates with $\hat x = 0$ and thus at time $\hat t$, the
+observer measures the function values to be
+\begin{equation}
+\sin(\omega \gamma(v)\hat t).
+\end{equation}
+The observed period is therefore
+\begin{equation}
+\frac{2\pi}{\omega\gamma(v)}.
+\end{equation}
+
+
+\hproblem Pions are subatomic particles with a half life of $\Delta t=1.8\times10^{-8}$ seconds.  As a consequence, given a collection of pions left alone for a time $\Delta t$, half
+of the pions will decay into other particles.
+
+A beam of pions is traveling at a speed $v=0.99c$. Notice that in time $\Delta t$ the beam
+travels
+\begin{equation}
+\Delta x = 0.99 c \Delta t = 5.35 \mathrm{m}
+\end{equation}
+and one might expect that the beam diminishes in intensity by one half every 5.35m.  Instead,
+it deminishes by one half every 38m or so.  Explain the discrepancy.
+\solution
+Let $(\hat t, \hat x)$ be coordinates in the rest frame of the pions, and let $(t,x)$ 
+be coordinates in the rest frame of the lab.  So
+\begin{equation}
+\begin{pmatrix} ct \\ x \end{pmatrix} = \gamma(v) \begin{pmatrix} 1 & \frac{v}{c} \\ \frac{v}{c} & 1\end{pmatrix} \begin{pmatrix} c\hat t \\ \hat x \end{pmatrix}.
+\end{equation}
+where $v/c=0.99$.  In the rest frame of the pions, the beam follows the worldline between $(0,0)$
+and $(\Delta \hat t, 0)$ and diminishes intensity by one half.  Here $\Delta\hat t = 1.8\times 10^{-8}$ seconds.
+
+Transforming to the lab frame, the beam starts at $(0,0)$ and reaches
+\begin{equation}
+\begin{pmatrix} ct \\ x \end{pmatrix} = \gamma(v) \begin{pmatrix} 1 & \frac{v}{c} \\ \frac{v}{c} & 1\end{pmatrix} \begin{pmatrix} c\Delta \hat t \\ 0 \end{pmatrix} = \gamma(v) \Delta \hat t
+\begin{pmatrix} c \\ v \end{pmatrix}
+\end{equation}
+when the beam has diminished in intensity by one half.  Note that the $x$ coordinate is
+\begin{equation}
+\gamma(v) \Delta\hat t v = (7.08) \cdot 1.8\times 10^{-8} \cdot (.99c)  = 38m
+\end{equation}
+
+\end{aproblems}
+
+
+\end{document}
