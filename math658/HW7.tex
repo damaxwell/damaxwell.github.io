@@ -1,0 +1,110 @@
+\documentclass[minion]{homework}
+\usepackage{cmacros}
+\newcommand{\maple}[1]{{\tt\bf #1}}
+\doclabel{Math F658: Homework 6}
+\docdate{Due: October 22, 2018}
+\def\Cplx{\mathbb{C}}
+\begin{document}
+
+\begin{aproblems}
+
+\hproblem Suppose a particle travels with a force law of the form
+\[
+\frac{dP}{d\tau} = A V
+\]
+where $P$ is its 4-momentum, $V$ is its 4-velocity and $A$ is a spacetime dependent matrix.  Assuming that $g(P,P)$ does not depend on $\tau$, show that
+\[
+A=GB
+\]
+where $B$ is antisymmetric.
+
+\hproblem Let $\omega$ be a covector expressed in an inertial
+coordinate system.  We define
+\begin{equation}
+(d\omega)_{ij} = \partial_i \omega_j - \partial_j \omega_i.
+\end{equation}
+
+\begin{subproblems}
+\item
+Show that in a second inertial coordinate system $\hat x = L x + Y$,
+\begin{equation}
+L^t \widehat{d\omega} L = d\omega.
+\end{equation}
+Here,
+\begin{equation}
+(\widehat{d\omega})_{ij} = \hat \partial_i \hat \omega_j - \hat \partial_j \hat \omega_i.
+\end{equation}
+
+\item If $f$ is a function, show $d(df)=0$.
+\item Let $K=(K_1,K_2,K_3)$ and $L=(L_1,L_2,L_3)$ be triples of real numbers.  We define
+the matrix
+\begin{equation}
+\mathcal{F}(K,L)= \begin{pmatrix} 0 & K_1 & K_2 & K_3 \\
+-K_1& 0& L_1& -L_2 \\
+-K_2& -L_1& 0& L_3 \\
+-K_3& L_2& -L_2& 0\end{pmatrix}
+\end{equation}
+If $\omega = ( \omega_0, \overrightarrow{\omega})$, show that 
+\begin{equation}
+d\omega = \mathcal{F}(\partial_0 \overrightarrow{\omega}-\nabla \omega^0,\nabla \times 
+\overrightarrow{\omega})
+\end{equation}
+Here we interpret $\overrightarrow{\omega}$ as the coordinates of a vector in $\Reals^3$
+and $\nabla$ and $\nabla\times$ are the standard gradient and curl operators in $\Reals^3$.
+\end{subproblems}
+
+\hproblem Recall that
+\begin{align}
+*\mathcal{F}(R,S) &= \mathcal{F}(S,-R)\\
+*d \mathcal{F}(R,S) &= [ \mathrm{div}\; S, -\nabla \times R + \partial_0 S].
+\end{align}
+
+\begin{subproblems}
+\item Let $\omega$ be a 1-form.  Show $*dd\omega=0$.  (In fact, this shows $d^2=0
+$ acting on $\Lambda^1$)
+\item Let $F$ be a 2-form.  Show $\delta\delta F=0$.
+\item Unwind the definitions and show that if $\omega$ is a 1-form, then
+\begin{equation}
+-\delta d \omega = \Box \omega - d\delta \omega.
+\end{equation}
+\end{subproblems}
+
+\hproblem
+Given a one-form $\omega$ we define the associated electric and magnetic
+fields $E$ and $B$ by
+\[
+d\omega = \mathcal{F}(E,-cB).
+\]
+Recalling that Maxwell's equations are
+\[
+-\delta d\omega = \frac{1}{c\epsilon_0}(c\rho,-j)
+\]
+\
+show that $E$ and $B$ satisfy
+\begin{align}
+\nabla\cdot E &= \frac{1}{\epsilon_0} \rho\\
+\frac{1}{c}\partial_0 E + \nabla\times B &= \frac{1}{c^2\epsilon_0} j.
+\end{align}
+These are Gauss' Law and Ampere's equation respectively.
+
+Then, from the fact that $\delta^2=0$ show that
+\begin{align}
+\nabla \cdot B &= 0\\
+c\partial_0 B + \nabla\times E &= 0.
+\end{align}
+These are Gauss' Law for magnetism and Faraday's Law, respectively.
+
+\hproblem  The fact that $d^2=0$ when acting on $\Lambda^0$ and $\Lambda^1$ 
+has a partial converse.
+Use the results on page 184 of the text to prove the following.
+\begin{subproblems}
+\item Suppose on some ball that $d\omega=0$ some some one-form $\omega$.  Show that there is a function $f$ on the ball
+such that $\omega=df$.
+\item Suppose on some ball that $*dF=0$ for some two-form $F$; this is equivalent to $dF=0$
+for the map $d:\Lambda^2\ra\Lambda^3$ that we did not discuss in detail.  Show that there is a 
+one-form $\omega$ with $F=d\omega$.
+\end{subproblems}
+
+
+\end{aproblems}
+\end{document}
