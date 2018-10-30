@@ -1,0 +1,39 @@
+\documentclass[minion]{homework}
+\usepackage{cmacros}
+\usepackage{tensor}
+\newcommand{\maple}[1]{{\tt\bf #1}}
+\doclabel{Math F658: Homework 9}
+\docdate{Due: November 5, 2018}
+\def\Cplx{\mathbb{C}}
+\begin{document}
+
+
+\begin{aproblems}
+\hproblem GR 1.1
+
+\hproblem GR 1.2
+
+\hproblem Suppose in $x$ coordinates a tensor $\tensor{T}{^a_b}$
+has components equal to $\tensor{\delta}{^a_b}$.   Write down
+in as simple a form you can the components in a different coordinate
+system $\hat x$.  Then repeat this exercise if $T_{ab}=\delta_{ab}$
+in $x$ coordinates.
+
+\hproblem GR 4.4
+Note: The notation $dt^2-dr^2-\sin^2(r)(d\theta^2)+\sin^2\theta d\phi^2$
+with $x^0=1$, $x^1=r$, $x^2=\theta$ and $x^3=\phi$ is shorthand
+for the metric $g_{ab}$ in these coordinates with
+\[
+[g_{ab}] = \begin{pmatrix} 
+1 & 0 & 0 & 0 \\
+0 & -1 & 0 & 0 \\
+0 &  0 & -\sin^2r & 0 \\
+0 & 0 & 0 & -\sin^2 r \sin^2 \theta \\
+\end{pmatrix}
+\]
+Ignore the suggestion about Lagrange's equations.  Rather, compute the Christoffel symbols
+and write down the geodesic equations directly.  
+
+\end{aproblems}
+
+\end{document}
