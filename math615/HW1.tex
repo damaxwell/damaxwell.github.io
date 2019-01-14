@@ -30,13 +30,16 @@ Then find the general solution of
 y''-y'-6y = 1 + t.
 \]
 
-\problem Implement the bisection algorithm for finding roots.
+\problem Implement the bisection algorithm for finding roots.  (You
+can look at the Wikipedia entry for a reminder of how the algorithm works.)
 Your code should take as its arguments:
 \begin{enumerate}
 	\item A function $f$.  You will be solving $f(x)=0$.
 	\item Two numbers $a$ and $b$.  The desired root should be in $[a,b]$.
 	\item A tolerance $\epsilon$.  The approximate root should be within distance $\epsilon$ of the true root.
 \end{enumerate}
+It should return the approximate root.
+
 Hand in both your code and a session showing its results in
 approximating $\sqrt{2}$ to within $10^{-8}$.
 
@@ -44,10 +47,14 @@ approximating $\sqrt{2}$ to within $10^{-8}$.
 Your code should take as its arguments:
 \begin{enumerate}
 	\item A function $f$.  You will be solving $f(x)=0$.
+	\item A function $f'$.  This is the derivative of the function $f$.
 	\item A number $x_0$, which is the initial approximate root.
 	\item A tolerance $\epsilon$.  The approximate root should be be returned when two subsequent iterations of Newton's method yield
 	approximations within $\epsilon$ of each other.
 \end{enumerate}
+It should return the approximate value of the root and the number of
+iterations required to find it.
+
 Newton's method can be finicky.  Your code should handle gracefully
 error conditions that can occur.
 
