@@ -140,3 +140,9 @@ dt {
 dd {
   margin: 0 0 0 60px;
   padding: 0 0 0.5em 0; }
+
+div.x-scroll {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  white-space: nowrap; }
