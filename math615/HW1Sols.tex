@@ -1,0 +1,112 @@
+\documentclass[minion]{homework}
+\newcommand{\Reals}{\mathbb{R}}
+\doclabel{Math F615: Homework 1 Solutions}
+\docdate{January 23, 2019}
+
+\begin{document}
+
+\begin{problems}
+
+\problem Refresh your memory about the statement of Taylor's Theorem
+with remainder.  (Appendix A.2 in your text will be helpful).  Then
+use it to estimate the number of terms needed for the Taylor polynomial $p(x)$ for $\sin(x)$ such that
+\[
+|p(x)-\sin(x)|< 10^{-4}
+\]
+for all $x$ in $[0,\pi]$.  This will require estimating the size
+of the remainder term, and you are welcome to use a computer or calculator to assist in this computation.  Then generate a graph
+showing the difference between $p(x)$ and $\sin(x)$ on
+the interval.  What is the maximum error you actually observe?
+\solution
+From Taylor's Theorem,
+\[
+\sin(h) = \sin(0+h) = p(h) + \frac{\sin^{(k+1)}(c)}{(k+1)!}h^{k+1}
+\]
+where $p(x)$ is the $k^{\rm th}$ order Taylor polynomial, and where
+$c$ lies between $0$ and $h$.  For $h$ in $[0,\pi]$ we estimate
+\[
+\left| \frac{\sin^{(k+1)}(c)}{(k+1)!}h^{k+1} \right| \le \frac{\pi^{k+1}}{(k+1)!}
+\]
+Let $E_k = \pi^{k+1}/ (k+1)!$.  A numerical computation shows that
+$E_{13}\approx 10^{-3}$ but $E_{14}\approx 2\times 10^{-5}$.  
+
+The Jupyter notebook shows a graph of the error in using the order 14 
+Taylor polynomial and confirms that the error is indeed less than
+$10^4$.
+
+\problem  Solve the initial value problem
+\[
+y''-y'-6y = 0
+\]
+for $y(t)$ subject to the initial condition $y(0)=0$ and
+$y'(0)=1$.
+
+Then find the general solution of
+\[
+y''-y'-6y = 1 + t.
+\]
+\subsol
+The characteristic polynomial of the ODE is $\lambda^2-\lambda-6$ which has roots $\lambda_+=3$ and $\lambda_-=-2$.  Thus the
+general solution is
+\[
+y = A e^{3t} + B e^{-2t}
+\]
+for constants $A$ and $B$.  From the initial condition we determine
+$A+B=0$ and $3A-2B=1$ so $A=1/5$ and $B=1/5$.
+
+\subsol
+For the general solution, it is enough to find a single solution
+of the ODE, and then add on the general solution of the homogeneous
+version (which we already solved in the previous problem).
+
+Let us guess a solution of the form $c_1 t + c0$.  
+Substituting into the ODE we desire
+\[
+-c_1 -6(c_1 t+c0)  = 1+t
+\]
+and therefore $c_1=-1/6$ and $c_0=-5/36$.  The general solution
+is
+\[
+y = A e^{3t} + B e^{-2t} -\frac{t}{6} -\frac{5}{36}.
+\]
+
+\problem Implement the bisection algorithm for finding roots.  (You
+can look at the Wikipedia entry for a reminder of how the algorithm works.)
+Your code should take as its arguments:
+\begin{enumerate}
+	\item A function $f$.  You will be solving $f(x)=0$.
+	\item Two numbers $a$ and $b$.  The desired root should be in $[a,b]$.
+	\item A tolerance $\epsilon$.  The approximate root should be within distance $\epsilon$ of the true root.
+\end{enumerate}
+It should return the approximate root.
+
+Hand in both your code and a session showing its results in
+approximating $\sqrt{2}$ to within $10^{-8}$.
+
+\solution
+
+See Jupyter notebook.
+
+\problem Implement Newton's method. 
+Your code should take as its arguments:
+\begin{enumerate}
+	\item A function $f$.  You will be solving $f(x)=0$.
+	\item A function $f'$.  This is the derivative of the function $f$.
+	\item A number $x_0$, which is the initial approximate root.
+	\item A tolerance $\epsilon$.  The approximate root should be be returned when two subsequent iterations of Newton's method yield
+	approximations within $\epsilon$ of each other.
+\end{enumerate}
+It should return the approximate value of the root and the number of
+iterations required to find it.
+
+Newton's method can be finicky.  Your code should handle gracefully
+error conditions that can occur.
+
+Hand in both your code, and a session showing its results 
+approximating $\sqrt{2}$ to within $10^{-12}$ starting from an initial approximation $x_0=2$.
+
+\solution
+
+See Jupyter notebook.
+\end{problems}
+\end{document}
