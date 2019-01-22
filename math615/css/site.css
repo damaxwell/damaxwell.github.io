@@ -129,7 +129,8 @@ table.asst-table {
   border-spacing: 20px 10px; }
   table.asst-table td {
     white-space: nowrap;
-    word-break: break-all; }
+    word-break: break-all;
+    line-height: 150%; }
 
 dt {
   float: left;
