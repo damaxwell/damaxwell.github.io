@@ -1,0 +1,116 @@
+\documentclass[minion]{homework}
+\usepackage{cmacros}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[all,cmtip]{xy}
+\def\vv{\mathbf{v}}
+\def\vw{\mathbf{w}}
+\def\vx{\mathbf{x}}
+\def\vb{\mathbf{b}}
+\def\vzero{\mathbf{0}}
+
+% \newcommand\tomeW{{\color{red}\textbf{(W) (Hand this one in to David.)}}}
+\newcommand\W{{\color{red}\textbf{(W) (Hand this one in to David.)}}}
+\newcommand\tome{{\color{red}\textbf{(Hand this one in to David.)}}}
+\doclabel{Math F314: Applications of the Fundamental Theorem of Linear Algebra}
+\docdate{October 27, 2017}
+
+\begin{document}
+
+\begin{aproblems}
+\vskip 0.5cm
+
+The goal of this worksheet is for you to work through some applications
+of the Fundamental Theorem of Linear Algebra:
+\[
+\begin{aligned}
+C(A) &= N(A^T)^\perp\\
+C(A^T) &= N(A)^\perp \\
+\end{aligned}.
+\]
+
+For the first set of exercises consider
+\[
+A = \begin{bmatrix} 1 & 2 \\
+-1 & -3 \\
+3 & 0 \\
+2 & 1
+\end{bmatrix}.
+\]
+Since $A$ is tall and thin, we know that we cannot always solve
+$A\mathbf x = \mathbf b$.  If we perform elimination, there will be 
+at least two zero rows, and hence there will be at least two conditions
+on $\mathbf b$ needed to ensure solvablility.  We would like to identify
+these conditions.
+
+\aproblem Consider the vector $\mathbf w = (-4, -3, 1, -1)$.  Show
+that $A^T\mathbf{ w}=\mathbf{ 0}$.
+
+\aproblem Use this vector to show that for $\mathbf{b}=(-1,1,1,1)$ there is
+no solution of
+\[
+A\mathbf{x} = \mathbf{b}.
+\]
+Hint: Since $A^T\vw = \vzero$, $\vw^T A = \vzero^T $.  Now
+try to combine this equation with $A\vx = \vb$.
+
+\aproblem You just saw an example of a general principle.  If $A \mathbf x =  \mathbf b$ has a solution, then $\mathbf w \cdot \mathbf b$ for every
+vector $\mathbf w$ such that $A^T\mathbf{w}=\mathbf 0$.  That is,
+$C(A)\perp N(A^T)$.  We know something better: $C(A)= N(A^T)^\perp$.
+So $A\mathbf x = \mathbf b$ will have a solution if and only if
+$\mathbf b$ is in $C(A)$, which happens if and only if $\mathbf b$
+is perpendicular to every vector in $N(A^T)$. And to detect
+whether $\mathbf b$ is perpendicular to every vector in $N(A^T)$
+you only need to show that $\mathbf b$ is perpendicular to every vector
+in a basis for $N(A^T)$.  So now the search is on! We need to find a
+basis for $N(A^T)$.  Start by performing elimination on $A^T$ to
+arrive at row echelon form $U$.  Don't go all the way to $R$ yet!  At this point,
+determine the dimension of $N(A^T)$.
+
+\aproblem Now keep going to reduced row echelon form $R$. At this point,
+find a basis for $N(A^T)$.
+
+\aproblem For each vector $\mathbf w$ in your basis, double check 
+and verify $A^T\mathbf w = \mathbf 0$.
+
+\aproblem Is there a solution of $A\mathbf x = (1,-3,-9,-4)$?
+
+\aproblem Is there a solution of $A\mathbf x = (-1,-3,-9,-4)$?
+\vskip 10pt
+
+\hrule 
+
+Now suppose we have the vectors $\mathbf v_1 = (1,-1,1)$ and
+$\mathbf v_2 = (1, 1, 2)$.  We would like to find 
+a basis for the orthogonal complement of $V = \mathrm{span}(\vv_1,\vv_2)$.
+
+
+\aproblem 
+Before finding this orthogonal complement, let's get to know $V$
+a bit better. First, show that $\vv_1$ and $\vv_2$ are linearly independent.
+
+\aproblem What is the dimension of $V$? Why?
+
+\aproblem What is the dimension of $V^\perp$? Why?
+
+\aproblem To find a basis $V^\perp$, the strategy is to construct
+a matrix $A$ such that $C(A)=V$.  Then use $V^\perp = C(A)^\perp = N(A^T)$.
+So, write down a matrix $A$ such that $C(A)=V$.
+
+\aproblem Now find a basis for $N(A^T)$, which is your desired basis for $V^\perp$.  Elimination strikes again!
+
+\aproblem Does your basis have the expected number of elements? Compare with
+your answer to problem 10.
+
+\aproblem Verify each element of this basis is perpendicular
+to both $\vv_1$ and $\vv_2$.
+
+\aproblem I bet you have a different, favorite way of finding a vector
+that is perpendicular to both $\vv_1$ and $\vv_2$ that you learned 
+before you took linear algebra.  This technique is special to three dimensions, and only works there. Still, if you happen to be working
+in three dimensions (like we are in this easy example), it's the way to go.
+Go ahead and use this method to find a vector that
+is perpendicular to both $\vv_1$ and $\vv_2$
+
+\end{aproblems}
+\end{document}

@@ -1,0 +1,141 @@
+\documentclass[minion]{homework}
+\usepackage{cmacros,graphicx}
+\newcommand\Irr{\mathbb{I}}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\vB}{\mathbf{B}}
+\newcommand{\va}{\mathbf{a}}
+\newcommand{\vb}{\mathbf{b}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vz}{\mathbf{z}}
+\newcommand{\vr}{\mathbf{r}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\vzero}{\mathbf{0}}
+\newcommand{\vw}{\mathbf{w}}
+
+\DeclareMathOperator{\erf}{\rm erf}
+\DeclareMathOperator{\Span}{\rm span}
+\DeclareMathOperator{\Col}{\rm Col}
+\DeclareMathOperator{\Null}{\rm Null}
+\DeclareMathOperator{\Row}{\rm Row}
+\DeclareMathOperator{\Coker}{\rm Coker}
+\DeclareMathOperator{\rank}{\rm rank}
+\doclabel{Math F314: Midterm 2 Study Ideas}
+\docdate{November 3, 2017}
+
+\def\exercise{{\bf Exercise:}\par}
+
+\begin{document}
+
+Here are some things you should know for the midterm, which will cover 
+Chapter 3, and Sections 4.1-4.3. Everything from the homework, the quizzes, and the worksheets is fair game.  Please study homework or quiz problems that you did not get right the first time. You must know all of that.  Here are more study ideas.
+
+Know the following definitions:
+\begin{enumerate}
+	\item A subspace of a vector space.
+	\item A linear combination of vectors.
+	\item The span of vectors $\vv_1,\ldots,\vv_n$.
+	\item A linearly independent collection of vectors
+	\item A basis for a subspace.
+	\item The dimension of a subspace.
+	\item The column space, null space, row space, and left null space of a matrix.
+	\item The rank of a matrix.
+	\item The spaces $V$ and $W$ are orthogonal.
+	\item The orthogonal complement of the space $V$.
+\end{enumerate}
+
+Know the full algorithm for solving $A\vx = \vb$.  That is, 
+form $[A;\vb]$.  Do row operations to arrive at $[U;\vw]$.
+Be able to spot at this point which are the pivot columns and which
+are the free columns.  At this point, be able to determine the
+rank of $A$, the dimension of the column space, and the dimension of the row
+space.  Now continue to $[R;\vz]$.  Be able at this point 
+to find a particular solution of $A\vx = \vb$.  Be able to find
+a basis for the null space of $A$.  Be able to find every solution
+of $A\vx = \vb$.
+
+You can practice the above as follows.
+Write down your favourite matrix $A$ and favourite right-hand side $\vb$.
+Do row operations to take $[A\;\vb]$ to $[R\;\vz]$.  Let Matlab do this work
+to save you time in your studying!  Now find a particular solution of $A\vx=\vb$.  Check with Matlab that your solution works.  Now find all the
+special solutions of $A\vx=\vzero$.  Check with Matlab that each special solution works.  If there are any special solutions, find 5 different solutions of $A\vx=\vb$.
+
+Know the Fundamental Theorem of Linear Algebra, parts I and II.
+
+
+Let $W$ be the set of all vectors in $\Reals^4$ that are perpendicular to 
+$(1,0,1,2)$.  Give three example of elements of $W$.  Is $W$ a subspace?
+
+Let $Z$ be the set of all vectors $\vz$ in $\Reals^4$ such that $z_1-z_3=4$.
+Is $Z$ a subspace?
+
+Can you prove that $\Null(A)$ a subspace?
+
+Given vectors $\va_1,\ldots \va_5$, form the matrix $A=[\va_1,\ldots\va_5]$.
+How can you detect that $\va_1,\ldots \va_5$ are linearly independent using 
+the matrix $A$.  Use this technique to show that $(1,1,1,1)$, $(1,2,-1,2)$
+and $(1,0,2,2)$ are linearly independent.
+
+Let 
+$$A=\begin{bmatrix} 2 &1 &3 \\
+4 & 0 & 9\\
+6 & 7 & 6 \end{bmatrix}.
+$$  Find a condition on the components of $\vb=(b_1,b_2,b_3)$ that
+ensures that $\vb$ is in $\Col(A)$.  Hint: use the left null space, Luke!
+
+The solutions of $x-3y-z=0$ form a plane in $\Reals^3$.  The set of solutions can be thought of as the null space of a matrix $A$.  What is the matrix?  What are the special solutions of $A\vx=\vzero$?
+
+Given a vector $\vv$, know how to form its orthogonal projection
+into the subspace spanned by vectors $\va_1,\va_2,\va_3$.  E.g., 4.2, problem 11.
+
+Find the orthogonal complement of $(1,1,1,1)$ and $(1,2,-1,2)$ in $\Reals^4$.
+
+Find one solution of $x-3y-z=12$.  Now use your answer to the previous problem 
+to find all solutions.
+
+If $A$ is an $m$ by $n$ rank-1 matrix, how many free columns are there? How many special solutions?
+
+Section 3.3 number 24
+
+Section 3.4 number 13
+
+Section 3.4 number 20
+
+
+If $A$ is short and wide, what can you say about $\Col(A)$?  What can you say about $\Null(A)$?
+
+If $A$ is tall and thin, what can you say about $\Col(A)$?  What can you say about $\Null(A)$?
+
+Suppose $A$ is $m$ by $n$ and has $m$ pivots.  What can you say about $\Col(A)$? Why? 
+
+Suppose $A$ is $m$ by $n$ and has $n$ pivots.  What can you say about $\Null(A)$?  Why? What can you say about the number of solutions of
+$A\vx=\vb$? 
+
+
+If $\vb$ is not in $C(A)$, what is a good alternative for solving
+$A\vx =\vb$?  
+
+
+If you reduce $A$ to (ordinary) echelon form, and if there are $5$ pivot
+columns, there is a $5\times 5$ matrix that can be used to find
+the special solutions of $A\vx=\vzero$.  What is this matrix?  
+What properties does it have?
+
+Suppose $(2,-1,3,5)$ and $(4,0,2,1)$ are in the column space of $A$.
+Let $\vb=(-2,-1,1,4)$.  Does there exist a solution of $A\vx=\vb$?
+Why or why not?
+
+Construct a $3\times 3$ matrix whose column space contains $(1,1,2)$ and $(-1,-1,4)$
+but not $(3,2,1)$.  Can you justify that your construction works?
+
+Suppose $A$ is a $4\times 3$ matrix and $B$ is a $3\times 3$ matrix.
+Why is everything in the column space of $AB$ also in the column space of $A$?
+Is it necessarily true that $\Col(A)=\Col(AB)$?
+
+Suppose $A$ is a rank-1 matrix.  What is the relationship between column 1 and column 5?
+
+True or false:  $\rank(A)+\rank(B)=\rank(A+B)$?
+
+
+\end{document}
