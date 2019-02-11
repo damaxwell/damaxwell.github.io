@@ -61,13 +61,16 @@ and $x_0$ (an initial guess).  It should terminate
 whenever either 
 \begin{itemize}
 \item $|f(x)|_\infty$ is less than a specified tolerance
-\item $|f(x)|_\infty$ is less than a sepcified fraction of $|f(x_0)|_\infty$
+\item $|f(x)|_\infty$ is less than a sepcified fraction of $|f(x_0)|_\infty$.
 \end{itemize}
 
 These tolerances should be specified with optional arguments 
-as used in your language of choice.
+as used in your language of choice, with values of $10^{-8}$ as the default.
 
-Test your code against TBA.
+Your function should return the estimated root and, as a diagnostic, the number of iterations needed to find the root.
+
+Test your code against solving the simultaneous equations
+$x^2+y^2=1$ and $x=y$ starting from $x=0$, $y=3$.  
 
 \problem The energy for the heat equation $u_t=u_{xx}$ 
 for $0\le x\le 1$ is
