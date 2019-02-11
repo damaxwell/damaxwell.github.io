@@ -46,7 +46,7 @@ u_{i+1} = u_i + \frac{h}{2}(3f_i-f_{i-1}).
 k\alpha_{k}+\cdots+ 1\alpha_1+0\alpha_0 &= \beta_k+\cdots+\beta_0
 \end{aligned}
 \end{equation}
-\item Use the previous result to show that every one-step LMM
+\item Use the previous result to show that every consistent one-step LMM
 is zero stable.
 \end{subproblems}
 
@@ -71,10 +71,13 @@ where $G$ is the gravitational constant.  The force of body 1 on body 2
 is the same, with the numbers 1 and 2 interchanged.
 
 Newton's Laws then read
-\begin{align}\label{eq:2body}
+\begin{equation}
+\begin{aligned}
+\label{eq:2body}
 m_1 \bfx_1'' &= F_{21}\\
 m_2 \bfx_2'' &= F_{12}.
-\end{align}
+\end{aligned}
+\end{equation}
 
 We have the following physical constants:
 \begin{align*}
@@ -84,7 +87,7 @@ G = 6.67408 \times 10^{-11} \frac{ \mathrm{m}^3 }{ \mathrm{kg} \, \mathrm{s}^2}
 \end{align*}
 
 \begin{subproblems}
-\item Convert system \ref{eq:2body} into a first order system by
+\item Convert system \eqref{eq:2body} into a first order system by
 introducing the variables $\bfv_1=\bfx_1'$ and $\bfv_2=\bfx_2'$.
 \item Writing $\bfx_i = [x_i,y_i]$ and $\bfv_i=[v_i,w_i]$, 
 we will keep track of all of the scalar system variables
@@ -96,7 +99,7 @@ Using this convention, write a right-hand side
 function \texttt{z=earthmoon(t,u)} for the system you wrote 
 down in part 1. 
 \item Suppose at time $t=0$ the Earth is stationary and located
-at the origin, the moon has position $x=3.565 \times 10^28$
+at the origin, the moon has position $x=3.565 \times 10^8$
 and $y=0$ meters with velocity $1.09 \times 10^3 m/s$ in
 the positive $y$ direction.
 
