@@ -65,8 +65,8 @@ and confirm that it has the predicted order of accuracy.
 implicit midpoint method,
 \begin{equation}
 \begin{aligned}
-u_* &= u_n + h f(t_n+h/2,u_*) \\
-u_{n+1} &=  u_n + k f(t_n+h/2,u_*)
+u_* &= u_n + \frac{h}{2} f(t_n+h/2,u_*) \\
+u_{n+1} &=  u_n + h f(t_n+h/2,u_*)
 \end{aligned}
 \end{equation}
 The first equation (stage) is Backward Euler to determine an approximation to the value at the midpoint in time and the second stage is the midpoint method using this value.
