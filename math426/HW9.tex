@@ -1,0 +1,172 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% This top part of the document is called the 'preamble'.  Modify it with caution!
+%
+% The real document starts below where it says 'The main document starts here'.
+
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{verbatim}
+
+% Comment the following line to use TeX's default font of Computer Modern.
+\usepackage{times,txfonts}
+
+\newtheoremstyle{homework}% name of the style to be used
+  {18pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {}% name of font to use in the body of the theorem
+  {}% measure of space to indent
+  {\bfseries}% name of head font
+  {:}% punctuation between head and body
+  {2ex}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+\theoremstyle{homework} 
+
+% Set up an Exercise environment and a Solution label.
+\newtheorem*{exercisecore}{\@currentlabel}
+\newenvironment{exercise}[1]
+{\def\@currentlabel{#1}\exercisecore}
+{\endexercisecore}
+
+\newcommand{\localhead}[1]{\par\smallskip\noindent\textbf{#1}\nobreak\\}%
+\newcommand\solution{\localhead{Solution:}}
+
+
+
+% \newcommand{includematlab}[1]{\verbatiminput{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Stuff for getting the name/document date/title across the header
+\makeatletter
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{\ifnum \value{page} > 1\relax\thepage\fi}
+\fancyhead[L]{\ifx\@doclabel\@empty\else\@doclabel\fi}
+\fancyhead[C]{\ifx\@docdate\@empty\else\@docdate\fi}
+\fancyhead[R]{\ifx\@docauthor\@empty\else\@docauthor\fi}
+\headheight 15pt
+
+\def\doclabel#1{\gdef\@doclabel{#1}}
+\doclabel{Use {\tt\textbackslash doclabel\{MY LABEL\}}.}
+\def\docdate#1{\gdef\@docdate{#1}}
+\docdate{Use {\tt\textbackslash docdate\{MY DATE\}}.}
+\def\docauthor#1{\gdef\@docauthor{#1}}
+\docauthor{Use {\tt\textbackslash docauthor\{MY NAME\}}.}
+\makeatother
+
+%% General formatting parameters
+\parindent 0pt
+\parskip 12pt plus 1pt
+
+\def\vx{\mathbf x}
+\def\vb{\mathbf b}
+
+% Shortcuts for blackboard bold number sets (reals, integers, etc.)
+\newcommand{\Reals}{\ensuremath{\mathbb R}}
+\newcommand{\Nats}{\ensuremath{\mathbb N}}
+\newcommand{\Ints}{\ensuremath{\mathbb Z}}
+\newcommand{\Rats}{\ensuremath{\mathbb Q}}
+\newcommand{\Cplx}{\ensuremath{\mathbb C}}
+%% Some equivalents that some people may prefer.
+\let\RR\Reals
+\let\NN\Nats
+\let\II\Ints
+\let\CC\Cplx
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% The main document start here.
+
+% The following commands set up the material that appears in the header.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\doclabel{Math 426: Homework 9}
+\docauthor{Your name here!}
+\docdate{October 28, 2020}
+
+\begin{document}
+
+\begin{exercise}{Exercise 7.9}
+\end{exercise}
+
+\begin{exercise}{Exercise 7.10}
+\end{exercise}
+
+\begin{exercise}{Exercise 7.14}
+\end{exercise}
+
+\begin{exercise}{Supplemental 1}
+Let
+\[
+A=\begin{pmatrix}  
+1 & -1 & 0 & \alpha-\beta & \beta\\
+0 & 1 & -1 & 0 & 0\\
+0 & 0 & 1 & -1 & 0\\
+0 & 0 & 0 & 1 & -1\\
+0 & 0 & 0 & 0 & 1 
+\end{pmatrix}; \qquad \vb = \begin{pmatrix} \alpha \\0\\0\\0\\0\end{pmatrix}
+\]
+\begin{enumerate}[a)]
+\item Show that that for any choice of numbers $\alpha$ and $\beta$, 
+the solution of $A\vx=\vb = (1,1,1,1,1)^T$.
+\item This is an upper triangular matrix!  
+For $\alpha= 0.1$ and $\beta=10^1,10^2,\ldots,10^{12}$ solve
+$A\vx=\vb$ using your {\tt usolve} code.  
+Present a table of $||\vx-\hat \vx ||_\infty$
+\item  Present a table of the $\infty$ norm condition numbers 
+of the matrices $A$ from the previous problem.
+\item Discuss the relationship between parts (b) and (c).
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{Supplemental 2}
+Suppose you have data points $(1,y_1),\ldots, (n,y_n)$
+and that the points $(k,\log(y_k))$ all lie on a line with
+positive slope. Show that there are constants $C>0$ and $\alpha>1$
+such that
+\[
+y_k = C \alpha^k
+\]
+\end{exercise}
+
+\begin{exercise}{Supplemental 3}
+We will shortly be seeing the Vandermonde matrices,
+which show up when doing polynomial interpolation.
+So, they appear naturally in the real world, and
+the point of this exercise is to characterize just
+how awfully their condition number grows as the
+size of the matrix grows.
+
+Given a vector $\vx=(x_0,x_1,\ldots,x_n)^T$, the
+$(n+1)\times (n+1)$ Vandermode matrix associated
+with $\vx$ is defined on page 181 in your text.
+You can create one in matlab with the command {\tt vander(x)}.
+\begin{enumerate}
+\item For $n=1$, $2$, $\ldots$, $20$, let $\vx=(0,1/n,2/n,\ldots, 1)$,
+and let $\kappa_n$ be the 2-norm condition number of the
+Vandermonde matrix associated with $\vx$.  Make
+a plot of $\log(\kappa_n)$ versus $n$.
+\item If everything has gone well, your plot will look like a straight line!  Use a least squares method to find $m$ and $b$ such that
+\[
+\log(\kappa_n) \approx m n + b
+\]
+Then plot your line on the same graph as in part (b).
+
+For full credit, you must show the matlab commands used to
+obtain $m$ and $b$.
+\item Find constants $C$ and $\alpha$ such that
+\[
+\kappa_n \approx C \alpha^n
+\]
+\end{enumerate}
+\end{exercise}
+
+\end{document}
