@@ -11,6 +11,12 @@ body {
   margin: 0px; 
   font-size: 100%;}
 
+.table-box {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  margin-right: 5px;
+  margin-bottom: 5px; }
+
 table.asst-table {
   border: 2px solid black;
   border-collapse: separate;
