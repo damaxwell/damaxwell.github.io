@@ -10,7 +10,7 @@ function x=usolve_hw9(U,b)
 		for j=n:-1:i+1
 			x(i) = x(i) - U(i,j)*x(j);
 		end
-		x(i) = x(i) + b(i)
+		x(i) = x(i) + b(i);
 		x(i) = x(i) / U(i,i);
 	end
 
