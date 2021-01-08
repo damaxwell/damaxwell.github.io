@@ -1,0 +1,34 @@
+>> xs = linspace(0,pi,5);
+>> ys = sin(xs);
+>> plot(xs,ys,'o','LineWidth',2)
+>> pp=spline(xs,ys);
+>> pp
+
+pp = 
+
+  struct with fields:
+
+      form: 'pp'
+    breaks: [0 0.7854 1.5708 2.3562 3.1416]
+     coefs: [4×4 double]
+    pieces: 4
+     order: 4
+       dim: 1
+
+>> ppval(pp,0)
+
+ans =
+
+     0
+
+>> ppval(pp,pi/2)
+
+ans =
+
+     1
+
+>> x=linspace(0,pi,100);
+>> plot(x,sin(x),xs,ys,'o','LineWidth',2);
+>> plot(x,sin(x),xs,ys,'o',x,ppval(pp,x),'LineWidth',2);
+
+>> plot(x,sin(x)-ppval(pp,x),'LineWidth',2);

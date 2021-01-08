@@ -1,0 +1,65 @@
+\documentclass[minion]{homework}
+\newcommand{\Reals}{\mathbb{R}}
+\doclabel{Math F615: Homework 1}
+\docdate{Due: January 23, 2019}
+
+\begin{document}
+
+\begin{problems}
+
+\problem Refresh your memory about the statement of Taylor's Theorem
+with remainder.  (Appendix A.2 in your text will be helpful).  Then
+use it to estimate the number of terms needed for the Taylor polynomial $p(x)$ for $\sin(x)$ such that
+\[
+|p(x)-\sin(x)|< 10^{-4}
+\]
+for all $x$ in $[0,\pi]$.  This will require estimating the size
+of the remainder term, and you are welcome to use a computer or calculator to assist in this computation.  Then generate a graph
+showing the difference between $p(x)$ and $\sin(x)$ on
+the interval.  What is the maximum error you actually observe?
+
+\problem  Solve the initial value problem
+\[
+y''-y'-6y = 0
+\]
+for $y(t)$ subject to the initial condition $y(0)=0$ and
+$y'(0)=1$.
+
+Then find the general solution of
+\[
+y''-y'-6y = 1 + t.
+\]
+
+\problem Implement the bisection algorithm for finding roots.  (You
+can look at the Wikipedia entry for a reminder of how the algorithm works.)
+Your code should take as its arguments:
+\begin{enumerate}
+	\item A function $f$.  You will be solving $f(x)=0$.
+	\item Two numbers $a$ and $b$.  The desired root should be in $[a,b]$.
+	\item A tolerance $\epsilon$.  The approximate root should be within distance $\epsilon$ of the true root.
+\end{enumerate}
+It should return the approximate root.
+
+Hand in both your code and a session showing its results in
+approximating $\sqrt{2}$ to within $10^{-8}$.
+
+\problem Implement Newton's method. 
+Your code should take as its arguments:
+\begin{enumerate}
+	\item A function $f$.  You will be solving $f(x)=0$.
+	\item A function $f'$.  This is the derivative of the function $f$.
+	\item A number $x_0$, which is the initial approximate root.
+	\item A tolerance $\epsilon$.  The approximate root should be be returned when two subsequent iterations of Newton's method yield
+	approximations within $\epsilon$ of each other.
+\end{enumerate}
+It should return the approximate value of the root and the number of
+iterations required to find it.
+
+Newton's method can be finicky.  Your code should handle gracefully
+error conditions that can occur.
+
+Hand in both your code, and a session showing its results 
+approximating $\sqrt{2}$ to within $10^{-12}$ starting from an initial approximation $x_0=2$.
+
+\end{problems}
+\end{document}

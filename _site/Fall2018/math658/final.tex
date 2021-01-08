@@ -1,0 +1,189 @@
+\documentclass[minion]{homework}
+\usepackage{cmacros,tensor}
+\newcommand{\maple}[1]{{\tt\bf #1}}
+\doclabel{Math F665: Final Exam}
+\docdate{Due: 12/6/2018}
+\def\ul#1{\underline{#1}}
+\def\Cplx{\mathbb{C}}
+\begin{document}
+
+\hproblem  The conversion formula $E=mc^2$ for rest mass 
+allows one to specify mass as energy.  In particle physics, a standard
+measure of energy is a ``gigaelectronvolt''.  Recall that the volt
+is the unit of electric potential: the energy required to move
+a coulomb of charge from a point with voltage $V_1$ to a point with
+voltage $V_2$ is $V_2-V_1$.  An electron volt is the energy in Joules required to
+move an electron accross a single volt of potential, and a gigaelectronvolt
+(GeV) is the energy needed to move $10^{9}$ electrons over a volt of potential.
+\begin{subproblems}
+\item Recalling that the charge of an electron is $1.6\times 10^{-19}$ coulombs,
+show that a mass of $1$GeV is equivalent to $1.8\times 10^{-27}$kg.
+\item A muon has a mass of $0.106$ GeV and a rest frame half life of
+$2.19\times 10^{-6}$ seconds.  It is moving in a circular particle accelerator,
+1 km in diameter, with energy 1000 GeV.  How far around the circle to you expect
+it will travel?
+\end{subproblems}
+
+\hproblem When we first introduced the equivalence principle, we observed that
+it would predict a change in wavelength of a photon travelling up a building of 
+height $z$ as
+\begin{equation}\label{eq:red1}
+\frac{\Delta \lambda}{\lambda} = -a\frac{z}{c^2}
+\end{equation}
+where $a$ is gravitational acceleration at the surface of the earth.
+
+In class, we saw that the formula for gravitational redshift in Schwarzschild
+is given by
+\begin{equation}\label{eq:red2}
+\frac{\omega_2}{\omega_1} = \sqrt{ \frac{1-\frac{2GM}{c^2r_1}}{1-\frac{2GM}{c^2r_2}} }.
+\end{equation}
+Use equation \eqref{eq:red1} to derive equation \eqref{eq:red2}.
+
+\hproblem The rules for computing Cristoffel symbols, parallel transport, covariant
+derivatives, and so forth work equally well for Riemannian metrics (i.e. metrics
+$g_{ab}$ with signature $(+,+,\ldots,+)$) and in any dimension.  Consider the Riemannian
+metric $d\phi^2 + \sin^2\phi d\theta^2$, which is the metric for the sphere in polar
+coordinates.  Here, $\phi\in(0,\pi)$ and $\theta\in(-\pi,\pi)$.
+\begin{enumerate}
+\item Show that curves of constant $\theta$ are geodesics, and that the only line
+of constant $\phi$ that is a geodesic is the curve $\phi=0$.
+\item In this coordinate system, take the vector $X=[1,0]$ and parallel transport
+it around a line of constant $\phi$.  What is the resulting vector?  Your answer
+should depend on $\phi$.
+\end{enumerate}
+
+\hproblem GR: 5.7
+
+\hproblem Consider a metric of the form
+\begin{equation}
+ds^2 = dt^2 - t^{2a_1} dx_1^2
+- t^{2a_2} dx_2^2
+- t^{2a_3} dx_3^2.
+\end{equation}
+Find necessary and sufficient conditions on the numbers $a_1$, $a_2$ and $a_3$
+such that the metric is a solution of the vacuum Einstein equations.
+
+\hproblem Consider Einstein's vaccum equation with a cosmological constant $\Lambda$:
+\[
+G_{ab} =-\Lambda g_{ab}.
+\]
+Find the analog of the Schwarzschild solution for $\Lambda\neq 0$.  The equation
+of motion for geodesics can be written in the form $p^2=f(u)$ as at the bottom
+of page 112.  What is $f(u)$ in this case?
+
+\hproblem GR 8.4
+
+\hproblem The equation
+\begin{equation}
+u_{tt}-c^2\Delta u + m^2 u = 0
+\end{equation}
+with the constant $m>0$ is known as the Klein-Gordon equation.  Find an energy
+for it and show that the causality principle holds for this equation as well.
+
+% \newpage
+% % \setcounter{probcount}{8}
+% \hproblem In this problem, we use units where $c=1$.
+% Maxwell's equations for the potential $A_a$ read
+% $$
+% \Box A_a - d \delta A_a = J_a = (\epsilon_0)^{-1} [\rho, -j^1,-j^2,-j^3]
+% $$
+% where $\rho$ is the charge density, $j^i$ is the electric current, and $J_a$
+% is the current 4-vector expressed as a 1-form.  Our goal is, given
+% $J_a$, to find a solution of Maxwell's equations.  We will use 
+% the fact that the inhomogeneous wave equation
+% \begin{equation}
+% \Box \phi = f
+% \end{equation}
+% is well posed with initial data $\phi$ at time $x^0=0$ and $\partial_0 \phi$ at $x^0=0$.
+
+% \begin{subproblems}
+% \item
+% Explain why the conservation of charge condition $\delta J = \nabla^a J_a=0$ 
+% is a necessary condition for there to exist a solution of Maxwell's equations.
+
+% \item
+% We have already seen that if $A_a$
+% solves Maxwell's equations for a given 4-current, then so does
+% $A_a +(df)_a$ for any function $f_a$.  Hence Maxwell's equations aren't well-posed:
+% there's more than one solution!  We can reduce the equations to a well-posed problem
+% by a technique known a gauge fixing.  The gauge we'll use is the so-called
+% Lorentz gauge defined by $\delta A = 0$ where 
+% $\delta A = \partial_0 A_0 - \partial_1 A_1- \partial_2 A_2- \partial_3 A_3$.
+% That is, we will seek a solution $A$ satisfying $\delta A=0$.  I guess there's no real question in part b).  Carry on to part c)!
+
+% \item
+% Suppose that $A_a$ solves Maxwell's equations.  Let $f$ be a function solving
+% the inhomogeneous wave equation
+% $$
+% \Box f = -\delta A
+% $$
+% with any initial data $f|_{x_0=0}$ and $\partial_0 f|_{x_0=0}$.
+% Show that $\hat A_a = A_a + (df)_a$ is a solution of Maxwell's equations 
+% for the same 4-current that also satisfies $\delta \hat A=0$.  Now explain
+% why if there exists a solution of Maxwell's equations, then there also exists
+% a solution in Lorentz gauge.
+
+% \item
+% Given the analogy with the wave equation, the right initial data for Maxwell's equations 
+% ought to consist of the value of $A_a$ at $x^0=0$ and $\partial_0 A_a$ at $x^0=0$.  
+% But these equations overspecify the initial data.  Suppose $A_a$ is a solution
+% of Maxwell's equations.  Show that
+% \begin{equation}\label{eq:const}
+% -\Delta A_0 + \partial_1(\partial_0 A_1)+ \partial_2(\partial_0 A_2) + \partial_3(\partial_0 A_3)  = \rho/\epsilon_0
+% \end{equation}
+% and that this can be computed entirely from the initial data
+% $A_a$ at $x^0=0$ and $\partial_0 A_a$ at $x^0=0$.
+% We will call equation \eqref{eq:const} the charge constraint.
+
+% \item
+% Suppose $\alpha_a$ and $\beta_a$ are initial data that satisfy the Lorentz constraint
+% \begin{equation}
+% \beta_0 - \partial_1 \alpha_1 - \partial_2 \alpha_2 - \partial_3 \alpha_3 =0
+% \end{equation}
+% and satisfy the charge constraint
+% \begin{equation}
+% -\Delta \alpha_0 + \partial_1(\beta_1)+ \partial_2(\beta_2) + \partial_3(\beta_3)  = \rho/\epsilon_0.
+% \end{equation}
+% Let the components $A_a$ be the solutions of the four inhomogeneous wave equations
+% \begin{equation}
+% \Box A_a = J_a
+% \end{equation}
+% with the initial conditions
+% \begin{align*}
+% \left. A_a \right|_{x^0=0} &= \alpha_a\\
+% \left. \partial_0 A_a \right|_{x^0=0} &= \beta_a.
+% \end{align*}
+% Show that
+% \begin{enumerate}
+% \item $\delta A=0$ at $x^0=0$.
+% \item $\partial_0 \delta A=0$ at $x^0=0$. (You'll need to use the charge constraint here along with the fact that $A_a$ solves the wave equation and $\delta A=0$ at $x^0=0$ ).
+% \item $\Box \delta A=0$ on all of spacetime. (You'll need to use charge conservation here).
+% \end{enumerate}
+% Conclude that $\delta A = 0$ on all of spacetime.  Conclude further that $A$ is a solution
+% of Maxwell's equations in Lorentz gauge.
+
+% \item In the usual initial problem for Maxwell's equations one starts with 
+% an electric field satisfying $\nabla_i E^i=\rho/\epsilon_0$ and a magnetic field satisfying
+% $\nabla_i B^i=0$.  Show that given such a fields, one can find initial data $\alpha_a$ and
+% $\beta_a$ satisfying the Lorenz constraint and the charge constraint that generate these fields.
+% Hence, given a current 4-vector and an initial choice of $E_i$ and $B_i$ one can solve Maxwell's equations. You are
+% welcome to assume that the scalar Poisson equation $\Delta \phi =f$ 
+% is well posed. (It is if $f$ decays sufficiently fast and we seek a solution
+% that decays to zero at infinity).
+
+
+% \end{subproblems}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

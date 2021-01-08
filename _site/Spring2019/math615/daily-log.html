@@ -1,0 +1,499 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Daily Log</title>
+   <meta http-equiv="Pragma" content="no-cache">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Expires" content="-1">
+   <!-The following magic viewport words are needed for Sarfari on mobile 
+      to make 96px=1in, really-->
+   <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/site.css">
+  </head>
+
+<body>
+
+<div class="burger-background"></div>
+<div class="sidenavburger hide-large" onclick="openNav()">&#9776;</div>
+
+<div id="nav" class="sidenav" >
+<nav role="navigation">
+<div class="sidenav-header"><a href="#page-top" onclick="closeNav()"">Math F615</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="Syllabus.pdf" alt="Syllabus">Syllabus</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="index.html#announcements" alt="Announcements">Announcements</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="index.html#office-hours" alt="Office Hours">Office Hours</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="index.html#readings-and-homework" alt="Homework">Homework</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="daily-log.html" alt="Daily Log">Daily Log</a></div>
+  
+</nav>
+</div>
+
+<div id="main" class="main-body" onclick="closeNav()">
+<div class="page-header" id="page-top">Numerical Differential Equations</a></div>
+<div class="page-content"><h3 id="daily-log">Daily Log</h3>
+
+<p>The table below contains a summary of what is covered
+each class day, along with any computer files that were
+used that day.  These include python files (<code class="highlighter-rouge">.py</code>), matlab
+files (<code class="highlighter-rouge">.m</code>) and Jupyter notebooks (<code class="highlighter-rouge">.ipynb</code>).</p>
+
+<p>By popular demand, I will post my lecture notes here with
+the caveat that these notes aren’t really written for public
+consumption. They may be useful in filling in your own hand-written
+notes after the fact.  Please do not rely on them solely.</p>
+
+<div class="x-scroll">
+<table class="asst-table">
+<tr><th>Date</th><th>Topics</th><th>Files</th><th>Notes</th></tr>
+
+<tr valign="top">
+  <td>1-14</td>
+  <td>Heat Equation<br />Cautionary Tale</td>
+  <td>
+    
+      
+      <a href="python/heatbasic.py">heatbasic.py</a><br />
+      
+      <a href="python/Day1-HeatExplicit.ipynb">Day1-HeatExplicit.ipynb</a><br />
+      
+    
+    
+      
+      <a href="matlab/heatbasic.m">heatbasic.m</a><br />
+      
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-01-14.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>1-16</td>
+  <td>Taylor's Theorem</td>
+  <td>
+    
+      
+      <a href="python/LogTaylor.ipynb">LogTaylor.ipynb</a><br />
+      
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-01-16.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>1-18</td>
+  <td>ODE Theory<br />Euler's Method<br />Consistency, Convergence</td>
+  <td>
+    
+      
+      <a href="python/ForwardEuler.ipynb">ForwardEuler.ipynb</a><br />
+      
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-01-18.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>1-23</td>
+  <td>Convergence of Euler's Method<br />Other Methods</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-01-23.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>1-25</td>
+  <td>Methods from Integration<br />Zero Stability</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-01-25.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>1-28</td>
+  <td>Zero Stability<br />Absolute Stability</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-01-28.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>1-30</td>
+  <td>Absolute Stability</td>
+  <td>
+    
+      
+      <a href="python/Transients.ipynb">Transients.ipynb</a><br />
+      
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-01-30.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>2-02</td>
+  <td><a href="https://www.dropbox.com/scl/fi/1ul9to3ustmwcoz8rdd7a/Runge-Kutta.mp4?dl=0">Runke-Kutta Methods</a></td>
+  <td>
+    
+      
+      <a href="python/RungeKuttaAstable.ipynb">RungeKuttaAstable.ipynb</a><br />
+      
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-02-01.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>2-04</td>
+  <td>Review of Stability for ODEs</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-02-04.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>2-06</td>
+  <td>Heat Equation:<br />Theory</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-02-06.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>2-08</td>
+  <td>Heat Equation:<br />More Theory!</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-02-08.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>2-11</td>
+  <td>Explicit Method for <br /> Heat Equation</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-02-11.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>2-13</td>
+  <td>Stability Analysis for Explicit Method</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-02-13.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>2-15</td>
+  <td>Stability Analyisis and<br />Convergence of Explicit Method</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-02-15.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>2-18</td>
+  <td>Convergence of Explicit Method<br />Implicit Methods</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-02-18.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>2-20</td>
+  <td>Convergence of Implicit Methods</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-02-20.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>2-22</td>
+  <td>Local Truncation Error Redux</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>2-25</td>
+  <td>L2 Convergence of Implicit Methods</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-02-25.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>2-27</td>
+  <td>L2 Convergence of Implicit Methods</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-02-27.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>3-1</td>
+  <td><a href="https://www.dropbox.com/scl/fi/swap6ij3fhe0d04ejifbx/L2Convergence.mp4?dl=0">Finish L2 Convergence</a></td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/No notes. Video.">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>3-4</td>
+  <td>Crank Nicolson</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>3-6</td>
+  <td>Crank Nicolson</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>3-8</td>
+  <td>Midterm!</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>3-18</td>
+  <td>Method of Characteristics</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-03-18.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>3-20</td>
+  <td>Upwinding</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>3-22</td>
+  <td>CFL Condition<br />Convergence of Upwinding</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-03-22.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>3-25</td>
+  <td>Advection and Eigenvalues</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-03-25.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>3-27</td>
+  <td>Lax Wendroff</td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/2019-03-27.pdf">Notes</a><br />    
+    
+  </td>
+</tr>
+
+<tr valign="top">
+  <td>3-29</td>
+  <td><a href="https://www.dropbox.com/scl/fi/43mw6ld0vt7hrvlg820o4/Wave1d.mp4?dl=0"> Wave Equation</a></td>
+  <td>
+    
+    
+  </td>
+  <td>
+    
+    <a href="notes/No notes. Video.">Notes</a><br />    
+    
+  </td>
+</tr>
+
+</table>
+</div>
+
+</div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+function openNav() {
+    x = document.getElementById("nav");
+    if(x.className="sidenav") {
+      x.className += " showing";
+    }
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    x = document.getElementById("nav").className = "sidenav"
+}
+</script>
+</html>
+

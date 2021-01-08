@@ -1,0 +1,94 @@
+<style type="text/css">
+* {box-sizing: border-box;}
+html {background: white}
+body {font-family: Verdana, Arial, Helvetica, sans-serif; background: #ffffff;}
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    display: block;
+    font-size: 20px;
+    padding: 20px 0px 0px 20px;
+}
+
+.sidenavmenu {
+    width: 40px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    display: block;
+    font-size: 30px;
+    padding: 10px 0px 0px 10px;
+}
+
+
+.sidenav h1 {
+  font-size: 120%;
+  margin: 0px 0px 10px 0px;
+}
+
+.sidenav h2 {
+  font-size: 100%;  
+  margin: 0px 0px 10px 0px;
+}
+
+.sidenav h2 a {
+  color: black;
+}
+.sidenav h2 a:hover {
+  background-color: #ffffff
+}
+
+
+.sidenav a {
+    padding: 3px 8px 3px 16px;
+    text-decoration: none;
+    display: block;
+    color: #4459e2;
+}
+
+.sidenav a:hover {
+  background-color: #8bb1ef;
+}
+
+.xlarge {
+  font-size:24px!important;
+}
+
+@media (max-width:992px){
+  .main-body {margin-left: 40px;}
+  .hide-small{display:none!important}
+  .sidenav{ width: 0; }
+}
+
+@media (min-width:993px){
+  .hide-large{display:none!important}
+  .main-body {margin-left: 220px;}
+}
+
+
+
+table.asst-table {
+    border: 2px solid black;
+    border-collapse: separate;
+    border-spacing: 20px 10px;
+}
+
+dt {
+  float: left;
+  width: 30px;
+  text-align: right;
+  font-weight: bold;
+}
+dd {
+  margin: 0 0 0 60px;
+  padding: 0 0 0.5em 0;
+}
+</style>

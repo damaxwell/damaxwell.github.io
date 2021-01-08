@@ -1,0 +1,368 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Math F426 (Numerical Analysis)</title>
+   <meta http-equiv="Pragma" content="no-cache">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Expires" content="-1">
+   <!-The following magic viewport words are needed for Sarfari on mobile 
+      to make 96px=1in, really-->
+   <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/site.css">
+  </head>
+
+<body>
+
+<div class="burger-background"></div>
+<div class="sidenavburger hide-large" onclick="openNav()">&#9776;</div>
+
+<div id="nav" class="sidenav" >
+<nav role="navigation">
+<div class="sidenav-header"><a href="#page-top" onclick="closeNav()"">Math F426</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="Syllabus.pdf" alt="Syllabus">Syllabus</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="index.html#announcements" alt="Announcements">Announcements</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="https://campuswire.com/p/G24C16D5A" alt="Campuswire">Campuswire</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="index.html#office-hours" alt="Office Hours">Office Hours</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="index.html#readings-and-homework" alt="Homework">Homework</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="https://www.dropbox.com/request/unSTKah9JYZihPzR3X9w" alt="Homework Submission">Homework Submission</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="daily-log.html" alt="Daily Log">Daily Log</a></div>
+  
+</nav>
+</div>
+
+<div id="main" class="main-body" onclick="closeNav()">
+<div class="page-header" id="page-top">Math 426: Numerical Analysis</div>
+<div class="page-content"><h3 id="office-hours">Office Hours</h3>
+
+<table class="asst-table">
+  <tbody>
+    <tr>
+      <td>Monday</td>
+      <td>10:00-11:00</td>
+    </tr>
+    <tr>
+      <td>Tuesday</td>
+      <td>12:00-1:00</td>
+    </tr>
+    <tr>
+      <td>Friday</td>
+      <td>10:00-11:00</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="readings-and-homework">Readings and Homework</h3>
+
+<div class="table-box">
+<table class="asst-table">
+<tr>
+	<th style="text-align: center">Week</th>
+	<th>Reading</th>
+	<th>Problems</th>
+	<th>Due</th>
+	<th>Solutions</th>
+</tr>
+
+<tr valign="top">
+	<td style="text-align: center"><p>11/19 - 11/25</p>
+</td>
+	<td><p>Chapter 10/9</p>
+</td>
+	<td><p><a href="HW13.pdf">HW13</a><br /><a href="HW13.tex">LaTeX source</a></p>
+</td>
+	<td><p>11/25</p>
+</td>
+	<td><p><a href="https://www.dropbox.com/scl/fi/bo60z46zzw1exn4rhe1a9/HW13Sols.pdf?dl=0">Solutions</a><br /></p>
+</td>
+</tr>
+
+<tr valign="top">
+	<td style="text-align: center"><p>11/11 - 11/18</p>
+</td>
+	<td><p>Chapter 10</p>
+</td>
+	<td><p><a href="HW12.pdf">HW12</a><br /><a href="HW12.tex">LaTeX source</a></p>
+</td>
+	<td><p>11/18</p>
+</td>
+	<td><p><a href="https://www.dropbox.com/scl/fi/b607jsfnfqz5lwxplw994/HW12Sols.pdf?dl=0">Solutions</a><br /></p>
+</td>
+</tr>
+
+<tr valign="top">
+	<td style="text-align: center"><p>11/2 - 11/6</p>
+</td>
+	<td><p>Chapter 8</p>
+</td>
+	<td><p><a href="HW11.pdf">HW11</a><br /><a href="HW11.tex">LaTeX source</a></p>
+</td>
+	<td><p>11/11</p>
+</td>
+	<td><p><a href="https://www.dropbox.com/scl/fi/wnu1awga6mz81q5jg94gm/HW11Sols.pdf?dl=0">Solutions</a><br /></p>
+</td>
+</tr>
+
+<tr valign="top">
+	<td style="text-align: center"><p>10/26 - 10/30</p>
+</td>
+	<td><p>Chapter 8</p>
+</td>
+	<td><p><a href="HW10.pdf">HW10</a><br /><a href="HW10.tex">LaTeX source</a></p>
+</td>
+	<td><p>11/4</p>
+</td>
+	<td><p><a href="https://www.dropbox.com/scl/fi/1z9ev27ua33f52rp5ahfz/HW10Sols.pdf?dl=0">Solutions</a><br /></p>
+</td>
+</tr>
+
+<tr valign="top">
+	<td style="text-align: center"><p>10/19 - 10/23</p>
+</td>
+	<td><p>Chapter 7</p>
+</td>
+	<td><p><a href="HW9.pdf">HW9</a><br /><a href="HW9.tex">LaTeX source</a></p>
+</td>
+	<td><p>10/28</p>
+</td>
+	<td><p><a href="https://www.dropbox.com/scl/fi/6u57wen4731dhw6vvnxne/HW9Sols.pdf?dl=0">Solutions</a><br /></p>
+</td>
+</tr>
+
+<tr valign="top">
+	<td style="text-align: center"><p>10/12 - 10/16</p>
+</td>
+	<td><p>Chapter 7</p>
+</td>
+	<td><p><a href="HW8.pdf">HW8</a><br /><a href="HW8.tex">LaTeX source</a></p>
+</td>
+	<td><p>10/21</p>
+</td>
+	<td><p><a href="https://www.dropbox.com/scl/fi/932b8jbaadedvofecuyay/HW8Sols.pdf?dl=0">Solutions</a><br /></p>
+</td>
+</tr>
+
+<tr valign="top">
+	<td style="text-align: center"><p>10/5 - 10/9</p>
+</td>
+	<td><p>Chapter 7</p>
+</td>
+	<td><p><a href="HW7.pdf">HW7</a><br /><a href="HW7.tex">LaTeX source</a></p>
+</td>
+	<td><p>10/14</p>
+</td>
+	<td><p><a href="https://www.dropbox.com/scl/fi/8103xj1fwq4qhozq6iffy/HW7Sols.pdf?dl=0">Solutions</a><br /></p>
+</td>
+</tr>
+
+<tr valign="top">
+	<td style="text-align: center"><p>9/28 - 10/2</p>
+</td>
+	<td><p>Chapter 7</p>
+</td>
+	<td><p><a href="HW6.pdf">HW6</a><br /><a href="HW6.tex">LaTeX source</a></p>
+</td>
+	<td><p>10/7</p>
+</td>
+	<td><p><a href="https://www.dropbox.com/scl/fi/3zeak6253nizz5b8boz5n/HW6Sols.pdf?dl=0">Solutions</a><br /></p>
+</td>
+</tr>
+
+<tr valign="top">
+	<td style="text-align: center"><p>9/21 - 9/25</p>
+</td>
+	<td><p>Chapter 5</p>
+</td>
+	<td><p><a href="HW5.pdf">HW5</a><br /><a href="HW5.tex">LaTeX source</a></p>
+</td>
+	<td><p>9/30</p>
+</td>
+	<td><p><a href="https://www.dropbox.com/scl/fi/491wpfrznptfvgo8kva49/HW5Sols.pdf?dl=0">Solutions</a><br /></p>
+</td>
+</tr>
+
+<tr valign="top">
+	<td style="text-align: center"><p>9/14 - 9/18</p>
+</td>
+	<td><p>Chapter 4/5</p>
+</td>
+	<td><p><a href="HW4.pdf">HW4</a><br /><a href="HW4.tex">LaTeX source</a></p>
+</td>
+	<td><p>9/23</p>
+</td>
+	<td><p><a href="https://www.dropbox.com/scl/fi/c3v2uoedfjm19fh7v1g4a/HW4Sols.pdf?dl=0">Solutions</a><br /></p>
+</td>
+</tr>
+
+<tr valign="top">
+	<td style="text-align: center"><p>9/7 - 9/11</p>
+</td>
+	<td><p>Chapter 4</p>
+</td>
+	<td><p><a href="HW3.pdf">HW3</a><br /><a href="HW3.tex">LaTeX source</a></p>
+</td>
+	<td><p>9/16</p>
+</td>
+	<td><p><a href="https://www.dropbox.com/scl/fi/zcjoucnsoyyzytp2haj04/HW3Sols.pdf?dl=0">Solutions</a><br /></p>
+</td>
+</tr>
+
+<tr valign="top">
+	<td style="text-align: center"><p>8/31 - 9/4</p>
+</td>
+	<td><p>Chapter 4</p>
+</td>
+	<td><p><a href="HW2Template.pdf">HW2</a><br /><a href="HW2Template.tex">LaTeX source</a></p>
+</td>
+	<td><p>9/9</p>
+</td>
+	<td><p><a href="https://www.dropbox.com/scl/fi/o15a59k858jsdm7g6o3nu/HW2Sols.pdf?dl=0">Solutions</a><br /></p>
+</td>
+</tr>
+
+<tr valign="top">
+	<td style="text-align: center"><p>8/24 - 8/28</p>
+</td>
+	<td><p>Chapter 2</p>
+</td>
+	<td><p><a href="MT1.pdf">HW1</a></p>
+</td>
+	<td><p>8/28 and 8/31</p>
+</td>
+	<td><p><a href="https://www.dropbox.com/scl/fi/op1rhuy2angjaf3inf6in/HW1Sols.pdf?dl=0">Solutions</a><br /></p>
+</td>
+</tr>
+
+</table>
+</div>
+
+<h3 id="announcements">Announcements</h3>
+<ul>
+  <li>
+    <p>11/30 Today’s worksheet on <a href="WS_Derivatives2.pdf">numerical differentiation</a>.</p>
+  </li>
+  <li>
+    <p>11/29 Here is the <a href="FinalStudy.pdf">final exam study guide</a>!</p>
+  </li>
+  <li>
+    <p>11/23 Today’s worksheet on <a href="WS_Derivatives.pdf">numerical differentiation</a>.</p>
+  </li>
+  <li>
+    <p>11/13 Today’s worksheet on <a href="WS_Quadrature.pdf">numerical integration</a>.</p>
+  </li>
+  <li>
+    <p>10/28 Here is a version of <a href="matlab/usolve_hw9.m"><code class="language-plaintext highlighter-rouge">usolve_hw9.m</code></a>
+that will trigger the behaviour to observe in problem Supplmental 1 on homework 9.  It turns out that there is a subtle rounding issue; if your
+version of <code class="language-plaintext highlighter-rouge">usolve</code> performs the computations in a different order, you might not see the desired issues.</p>
+  </li>
+  <li>
+    <p>10/14 Here is the <a href="MTStudy.pdf">midterm study guide</a>!</p>
+  </li>
+  <li>
+    <p>10/12 Here is <a href="WSImplementingPP.pdf">implementing partial pivoting worksheet</a>.  You will want the code <a href="matlab/lsolve.m"><code class="language-plaintext highlighter-rouge">lsolve.m</code></a> if you do not already have it.</p>
+  </li>
+  <li>
+    <p>10/7 Here is the <a href="WSPartialPivoting.pdf">partial pivoting worksheet</a>.</p>
+  </li>
+  <li>
+    <p>10/7 Here is the <a href="WSLUFactorization.pdf">LU Factorization worksheet</a>.</p>
+  </li>
+  <li>
+    <p>10/2 Here is <a href="WSOperationCounting.pdf">today’s worksheet</a>.</p>
+  </li>
+  <li>
+    <p>Here are <a href="OctavePath.pdf">instructions</a> for updating the Matlab/Octave path.  The technique demonstrated in class today was Matlab-specific.  The technique shown here is a little more technical, but works equally well for Octave and Matlab.</p>
+  </li>
+  <li>
+    <p>In case your text has not yet arrived, here are the <a href="https://classes.alaska.edu/webapps/blackboard/content/listContent.jsp?course_id=_197955_1&amp;content_id=_8010583_1">Chapter 2 problems</a>.  For subsequent homework, I expect you will have access to a text.</p>
+  </li>
+  <li>
+    <p>By popular demand, here is a LaTeX <a href="HW1ATemplate.tex">template file</a> all set up for Homework 1A. Just fill in the blanks.</p>
+  </li>
+  <li>
+    <p>Websites of interest.</p>
+
+    <ul>
+      <li><a href="http://academics.davidson.edu/math/chartier/Numerical/matlab.html">Course Text web site</a> (for Matlab code referenced in the exercises)</li>
+      <li>Free online text: Moler, <a href="http://www.mathworks.com/moler/index_ncm.html">Numerical Computing with Matlab</a>, SIAM Press 2004</li>
+    </ul>
+  </li>
+  <li>
+    <p>Here is the <a href="OctaveBasics.pdf">Matlab/Octave tutorial</a> from the first day of class.</p>
+  </li>
+  <li>
+    <p>You will use your choice of Matlab or Octave in this class.</p>
+
+    <ul>
+      <li>
+        <p>Apparently UA has a Matlab license for students. Go
+to the <a href="https://alaska.edu/oit/software/">UA software page</a>
+to download it.</p>
+      </li>
+      <li>
+        <p>If we find something goes wrong with using the site license, you can buy Matlab for $49 for the student edition.</p>
+      </li>
+      <li>
+        <p>Octave is an open source alternative to Matlab. It can be downloaded
+following instructions from the <a href="https://www.gnu.org/software/octave/">Octave webpage</a>.  Their distribution mechanism has changed since the last time I taught this class; please let me know if you try this and encouter trouble.</p>
+      </li>
+    </ul>
+
+    <p>I didn’t write a guide for Linux; if you are using Linux and need help just let me know.</p>
+  </li>
+  <li>
+    <p>We will use <a href="https://campuswire.com/p/G24C16D5A">CampusWire</a>
+for course-related discussions outside of class time. Please sign up promptly to ensure you don’t miss important announcements.</p>
+  </li>
+  <li>
+    <p>Here is <a href="HWDemo.tex">HWDemo.tex</a>, a template file for solutions
+written in LaTeX and <a href="HWDemo-prob2.pdf">a PDF figure that it includes</a>.  YOu can use it as a starting piont or writing up your own solutions.
+ If it works for you, you should be able to make a PDF file like <a href="HWDemo.pdf">this.</a></p>
+  </li>
+  <li>
+    <p>Here is <a href="BeginningLatex.pdf">a beginner’s guide to LaTeX</a>.  Please read it, even if you have used LaTeX before.</p>
+  </li>
+  <li>
+    <p>In this class, you may wish to use LaTeX to typeset solutions.  If you are new to using LaTeX, I can help.  Your first step is to install LaTeX; here are some installation guides.</p>
+
+    <ul>
+      <li>
+        <p><a href="LatexInstallationWindows.pdf">Latex Installation for Windows</a></p>
+      </li>
+      <li>
+        <p><a href="LatexInstallationMac.pdf">Latex Installation for Mac</a></p>
+      </li>
+    </ul>
+
+    <p>I didn’t write a guide for Linux; if you are using Linux and need help
+ just let me know.</p>
+  </li>
+</ul>
+
+</div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+function openNav() {
+    x = document.getElementById("nav");
+    if(x.className="sidenav") {
+      x.className += " showing";
+    }
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    x = document.getElementById("nav").className = "sidenav"
+}
+</script>
+</html>
+

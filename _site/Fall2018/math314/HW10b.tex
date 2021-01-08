@@ -1,0 +1,62 @@
+\documentclass[minion]{homework}
+\doclabel{Math F314: Linear Algebra}
+\docdate{Homework 10 Supplement}
+\usepackage{cmacros}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vB}{\mathbf{B}}
+\newcommand{\vb}{\mathbf{b}}
+\newcommand{\vr}{\mathbf{r}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\vw}{\mathbf{w}}
+\newcommand{\vzero}{\mathbf{0}}
+\begin{document}
+\begin{aproblems}
+\aproblem
+Consider the matrix
+\[
+A=\begin{pmatrix} 2 & 4 & 5 \\
+2 & 6 & 10\\
+3 & 7 & 11 \\
+0 & 8 & 12
+\end{pmatrix}
+\]
+\begin{subproblems}
+\item Find a collection of vectors $\vw_k$ such that $A\vx=\vb$
+has a solution if and only if $\vw_k\cdot\vb=0$ for each $k$.
+\item Determine if $A\vx = (5,4,6,4)$ has a solution.  You 
+do not need to find the solution, if it exists.
+\end{subproblems}
+
+\aproblem Find a basis for the orthogonal complement
+of the plane in $\Reals^4$ spanned by $(4,6,7,8)$ and $(5,10,11,12)$.
+
+\aproblem For a square matrix, explain why its null space and its
+left null space have the same dimension.  Then answer the following:
+is it possible that a square matrix $A$ has an inverse but $A^T$ does not?
+
+\aproblem Suppose $\vv$ is a non-zero 
+vector in $\Reals^4$ and let $A=\vv\vv^T$.  The questions
+below concern an arbitrary choice of $\vv$. Still, to get a picture
+of what is going on, you might find it helpful to pick a random vector
+$\vv$ in $\Reals^4$ and examine the properties of that particular $A=\vv\vv^T$.
+Nevertheless, your answers need to work in general, not just for one choice
+of $\vv$.
+\begin{itemize}
+	\item Compute the dimension of the column space of $A$.  You should explain
+	your answer in terms of the column perspective of matrix multiplication. 
+	\item Compute the dimension of the null space of $A$.
+	\item Explain why the left null space equals the null space for this matrix.
+	\item True or false: $A\vx = \vzero$ if and only if $\vx$ is perpendicular
+	to $\vv$.
+	\item Does the column space equal the row space for this matrix?
+	\item Find a condition on $\vv$ that ensures $A^2=A$.
+\end{itemize}
+
+\aproblem 
+
+\end{aproblems}
+
+\end{document}

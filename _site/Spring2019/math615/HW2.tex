@@ -1,0 +1,134 @@
+\documentclass[minion]{homework}
+\newcommand{\Reals}{\mathbb{R}}
+\doclabel{Math F615: Homework 2}
+\docdate{Due: January 30, 2019}
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{problems}
+
+\problem Suppose this table of ``data'' is samples of an 
+$O(h^p)$ function:
+
+\hfil\begin{tabular}{c|l|l|l|l|l|l}
+ h  & 1.0 & 0.5 & 0.1 & 0.05 & 0.01 & 0.005 \\\hline
+Z & 56.859  & 21.694 & 1.1081 & 1.1101 & 0.096909 & 0.011051
+\end{tabular}
+
+This data may be fitted (linear regression) by a function 
+$f(h) = M h^p$ for some values $M$ and $p$, as in the following figure.
+Find $p$ by fitting a straight line to the data, and reproduce the figure. Your version of the figure should have the value of $p$ filled in.
+
+\hfil\includegraphics{HW2loglog.pdf}
+
+\problem Use Taylor's Theorem to verify the truncation term
+for the ``Centered'' row of Table 1.1 of your text.  Hint:
+center all Taylor expansions at the same point. 
+
+Substantial partial
+credit will be awarded for showing the truncation
+term is $O(h^2)$, but try to get the exact expression with its
+constant. Hint: The average of two numbers lies in between the two
+numbers.
+
+\problem Implement the following schemes for
+a scalar ODE:
+\begin{enumerate}
+	\item Forward Euler
+	\item Backwards Euler
+	\item Trapezodial
+\end{enumerate}
+Each method should be implemented with a function
+that takes the following arguments:
+\begin{enumerate}
+	\item The right-hand side function $f(t,u)$.
+	\item The initial time $t_0$.
+	\item The initial value $u_0$.
+	\item The final time $T$.
+	\item The number $M$ of time steps.
+\end{enumerate}
+It should return a vector of sample times $t_k$, 
+and a vector of solution values $u_k$.
+
+Test your methods against $u'=-u$ and $u'=-\sin(t)$
+with initial condition $u(0)=1$ and confirm (using the technique
+of problem 1) that 
+the order of convergence is the theoretically expected order
+for each method.
+
+\problem Consider the linear multistep method
+\[
+u_{n+2} +4 u_{n+1} -5u_{n} = h(4f_{n+1}+2f_n)
+\]
+where $f_k=f(t_k,u_k)$. 
+\begin{subproblems}
+\item Show that this method is consistent.
+\item In the case $f=0$, the method reduces to
+a linear recurrence relation
+\[
+u_{n+2} +4 u_{n+1} -5u_{n} = 0.
+\]
+The characteristic polynomial of this relation is
+$\sigma(\rho) = \rho^2+4\rho -5$.  Show that if
+$\rho$ is a root of the characteristic polynomial, then
+$u_n = C\rho^n$ is a solution of the recurrence relation
+for any constant $C$. Moreover, if $\rho_1$ and $\rho_2$
+are roots of the characteristic polynomial, then
+$u_n=C_1\rho_1^n + C_2\rho_2^n$ is a solution of the
+recurrence relation for any constants $C_1$ and $C_2$.
+\item Compute the roots of the characteristic polynomial.
+\item Implement this method (using Euler's method 
+to compute $u_1$) and apply it to the IVP
+\begin{align*}
+u'&=-u\\
+u(0)&=1
+\end{align*}
+on the $t$-interval $[0,1]$ with $M=10$, $50$ and $100$.
+\item Compute the global error in each of these three cases.
+Why is the error growing?  Can you give an rough explanation
+for the rate of growth you observed?
+\end{subproblems}
+
+\problem The two step Adams-Bashforth method is derived as follows.
+Suppose $u_{i-1}$ and $u_i$ have been computed already.  There
+is a unique linear polynomial $p(t)$ that interpolates 
+$(t_{i-1},f(t_{i-1},u_{i-1})$ and $(t_i,f(t_i,u_i))$.  This
+linear polynomial provides an approximation for $f(t,u(t))$
+on the interval $[t_i,t_{i+1}]$ and we replace the integral
+form of the ODE
+\[
+u(t_{i+1}) = u(t_i) + \int_{t_i}^{t_{i+1}} f(t,u(t))\;dt
+\]
+with
+\[
+u_{i+1} = u_i + \int_{t_i}^{t_{i+1}} p(t) \;dt.
+\]
+\begin{subproblems}
+\item By explicitly integrating, show that this scheme can be written
+in the form
+\[
+u_{i+1} = u_i + \frac{h}{2}(3f_i-f_{i-1}).
+\]
+\item Compute the order of the local truncation error of this method.
+\item This method is conditionally A-stable.  Generate a plot
+of the boundary of the absolute stability region as follows.
+\begin{enumerate}
+	\item Write down the characteristic polynomial $p(\rho)$ for this method applied to the problem $u'=\lambda u$.
+	\item The equation $p(\rho)=0$ will involve the expresion $\lambda h$.  Solve for $\lambda h$ to write
+	\[
+       \lambda h = f(\rho)
+	\]
+	for some function $f$.
+	\item Numerically determine values of $f(\rho)$ where $\rho$ lives on the unit circle of complex numbers.  These will 
+	generate values of
+	$\lambda h$ where the associated root of the characteristic
+	polynomial has size one, and is therefore potentially on the 
+	boundary of the stability region.
+	\item Generate a plot of the values of $f(\rho)$ as $\rho$
+	varies around the unit circle to see the boundary of the 
+	absolute stability region.
+\end{enumerate}
+\end{subproblems}
+\end{problems}
+\end{document}

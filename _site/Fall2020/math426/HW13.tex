@@ -1,0 +1,72 @@
+\documentclass[minion]{homework}
+\usepackage{cmacros}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[all,cmtip]{xy}
+
+% \newcommand\tomeW{{\color{red}\textbf{(W) (Hand this one in to David.)}}}
+\newcommand\W{{\color{red}\textbf{(W) (Hand this one in to David.)}}}
+\newcommand\tome{{\color{red}\textbf{(Hand this one in to David.)}}}
+\doclabel{Math F310: Homework 13}
+\docdate{Due: November 25, 2016}
+
+\begin{document}
+
+\begin{aproblems}
+\vskip 0.5cm
+
+\aproblem Problem 10.5
+
+\aproblem Problem 10.7
+
+\aproblem Continuing with the theme that some sample points are better than others, recall that polynomial interpolation with high-order polynomials is prone to making large oscillation errors, but that this can be minimized
+using Chebyshev polynomials, which are the Lagrange polynomials associated
+with the sample points 
+\[
+x_j= \cos(\pi+(\pi j/n)),\qquad j=0,\ldots,n
+\]
+on the interval $[-1,1]$.
+Clenshaw-Curtis integration is integration using polynomial interpolation at
+these sample points.
+
+Use the MATLAB \texttt{polyfit} function to perform polynomial
+interpolation at these sample points for $n=4,6,10$ and then
+use the resulting polynomials to approximate
+\[
+\int_{-1}^1 x\sin(x)\;dx.
+\]
+Compare your approximations to the exact answer (which you should
+compute by hand).  Integration by parts!
+
+\aproblem Recall that 5 point Gauss-Legendre integration
+uses sample points
+$[-\beta,-\alpha,0,\alpha,\beta]$ where
+\[
+\begin{aligned}
+\alpha &= \frac{1}{3}\sqrt{5-2\sqrt{\frac{10}{7}}}\\
+\beta &= \frac{1}{3}\sqrt{5+2\sqrt{\frac{10}{7}}}.
+\end{aligned}
+\]
+Write a code that performs composite Gauss-Legendre integration
+with these sample points.  Your code should have the signature
+\begin{verbatim}
+function q=glquad(f,a,b,N)
+...
+end
+\end{verbatim}
+were $f$ is the function to integrate, $a$ and $b$ are the endpoints
+of integration, and $N$ is the number of subintervals. Your code
+should perform Gauss-Legendre integration on each subinterval and add them up.
+Then apply your function to compute
+\[
+\int_{-1}^1 x\sin(x)\;dx
+\]
+using $N=1,2,4,10$.  Compare the results of Gauss-Legendre integration
+to the results you saw using Clenshaw-Curtis integration.
+
+\aproblem Problem 9.1
+
+\aproblem Problem 9.5
+
+\end{aproblems}
+\end{document}

@@ -1,0 +1,206 @@
+\documentclass[minion]{homework}
+\usepackage{graphicx}
+\usepackage{cmacros}
+\newcommand{\maple}[1]{{\tt\bf #1}}
+\doclabel{Math F658: Homework 5 Solutions}
+\docdate{October 16, 2018}
+
+\begin{document}
+
+\begin{aproblems}
+
+\hproblem SR 6.3
+\solution
+The vector from event $A$ to $B$ has direction $U$ and
+interval $\sigma$.  Since $U$ has interval $c$,
+$$
+B = A + \frac{\sigma}{c} U.
+$$
+Similarly, $C = B + \frac{\tau}{c}V$ and $C = A + \frac{\tau'}{c} V'$.
+Thus
+\[
+A + \frac{\tau'}{c} V' = A + \frac{\sigma}{c} U + \frac{\tau}{c}V.
+\]
+Subtracting $A$ and multiplying by $c$ obtains the relation
+\[
+\tau' V' = \sigma U + \tau V.
+\]
+But then
+\[
+\tau'^2c^2 = g(\tau' V',\tau' V') = g(\sigma U + \tau V,\sigma U + \tau V) = \sigma^2 c^2 + \tau^2 c^2 + 2 \sigma \tau g(U,V).
+\]
+In the frame in which the traveler is at rest in the first part of his journey,
+$U=(c,0)$ and $V = \gamma(v)(c,v)$ so $g(U,V)=c^2\gamma(v)$.  Thus
+\[
+\tau'^2 = sigma^2 + \tau^2 + 2 \sigma \tau \gamma(v).
+\]
+Since $v\neq 0$, $\gamma(v)>1$.  And since $\tau,\sigma>0$,
+\[
+\tau'^2 = sigma^2 + \tau^2 + 2 \sigma \tau \gamma(v) > sigma^2 + \tau^2 + 2 \sigma \tau = (\sigma+\tau)^2.
+\]
+We conclude that $\tau' > \sigma+\tau$.
+
+Of course, in classical mechanics, the time difference between the two paths is identical, $\tau' = \sigma + \tau$.  
+
+The interesting phenomenon here is that the \textbf{longest} path from $A$ to $C$
+is the one for the non-accelerating traveler.
+\hproblem SR 6.4
+\solution
+We may assume the traveler is traveling in the $t$, $x$ plane and we will ignore the other directions.  So $\alpha(\tau) = (ct(\tau),x(\tau))$ is its path
+parameterized by proper time.  Now $\alpha'$ always has length $c$; this is
+what it means to be parameterized by proper time.  So for each $\tau$ there
+is a uniqe rapidity $\psi(\tau)$ such that the 4-velocity
+\[
+V = \alpha'(\tau) = c(\cosh(\psi),\sinh(\psi)).
+\]
+Taking another derivative with respect to $\tau$,
+\[
+A = \alpha''(\tau) = c(\sinh(\psi),\cosh(\psi))\frac{d\psi}{d\tau}
+\]
+Since $(\sinh(\psi),\cosh(\psi))$ is spacelike with interval $-1$,
+\[
+g(A,A) -c^2\left(\frac{d\psi}{d\tau}\right)^2
+\]
+
+\hproblem SR 6.5
+\solution
+Let 
+\begin{align}
+\alpha_A(\tau) &= (c^2/a) [ \sinh(a\tau/c), -\cosh(a\tau/c)] \\
+\alpha_B(\tau) &= (c^2/a) [ \sinh(a\tau/c), \cosh(a\tau/c)]
+\end{align}
+be the paths of the two rockets that are accelerating in opposite directions
+with acceleration $a$.  Then
+\[
+Z(\tau) = \alpha_B(\tau) - \alpha_A(-\tau) = \frac{2c^2}{a} [ \sinh(a\tau/c), \cosh(a\tau/c)].
+\]
+Thus $g(Z,Z)=-4c^4/a^2$ for all $\tau$.  Moreover,
+\begin{align}
+\alpha_A'(-\tau) &= c [ \cosh(-a\tau/c), -\sinh(-a\tau/c)]  = 
+c [ \cosh(a\tau/c), \sinh(a\tau/c)]\\
+\alpha_B'(\tau) &= c [ \cosh(a\tau/c), \sinh(a\tau/c)]
+\end{align}
+which are identical.  And
+\[
+g(\alpha_A'(-\tau),Z(\tau)) = \frac{2c^3}{a} \left[ \sinh(a\tau/c)\cosh(a\tau/c)
+- \sinh(a\tau/c)\cosh(a\tau/c)\right] = 0.
+\]
+So $Z$ is a spacelike vector orthogonal to $\alpha_A'(-\tau)$ and 
+therefore rocket A sees the event $\alpha_A(-\tau)$ as simultaneous
+with the event $\alpha_B(\tau)$, at a constant distance $2c^2/a$.
+The same holds for rocket $B$ since $\alpha_B'(\tau)=\alpha_A'(-\tau)$.
+
+This is a difficult problem to reconcile with our intuition from classical mechanics.  The key observation is that as rocket $A$ travels into the future,
+the parts of $B$'s worldline that $A$ deduces are 'now' actually travel back into the past.  So even though $A$ and $B$ are accelerating in opposite directions, in effect $A$ is seeing the course of time for $B$ run in reverse.  At each moment the velocities of $A$ and $B$ are deemed equal by $A$ and thus it is no surprise to find that the distance between the rockets remains the same.
+
+Sketching the world lines of $A$ and $B$ it's easy to see, however, that 
+light from rocket $A$ will never reach rocket $B$.  So although $B$ is a constant distance from $A$, according to $A$, the rocket $A$ never knows this.
+
+\hproblem 
+Let $\kappa(s)$ be a function on $\Reals$ and let
+\begin{equation}
+\phi(s) = \frac{1}{c} \int_0^s \kappa(r)\; dr.
+\end{equation}
+Show that
+\begin{equation}
+\alpha(s) = c \int_0^s (\cosh(\phi(s)),\sinh(\phi(s))\; ds
+\end{equation}
+is pararameterized by proper time and has a 4-acceleration with
+size $|\kappa(s)|$.  What does the sign of $\kappa$ tell you?
+\solution
+From the Fundamental Theorem of Calculus,
+\[
+\phi'(s) = \frac{1}{c} \kappa(s)
+\]
+and
+\[
+\alpha'(s) = c (\cosh(\phi(s)),\sinh(\phi(s)))
+\]
+Evidently $g(\alpha',\alpha')=c^2$ and thus $\alpha$ is parameterized
+by proper time.  Moreover,
+\[
+\alpha''(s) = c(\sinh(\phi(s)),\cosh(\phi(s)))\phi'(s) = 
+(\sinh(\phi(s)),\cosh(\phi(s)))\kappa(s).
+\]
+Therefore $g(\alpha',\alpha') = - \kappa^2 $ and curve has acceleration 
+of size $\kappa$.  Since the $x$-component of $\alpha''$ is 
+$\cosh(\phi(s))\kappa(s)$, and since $\cosh(\phi)>0$, the sign of $\kappa$
+determines if the acceleration is to the left or to the right.
+
+\hproblem Using some kind of computer technology, generate a graph of a curve in spacetime with acceleration 
+\begin{equation}
+\kappa(s) = \sin(s)
+\end{equation}
+over the interval $s\in [0,2\pi]$.
+\solution
+We use units in which $c=1$.
+
+Following the recipe from the previous problem, if 
+$\kappa(s)=\sin(s)$ we can take
+\[
+\phi(s) = \frac{1}{c} \int_0^s \sin(r)\; dr =  1-\cos(s)
+\]
+But for purposes of our diagram, it's more convenient to take
+$\phi(s)=-\cos(s)$, which does not change $\phi'(s)$ and simply corresponds
+to an overall boost.  Then
+\[
+\alpha(s) = \int_0^s (\cosh(\cos(s)),-\sinh(\cos(s))\; ds
+\]
+This integration can be computed numerically, e.g. python's \texttt{scipy.integrate.quad}.
+
+Here's my code
+\begin{verbatim}
+from math import *
+from scipy.integrate import quad
+import numpy as np
+import matplotlib.pyplot as pp
+
+def x(s):
+	return quad( lambda z: sinh(-cos(z)),0,s)
+
+def t(s):
+	return quad(lambda z: cosh(-cos(z)),0,s)
+
+tau = np.linspace(0,2*pi,100)
+
+X = [x(s) for s in tau]
+T = [t(s) for s in tau]
+
+pp.plot(X,T,color='blue',linewidth=1.5)
+tmax = np.max(T)
+pp.plot([0,tmax],[0,tmax],color='green',linewidth=2)
+pp.plot([0,-tmax],[0,tmax],color='green',linewidth=2)
+pp.axis('scaled')
+pp.xlabel('$x$')
+pp.ylabel('$t$')
+pp.savefig('HW5_f1.pdf')
+pp.show()
+\end{verbatim}
+
+\includegraphics[width=5in]{HW5_f1.pdf}
+
+\hproblem SR 7.1
+\solution
+Before the collision, we have momenta $P_1$ and $P_2$ with
+$g(P_1,P_1)=M^2c^2$ and $g(P_2,P_2)= m^2 c^2$. After the collision
+we have momentum $P=P_1+P_2$.  Moreover, $c^2g(P,P)$ is the square
+of the rest energy of a particle with momentum $P$: after all,
+in its rest frame $P=(cm_0,0)$ and $c^2 g(P,P)= c^2 c^2 m_0^2 = (m_0c^2)^2$
+as desired.  Thus
+\[
+(E')^2 = c^2 g(P,P)= c^2g(P_1+P_2,P_2+P_2) = c^2 g(P_1,P_1) + c^2 g(P_2,P_2) + 2c^2 g(P_1,P_2).
+\]
+Now $g(P_1,P_1)=c^2M^2$ and $g(P_2,P_2)=c^2m^2$.  Moreover,
+since $P_1$ has energy $E$ in the lab fame,
+\[
+P_1 = (E/c,*).
+\]
+Sicne $P_2=(cm,0)$ in the lab frame, $g(P_1,P_2) = (E/c)cm = Em$.
+Thus
+\[
+(E')^2 = c^2( c^2M^2 + c^2m^2 + 2Em)
+\]
+as desired.
+
+\end{aproblems}
+\end{document}

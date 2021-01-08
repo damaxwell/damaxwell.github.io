@@ -1,0 +1,76 @@
+\documentclass[minion]{homework}
+\doclabel{Math F314: Linear Algebra}
+\docdate{Homework 5 Supplement}
+\usepackage{cmacros}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vB}{\mathbf{B}}
+\newcommand{\vb}{\mathbf{b}}
+\newcommand{\vr}{\mathbf{r}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\vw}{\mathbf{w}}
+\newcommand{\vzero}{\mathbf{0}}
+\begin{document}
+\begin{aproblems}
+\aproblem
+Consider the matrix
+\[
+A=\begin{pmatrix} 1 & 1 \\ 1 & 2 \end{pmatrix}.
+\]
+\begin{subproblems}
+\item Use elimination to find a matrix $E_{21}$ such that $E_{21} A = U$,
+where $U$ is upper triangular.
+
+\item Compute $E_{21}^{-1}$.
+
+\item Explain why $A = E_{21}^{-1} U$.
+
+\item Observe that $E_{21}^{-1}$ is lower-triangluar; let's call it $L$,
+so $A=LU$.  Use $L$ and $U$ to solve
+\[
+A\mathbf x = (5,7).
+\]
+Recall: first solve $L\mathbf c =\mathbf b$, then $U\mathbf x = \mathbf c$.
+\end{subproblems}
+
+\aproblem  
+Consider the matrix 
+\[
+A=\begin{pmatrix} 
+4  &1 &-1\\ 
+-8 & 0 & -1 \\
+12 & 7 &-8
+\end{pmatrix}
+\]
+\begin{subproblems}
+
+\item
+Compute the matrices $E_{21}$, $E_{31}$ and $E_{32}$ obtained using elimination
+so that
+\[
+E_{32}E_{31}E_{21} A = U
+\]
+where $U$ is upper triangular.
+
+\item Using properties of inverse matrices from page 84 (The Inverse of a Product) explain why
+\[
+A = E_{21}^{-1} E_{31}^{-1}E_{12}^{-1} U.
+\]
+
+\item Write down the individual matrices 
+$E_{21}^{-1}$,  $E_{31}^{-1}$, and $E_{12}^{-1}$.
+
+\item Use brute force matrix multiplication to compute
+\[
+L = E_{21}^{-1} E_{31}^{-1}E_{12}^{-1}.
+\]
+Is $L$ lower-triangular?
+
+\item Use $A=LU$ to solve $A\mathbf{x}=(7,-26,-1)$.
+\end{subproblems}
+
+\end{aproblems}
+
+\end{document}

@@ -1,0 +1,49 @@
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+html { background: white; }
+
+body { font-family: Verdana, Arial, Helvetica, sans-serif; margin: 0px; }
+
+.sidenav { height: 100%; width: 200px; z-index: 3; position: fixed; top: 0; left: 0; overflow-x: hidden; display: block; background-color: #ccc; box-sizing: border-box; transition: 0.3s; }
+
+.entry a { padding: 4px 8px 4px 20px; font-size: 120%; text-decoration: none; display: block; color: #4459e2; }
+
+.entry a:hover { background-color: #8bb1ef; }
+
+.sidenav-header { height: 55px; padding-left: 10px; font-size: 120%; font-weight: bold; line-height: 50px; }
+
+.sidenav-header a { padding: 0; color: black; text-decoration: none; }
+
+.sidenav-header a:visited { color: black; }
+
+.page-header { height: 50px; background-color: #8bb1ef; font-size: 120%; font-weight: bold; line-height: 50px; padding-left: 10px; }
+
+.page-content { padding-left: 10px; }
+
+.sidenavburger { width: 30px; font-size: 20px !important; text-align: center; line-height: 30px; position: fixed; left: 5px; top: 5px; z-index: 2; display: inline; border-radius: 5px; background-color: #ccc; border-style: solid; border-width: 2px; }
+
+.burger-background { width: 40px; height: 50px; position: absolute; left: 0px; top: 0px; background-color: #8bb1ef; }
+
+.main-body { -webkit-tap-highlight-color: transparent; }
+
+.main-body a { color: #4459e2; text-decoration: none; }
+
+.main-body a:visited { color: #224d93; }
+
+@media (max-width: 767px) { .sidenav { width: 0; } .sidenav.showing { width: 200px; } .main-body { margin-left: 40px; } .page-header { padding-right: 5px; } .page-content { padding-right: 5px; } }
+
+@media (min-width: 768px) { .hide-large { display: none !important; } .sidenav { width: 200px; } .main-body { margin-left: 200px; } .page-header { padding-right: 20px; } .page-content { padding-right: 20px; } }
+
+.table-box { overflow-x: scroll; -webkit-overflow-scrolling: touch; margin-right: 5px; margin-bottom: 5px; }
+
+table.asst-table { border: 2px solid black; border-collapse: separate; border-spacing: 20px 10px; }
+
+table.asst-table td { white-space: nowrap; word-break: break-all; line-height: 130%; }
+
+dt { float: left; width: 30px; text-align: right; font-weight: bold; }
+
+dd { margin: 0 0 0 60px; padding: 0 0 0.5em 0; }
+
+div.x-scroll { overflow-x: scroll; -webkit-overflow-scrolling: touch; width: 100%; white-space: nowrap; }
+
+/*# sourceMappingURL=site.css.map */

@@ -1,0 +1,349 @@
+\documentclass[minion]{homework}
+\usepackage{cmacros}
+\newcommand{\maple}[1]{{\tt\bf #1}}
+\doclabel{Math F665: Homework 4 Solutions}
+\docdate{Due: October 7, 2018}
+
+\begin{document}
+
+\begin{aproblems}
+
+\hproblem SR 5.4
+
+Let $O$ and $O'$ be two non-accelerating observers with inertial coordinate systems related
+by a proper orthochronous Lorentz transformation $L$, with $E = L E'$. Show that
+\begin{equation}
+L = \begin{pmatrix} \gamma & -\gamma u_1'/c & -\gamma u_2'/c  & -\gamma u_3'/c\\
+\gamma u_1/c &  * & * & *  \\
+\gamma u_2/c &  * & * & *  \\
+\gamma u_3/c &  * & * & *  \\
+\end{pmatrix}
+\end{equation}
+
+\solution
+The position of the origin in the $O'$ is given by $(t', 0, 0, 0)$.  Sending these events
+through $L$ we find
+\begin{equation}
+\begin{pmatrix} ct & x & y & z \end{pmatrix} = ct' \begin{pmatrix} L^0_0 & L^1_0 & L^2_0 & L^3_0 \end{pmatrix}.
+\end{equation}
+Hence
+\begin{equation}
+t = L^0_0 t'
+\end{equation}
+and
+\begin{equation}
+u_1=\frac{dx}{dt} = \frac{1}{L^0_0} \frac{dx}{dt'} = c\frac{L^1_0}{L^0_0}.
+\end{equation}
+Thus 
+\begin{equation}
+L^{1}_0 = L^{0}_0 \frac{u_1}{c}.
+\end{equation}
+A similar equation holds for $y$ and $z$. Letting $\gamma$ denote the value of $L^0_0$
+we find
+\begin{equation}
+L = \begin{pmatrix} \gamma & a_1 & a_2 & a_3 \\
+\gamma u_1/c &  * & * & *  \\
+\gamma u_2/c &  * & * & *  \\
+\gamma u_3/c &  * & * & *  \\
+\end{pmatrix}
+\end{equation}
+for some numbers $\gamma$, $a_1$, $a_2$, and $a_3$ .  But
+\begin{equation}
+L^t G L = G
+\end{equation}
+and consequently from the upper-left entry of this matrix equation
+\begin{equation}
+\gamma^2 (1- (u_1/c)^2 + (u_2/c)^2 + (u_3/c)^2) = 1.
+\end{equation}
+Since $L$ is orthochronus, $\gamma>0$ and hence
+\begin{equation}
+\gamma = \frac{1}{\sqrt{1- [(u_1)^2 + (u_2)^2 + (u_3)^2]/c^2}}=\gamma(u)
+\end{equation}
+where $u=\sqrt{u_1^2+u_2^2+u_3^2}$.
+
+Similar considerations applied to $L^{-1}$ show that $L^{-1}$ has the form
+\begin{equation}
+L^{-1} = \begin{pmatrix} \gamma' & * & * & * \\
+\gamma' u_1'/c &  * & * & *  \\
+\gamma' u_2'/c &  * & * & *  \\
+\gamma' u_3'/c &  * & * & *  \\
+\end{pmatrix}
+\end{equation}
+where $\gamma'=\gamma(u')$ and where $u'=\sqrt{(u_1')^2+(u_2')^2+(u_3')^2}$.  But
+\begin{equation}
+L^t = G L^{-1} G = \begin{pmatrix} \gamma' & * & * & * \\
+-\gamma' u_1'/c &  * & * & *  \\
+-\gamma' u_2'/c &  * & * & *  \\
+-\gamma' u_3'/c &  * & * & *  \\
+\end{pmatrix}
+\end{equation}
+But
+\begin{equation}
+L^t = \begin{pmatrix} \gamma & \gamma u_1/c & \gamma u_2/c & \gamma u_3/c \\
+a_1 &  * & * & *  \\
+a_2 &  * & * & *  \\
+a_3 &  * & * & *  \\
+\end{pmatrix}
+\end{equation}
+from which we conclude that $\gamma'=\gamma$ and $a_i = - \gamma u_i'/c$
+as required.
+
+\hproblem SR 5.5
+\solution
+
+Let the matrics from the problem be $L_1$, $L_2$, $L_3$ and $L_4$
+respectively.  It is an easy computation to show that
+\[
+L_1^t G L_1 = G
+\]
+and that $L_1$ has unit determinant.  Since it's upper-left entry is
+positive, this is a proper, orthochronus Lorentz transformation.
+
+It is a tedious computation (use Matlab/python/Julia/anything!) to check
+that
+\[
+L_2^t G L_2 = G
+\]
+and that $\det(L_2)=-1$.  Since it's upper left entry is positive this
+is an orthochronus but not proper Lorentz transformation.
+
+Notice that $L_3$ is obtained from $L_2$ by multiplying the first column
+by $-1$ and interchanging the middle columns.  Multiplying the first column
+by $-1$ is effected by right multiplication by
+\[
+\begin{pmatrix} -1 & 0 \\
+0 &I\end{pmatrix}
+\]
+which is evidently a Lorentz transformation. Interchanging the middle columns
+is effected by right multiplication by
+\[
+\begin{pmatrix} 
+1 &0& 0& 0\\
+0 &0& 1& 0\\
+0 &1& 0& 0\\
+0 &0& 0& 1\end{pmatrix}
+\]
+which is readily seen to be a Lorentz transformation (it's a spatial reflection).  Hence the composition of $L_2$ with these two matrices
+is also a Lorentz transformation.  It's determinant is the same as $L_2$
+since the sign changes for the column interchange and the first column
+multiplication cancel. Since the upper-left entry is negative, we find
+$L_3$ is a non-proper, non-orthochronus Lorentz transformation.
+
+By these same arguments, $L_4$ is a propoer, orthochronus Lorentz transformation.  Its determinant has the opposite sign of that of $L_3$,
+and its upper-left entry is positive.
+
+\hproblem SR 5.6
+
+Let $V$ be a four-vector.  Show
+\begin{itemize}
+\item[i)] If $V$ is future pointing timelike, there is an inertial coordinate
+system in which it has components $(a,0,0,0)$ with $a=\sqrt{g(V,V)}$.
+\item[ii)] If $V$ is future pointing null, there is an inertial coordinate
+system in which it has components $(1,1,0,0)$ with $a=\sqrt{g(V,V)}$.
+\end{itemize}
+\solution
+
+For part i), assume that $V$ is future pointing and timelike. After applying
+a spatial rotation we can assume that $V=(V^0,V^1,0,0)$. Pick $\phi$ by
+\[
+\tanh(\phi) = -\frac{V^1}{V^0},
+\]
+which is possible since $\tanh$ is invertible and $V^0>0$.
+Setting $C=\cosh(\phi)$ and $S=\sinh(\phi)$, we define
+\[
+\begin{pmatrix} \hat V^0\\\hat V^1\end{pmatrix} \begin{pmatrix} C & S\\ S & C \end{pmatrix} \begin{pmatrix} V^0\\V^1\end{pmatrix} = \begin{pmatrix} C V^0 + S V^1\\ S V^0 + C V^1\end{pmatrix}
+\]
+But
+\[
+\hat V^1 S V^0 + C V^1 = \frac{C}{V^0} \left( -\tanh(\phi) + \frac{V^1}{V^0}\right).
+\]
+Since spatial rotations and the above boost are orhthochronus, so are their
+composition and we find that we can take $V$ to a vector $\hat V =(a,0,0,0)$ by
+an orthochronus Lorentz transformation.  Since $V$ is future pointing, so
+is $\hat V$ and $a>0$. Moreover,
+\begin{equation}
+\sqrt{g(V,V)} = \sqrt{g(LV,LV)} =\sqrt{g(aT,aT)}=a\sqrt{g(T,T)} = a.
+\end{equation}
+
+ Part ii). Let $N$ be a null vector. Just as in
+the our proof in class of part i), we can find an inertial frame where $N$ has
+coordinates $N^1\ge 0$ and $N^2=N^3=0$.  Moreover, since $N$ is null,
+\begin{equation}
+(N^0)^2-(N^1)^2 = 0
+\end{equation}
+and since $N^0>0$ ($N$ is future pointing) and since $N^1>0$ we conclude
+\begin{equation}
+N = (a,a,0,0)
+\end{equation}
+for some $a>0$.
+
+We now show by applying a boost that we can transform to $(1,1,0,0)$.
+Note that for any rapidity $\phi$,
+\begin{equation}
+\begin{pmatrix} \cosh(\phi) & \sinh(\phi) \\ \sinh(\phi) & \cosh(\phi) \end{pmatrix}
+\begin{pmatrix} a \\ a \end{pmatrix} = a\begin{pmatrix} e^\phi \\ e^\phi \end{pmatrix}.
+\end{equation}
+Letting $\phi=-\log(a)$ we find
+\begin{equation}
+a(e^\phi,e^\phi) = (1,1)
+\end{equation}
+as needed.  Hence we can boost in the $(t,x)$ plane by rapidity $\phi$ to transform
+$N$ to $(1,1,0,0)$.
+
+\hproblem SR 5.7
+
+Show that
+\begin{itemize}
+\item[i)] The sum of future pointing timelike vectors is future pointing timelike.
+\item[ii)] The sum of future pointing null vectors is future pointing timelike or
+future pointing null, and is null if and only if the vectors are linearly dependent.
+\item[iii)] Every four vector orthogonal to a timelike vector is spacelike.
+\end{itemize}
+
+\solution
+
+\begin{lemma}\label{lem:mainlemma}
+Let $X$ and $Y$ be causal and future pointing.  Then
+\begin{equation}
+g(X,Y) \ge ||X||||Y||
+\end{equation}
+with equality if and only if $X$ and $Y$ are linearly dependent.
+\end{lemma}
+\begin{proof}
+First, suppose $X$ is timelike.  Without loss of generality, we may assume
+\begin{equation}
+X= (X^0,0,0,0)
+\end{equation}
+for some $X>0$.  Then
+\begin{equation}
+g(X,Y) = X^0 Y^0 = ||X|| Y^0
+\end{equation}
+Note that
+\begin{equation}
+||Y|| = \sqrt{(Y^0)^2-(Y^1)^2-(Y^3)^2-(Y^3)^2} \le |Y^0| = Y^0
+\end{equation}
+with equality if and only if $Y^1=Y^2=Y^3=0$ (i.e. if and only if $Y$
+and $X$ are linearly dependent. Hence
+\begin{equation}
+g(X,Y) \ge ||X|| ||Y||
+\end{equation}
+with equality if and only if $X$ and $Y$ are linearly dependent.
+
+The case where $Y$ is timelike follows from our previous argument and symmetry
+of $g$, so we now suppose both $X$ and $Y$ are null. Since $||X||=||Y||=0$,
+we need to show that
+\begin{equation}
+g(X,Y) \ge 0
+\end{equation}
+with equality if and only if $X$ and $Y$ are linearly dependent.
+Without loss of 
+generality we may assume 
+\begin{equation}
+X=(1,1,0,0)
+\end{equation}
+and hence
+\begin{equation}
+g(X,Y) = Y^0 - Y^1.
+\end{equation}
+Since $Y$ is null and future pointing
+\begin{equation}
+Y^0 = \sqrt{(Y^1)^2+(Y^2)^2+(Y^3)^2}.
+\end{equation}
+and hence
+\begin{equation}
+Y^0 \ge |Y^1|
+\end{equation}
+with equality if and only if $Y^2=Y^3=0$.
+Now
+\begin{equation}
+Y^0 - Y^1 \ge |Y^1|-Y^1 \ge 0
+\end{equation}
+with equality if and only if $Y^2=Y^3=0$ and $Y^1\ge 0$.
+
+Notice $Y=(Y^0,Y^1,0,)$ with $Y^1>0$ is equivalent to  $Y = Y^0(1,1,0,0)$
+since $Y$ is null and future pointing.  Hence in the null case we find
+\begin{equation}
+g(X,Y)\ge 0
+\end{equation}
+with equality if and only if $Y=Y^0 X$ as needed.
+\end{proof}
+
+Now with the main solution.
+
+For parts i) and ii), suppose $X$ and $Y$ are causal and future pointing.
+Expressing the vectors with respect to an inertial frame, $(X+Y)^0=X^0+Y^0>0$
+since $X^0$ and $Y^0$ are positive.  Hence $X+Y$ is future pointing.
+
+Lemma \ref{lem:mainlemma} implies
+\begin{equation}
+\begin{aligned}
+g(X+Y,X+Y) &= g(X,X) + g(Y,Y) + 2g(X,Y) \\
+&\ge g(X,X) + g(Y,Y) + 2||X||||Y|| \\
+&= (||X||+||Y||)^2 \\
+&\ge 0
+\end{aligned}
+\end{equation}
+with equality if and only if $X$ and $Y$ are linearly dependent and both null. Hence
+$Z$ is timelike unless $X$ and $Y$ are null and linearly dependent, in which case $Z$ is null.
+
+For part iii), suppose $X$ is timelike and $g(X,Y)=0$.  From our extended version
+of part $i)$ we know that if $Y$ is causal and future pointing that $g(X,Y)>0$.
+If $Y$ is causal and past pointing, then $-Y$ is causal and future pointing
+and $g(X,-Y)>0$ and $g(X,Y)<0$.  Hence if $g(X,Y)=0$, then $Y$ is neither causal
+future pointing, nor causal past pointing.  That leaves spacelike!
+
+
+
+\hproblem SR 5.8
+Let $X$ and $Y$ be future pointing and let $Z= X+Y$.  Then
+\begin{equation}
+\sqrt{g(Z,Z)} \ge \sqrt{g(X,X)} + \sqrt{g(Y,Y)}
+\end{equation}
+with equality if and only if $X$ and $Y$ are null and linearly dependent.
+
+\solution
+Lemma \ref{lem:mainlemma} implies
+\begin{equation}
+(||X||+||Y||)^2 = ||X||^2 + ||Y||^2 + 2||X||||Y|| \le ||X||^2 + ||Y||^2 + 2 g(X,Y) = g(X+Y,X+Y) = ||Z||^2
+\end{equation}
+with equality if and only if $X$ and $Y$ are are linearly dependent.
+Hence
+\begin{equation}
+||Z|| \ge ||X||+||Y||
+\end{equation}
+with equality if and only if $X$ and $Y$ are linearly dependent.
+
+This result is akin to the triangle inequality for Euclidean space:
+\begin{equation}
+||X+Y|| \le ||X|| + ||Y||
+\end{equation}
+with equality if and only if $X$ and $Y$ are linearly dependent.  The 
+inequality in the Euclidean case points in the opposite direction.
+
+
+\hproblem [The Peter Mulvey Observation] Your head will be younger than your feet by the time of your death.  Estimate, with justification, how much younger.
+
+\solution
+We apply equation (6.14) from the text,
+\begin{equation}
+\frac{d\tau}{dt} = \sqrt{1-R^2\omega^2/c^2}
+\end{equation}
+concerning the relationship between inertial time and proper time
+for circular motion. The radii in question are the radius of the earth,
+\begin{equation}
+R_0=6400\mathrm{km}
+\end{equation}
+and radius, $R_1=R_0 + 2/1000$ corresponding to one's head.  We then have
+\begin{equation}
+\frac{d\tau_1}{dt}-\frac{d\tau_0}{dt} \approx -\frac{1}{1-R_0^2\omega^2/c^2} R_0(R_1-R_0)\frac{\omega^2}{c^2}=7.5\times 10^{-19}\;\mathrm{seconds.}
+\end{equation}
+Taking the elapsed $t$ to be 100 years we find
+\begin{equation}
+\tau_1-\tau_0 = 2.4\times 10^{-9},
+\end{equation}
+i.e about 3 nanoseconds. Of course, one is not standing one's whole life, and one is not always standing on the equator of the earth, so this estimate is an overestimate. Still, the net 
+discrepancy on the order of one nanosecond, the about the time it takes my laptop to execute a single instruction.
+
+
+\end{aproblems}
+\end{document}

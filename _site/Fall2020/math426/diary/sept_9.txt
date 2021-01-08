@@ -1,0 +1,29 @@
+x = linspace(-1/2,1/2,5)
+
+x =
+
+  Columns 1 through 4
+
+  -0.500000000000000  -0.250000000000000                   0   0.250000000000000
+
+  Column 5
+
+   0.500000000000000
+
+x = linspace(-1/2,1/2,100);
+plot(x,sin(x),x,x);
+plot(x,sin(x)-x);
+1/8
+
+ans =
+
+   0.125000000000000
+
+plot(x,sin(x)-x,x,1/2*x*x,x,-1/2 *x*x);
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mtimes')" style="font-weight:bold"> * </a>
+Incorrect dimensions for matrix multiplication. Check that the number of columns in the first
+matrix matches the number of rows in the second matrix. To perform elementwise multiplication,
+use '.*'.
+} 
+plot(x,sin(x)-x,x,1/2*x.*x,x,-1/2 *x.*x);
+diary

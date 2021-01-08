@@ -1,0 +1,55 @@
+\documentclass[minion]{homework}
+\newcommand{\Reals}{\mathbb{R}}
+\doclabel{Math F665: Homework 1A}
+\docdate{Due: September 5, 2018}
+
+\begin{document}
+
+\begin{aproblems}
+
+\hproblem SR 1.1
+
+\hproblem SR 1.2 (i) - (ii)
+
+\hproblem The general linear group $GL(\Reals,3)$ is the set of $3\times 3$ invertible matrics.
+In this exercise, we show that the Euclidean group $E(\Reals^2)$ can be seen as a subgroup of $GL(\Reals,3)$. (More formally, for the cognoscenti, we construct
+a group homomorphism from $E(\Reals^2)$ to $GL(\Reals,3)$, i.e.
+a group representation of $E(\Reals^2)$.)
+
+If
+\begin{equation}
+i(x,y) = \begin{pmatrix} c & \mp s  \\
+s & \pm c \\
+\end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} +\begin{pmatrix} t_x \\ t_y \end{pmatrix}
+\end{equation}
+we define
+\begin{equation}
+M_i = \begin{pmatrix} c & \mp s & t_x \\
+s & \pm c & t_y \\
+0 &  0 & 1\end{pmatrix}.
+\end{equation}
+\begin{subproblems}
+\item Suppose $x,y\in \Reals$. Show that 
+\begin{equation}
+M_i \begin{pmatrix} x \\ y \\ 1 \end{pmatrix}
+\end{equation}
+has the form
+\begin{equation}
+\begin{pmatrix} a \\ b \\ 1 \end{pmatrix}
+\end{equation}
+and that $i(x,y)=(a,b)$.
+\item Show that if $i_1$ and $i_2$ belong to $E(\Reals^2)$ then
+\begin{equation}
+M_{i_2\circ i_1} = M_{i_2} M_{i_1}.
+\end{equation}
+Note that on the right-hand side of this equation we are multiplying matrics.
+\item  Conclude that if $i\in E(\Reals^2)$, then
+\begin{equation}
+M_{i^{-1}} = (M_i)^{-1}.
+\end{equation}
+\end{subproblems}
+
+\hproblem [Challenge, not due!] SR 1.2 (iii)
+
+\end{aproblems}
+\end{document}	

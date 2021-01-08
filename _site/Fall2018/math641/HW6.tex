@@ -1,0 +1,68 @@
+\documentclass[minion]{homework}
+\usepackage{cmacros}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[all,cmtip]{xy}
+
+\doclabel{Math F641: Homework 6}
+\docdate{Due: October 11, 2017}
+\begin{document}
+\begin{aproblems}
+
+\hproblem [David]
+In this problem, we will seek a solution to the initial value problem
+\begin{align*}
+f'(t) &= F(t,f(t))\\
+f(0) &= a
+\end{align*}
+where $F:\Reals^2\ra \Reals$ and $a\in\Reals$.
+
+To obtain the existence result, we need to assume that $F$ is sufficiently nice;
+we will assume that $F$ is continuous, and moreover that there exists a constant $K$
+such that
+$$
+|F(x,y_1)-F(x,y_2)|\le K |y_1-y_2|
+$$
+for all $x,y_1,y_2\in\Reals$.
+
+Define $G:C[-T,T]\ra C[-T,T]$ by
+$$
+G(f)(t) = a + \int_0^t F(s,f(s))\; ds.
+$$
+
+\begin{subproblems}
+\item Explain why $G(f)\in C[-T,T]$ if $f\in C[-T,T]$.
+\item Show that if $f$ solves the initial value problem for $t\in[-T,T]$, then $G(f)=f$.
+\item Show that $G$ is Lipschitz with Lipschitz constant $TK$.
+\item Assuming $T<1/K$, show that there exists a solution of $G(f)=f$
+defined for $t\in [-T,T]$.
+You may use the fact that $C[-T,T]$ is complete; we'll show this later.
+\item Assuming $T<1/K$, show that there exists a unique solution
+of the initial value problem defined on $(-T,T)$.
+\item Extra credit:  Show that there exists a solution $f$ of the initial value problem
+defined for all $t\in\Reals$.
+\end{subproblems}
+
+\hproblem Carothers 8.66 [Max]
+
+\hproblem Carothers 8.76 [Sakti]
+
+\hproblem Carothers 8.77 [Jody]
+
+\hproblem Carothers 8.78 [Lander]
+
+\hproblem Carothers 8.80 [Mason]
+
+\hproblem Carothers 8.81 [Max]
+
+\hproblem Carothers 8.84 [Lander]
+
+\hproblem Carothers  10.7 [Sakti]
+
+\hproblem Carothers  10.9 (No rigor, please!) [Mason]
+
+\hproblem Carothers  10.10 [Jody]
+
+
+\end{aproblems}
+\end{document}
