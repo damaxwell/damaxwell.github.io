@@ -14,7 +14,7 @@ def heatbasic(u0,T,K):
     N = len(u0)-1
 
     dx = 1.0/N;
-    dt = 0.1/K;
+    dt = T/K;
     x = np.linspace(0,1,N+1)
 
     u = np.copy(u0)
@@ -56,8 +56,8 @@ def plot_run(N,K):
 
     x = np.linspace(0,1,N+1)
     u0 = x*(1.0-x)
-    T = 0.1
-
+    T=0.1
+    
     u_hist = heatbasic(u0,T,K)
 
     dt = 0.1/K
