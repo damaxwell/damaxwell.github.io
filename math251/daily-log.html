@@ -9,46 +9,60 @@
    <!-The following magic viewport words are needed for Sarfari on mobile 
       to make 96px=1in, really-->
    <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/site.css">
   </head>
-  <body>
 
+<body>
+
+<div class="burger-background"></div>
 <div class="sidenavburger hide-large" onclick="openNav()">&#9776;</div>
-<div id="nav" class="sidenav" ><nav role="navigation">
-<h1><a href="index.html">Math 251:<br>Section F03</a></h1>
+
+<div id="nav" class="sidenav" >
+<nav role="navigation">
+<div class="sidenav-header"><a href="#page-top" onclick="closeNav()"">Math F251</a></div>
   
-  <a  class="menuitem" href="https://uaf-math251.github.io" alt="UAF Calculus I">UAF Calculus I</a>
+  <div class="entry"><a  onclick="closeNav()" href="https://uaf-math251.github.io" alt="UAF Calculus I">UAF Calculus I</a></div>
   
-  <a  class="menuitem" href="daily-log.html" alt="Daily Log">Daily Log</a>
+  <div class="entry"><a  onclick="closeNav()" href="daily-log.html" alt="Daily Log">Daily Log</a></div>
   
-</nav></div>
+  <div class="entry"><a  onclick="closeNav()" href="index.html#office-hours" alt="Office Hours">Office Hours</a></div>
+  
+</nav>
+</div>
 
+<div id="main" class="main-body" onclick="closeNav()">
+<div class="page-header" id="page-top">Math 251: Calclus I</div>
+<div class="page-content"><h3 id="daily-log">Daily Log</h3>
 
-    <div id="main" class="main-body" onclick="closeNav()">
-    <h2 id="daily-log">Daily Log</h2>
+<p>The table below contains a summary of what is covered
+each class day, along with any computer files (e.g. Matlab files) that were
+used that day.</p>
 
-<p>The table below contains materials associated with each class day.
-Some days there are just notes, some days just a worksheet, and some days
-there are both depending on what we did in class.</p>
-
-<p>If there are notes, these are what I have in my hands when I begin class.
-They are probably pretty close to what I write on the board,
-but there will be digressions and variations. They are provided for your convenience, especially if you miss a day.</p>
+<p>I will post the lecture notes that I write on the screen here.
+ They may be useful in filling in your own hand-written
+notes after the fact.  Please do not rely on them solely.</p>
 
 <div class="x-scroll">
 <table class="asst-table">
-<tr><th>Date</th><th>Topics</th><th>Notes</th><th>Worksheet</th></tr>
+<tr><th>Date</th><th>Topics</th><th>Zoom</th><th>Notes</th><th>Worksheet</th></tr>
 
-<tr>
-  <td>8/27</td>
+<tr valign="top">
+  <td>1/11</td>
   <td>Sections 1.1-1.2</td>
-  <td></td>
+  <td> 
+  </td>
+  <td>
+  
+    <a href="big-picture/Section-1-1.pdf">Big Picture</a><br />
+  
+ 
+  </td>
   <td>
       <table class="inner">
         <tr><td><a href="worksheets/Worksheet-1-1.pdf">blank</a></td>
-		      
+          
           <td></td>
-		    
+        
         </tr>
       </table>
       
@@ -58,9 +72,11 @@ but there will be digressions and variations. They are provided for your conveni
 </table>
 </div>
 
+</div>
+</div>
 
-    </div>
-  </body>
+</body>
+
 <script type="text/javascript">
 function openNav() {
     x = document.getElementById("nav");

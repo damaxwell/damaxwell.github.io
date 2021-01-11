@@ -2,30 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Math F251 Calculus I</title>
+    <title>Math F251 Section FXB (Calculus I)</title>
    <meta http-equiv="Pragma" content="no-cache">
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
    <meta http-equiv="Expires" content="-1">
    <!-The following magic viewport words are needed for Sarfari on mobile 
       to make 96px=1in, really-->
    <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/site.css">
   </head>
-  <body>
 
+<body>
+
+<div class="burger-background"></div>
 <div class="sidenavburger hide-large" onclick="openNav()">&#9776;</div>
-<div id="nav" class="sidenav" ><nav role="navigation">
-<h1><a href="index.html">Math 251:<br>Section F03</a></h1>
-  
-  <a  class="menuitem" href="https://uaf-math251.github.io" alt="UAF Calculus I">UAF Calculus I</a>
-  
-  <a  class="menuitem" href="daily-log.html" alt="Daily Log">Daily Log</a>
-  
-</nav></div>
 
+<div id="nav" class="sidenav" >
+<nav role="navigation">
+<div class="sidenav-header"><a href="#page-top" onclick="closeNav()"">Math F251</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="https://uaf-math251.github.io" alt="UAF Calculus I">UAF Calculus I</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="daily-log.html" alt="Daily Log">Daily Log</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="index.html#office-hours" alt="Office Hours">Office Hours</a></div>
+  
+</nav>
+</div>
 
-    <div id="main" class="main-body" onclick="closeNav()">
-    <h2 id="welcome">Welcome!</h2>
+<div id="main" class="main-body" onclick="closeNav()">
+<div class="page-header" id="page-top">Math 251: Calclus I</div>
+<div class="page-content"><h2 id="welcome">Welcome!</h2>
 
 <p>This page hosts material specific to Dr. Maxwell’s Spring 2021 section
 of Calculus I.</p>
@@ -52,8 +59,11 @@ When opening the the new spreadsheet, be patient. It can take a little time for 
 | Friday         |  9:15-10:15  |
  --></p>
 
-    </div>
-  </body>
+</div>
+</div>
+
+</body>
+
 <script type="text/javascript">
 function openNav() {
     x = document.getElementById("nav");
