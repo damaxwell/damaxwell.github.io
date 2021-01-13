@@ -18,7 +18,7 @@ def heatbasic(u0,T,K):
     x = np.linspace(0,1,N+1)
 
     u = np.copy(u0)
-
+    
     u_history = [u]
 
     A = np.zeros( (N+1,N+1) )
@@ -47,7 +47,7 @@ def validate(k,N,K):
 
     u_hist = heatbasic(u0,T,K)
 
-    pp.plot(x,u_hist[K],x,np.sin(k*x*np.pi)*np.exp(-k*k*np.pi*np.pi*0.1))
+    pp.plot(x,u_hist[K],x,np.sin(k*x*np.pi)*np.exp(-k*k*np.pi*np.pi*T))
     pp.show()
 
 def plot_run(N,K):
@@ -60,7 +60,7 @@ def plot_run(N,K):
     
     u_hist = heatbasic(u0,T,K)
 
-    dt = 0.1/K
+    dt = T/K
     dx = 1.0/N
     mu = dt/(dx*dx) 
     print("mu=%f\n" % mu)
