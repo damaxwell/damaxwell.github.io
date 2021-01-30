@@ -22,14 +22,19 @@ u_{i+1} = u_i + \frac{h}{2}(3f_i-f_{i-1}).
        \lambda h = f(\rho)
 	\]
 	for some function $f$.
-	\item Numerically determine values of $f(\rho)$ where $\rho$ lives on the unit circle of complex numbers.  These will 
-	generate values of
-	$\lambda h$ where the associated root of the characteristic
-	polynomial has size one, and is therefore potentially on the 
-	boundary of the stability region. 
-	Generate a plot of the values of $f(\rho)$ as $\rho$
-	varies around the unit circle to see the boundary of the 
-	absolute stability region.
+	\item Make a numerical sketch of the boundary of the region of absolute 
+	stability as follows. The characteristic polynomial has the form $p(\rho)=\sigma(\rho)-z\eta(\rho)$ for certain polynomials $\sigma$ and $\eta$.  The boundary of the region of absolute stability 
+	is given by those values of $z$ such that there is a root
+	of $p(\rho)$ with $|\rho|=1$.  Turn this idea on its head:
+	the condition $p(\rho)=0$ is the same as
+	\[
+	z = \frac{\sigma(\rho)}{\eta(\rho)}.
+	\]
+	So if you plug in a $\rho$ on the right-hand side with $|\rho|=1$,
+	you get a $z$ such that the characteristic polynomial has a root
+	with size 1.  You can generate a curve of all such values of $z$
+	by letting $\rho$ vary around the unit circle of the complex plane.
+
 \end{subproblems}
 
 \problem Recall that a linear multistep method (LMM) has the form
