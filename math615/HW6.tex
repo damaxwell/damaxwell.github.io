@@ -1,0 +1,79 @@
+\documentclass[minion]{homework}
+\newcommand{\Reals}{\mathbb{R}}
+\doclabel{Math F615: Homework 6}
+\docdate{Due: February 26, 2021}
+\usepackage{graphicx}
+
+\newcommand{\bfx}{\mathbf{x}}
+\newcommand{\bfv}{\mathbf{v}}
+
+\begin{document}
+
+\begin{problems}
+
+\problem  Consider the heat equation $u_t = \kappa u_{xx}$ 
+for $\kappa>0$, $x\in [0, 1]$, and Dirichlet boundary conditions $u(0, t) = 0
+$ and $u(1, t) = 0$. 
+Suppose we have initial condition $u(x, 0) = sin(5\pi x)$.
+\begin{subproblems}
+\item Find an exact solution to this problem.
+\item Implement the backward Euler (BE) method
+ to solve this heat equation problem. Specifically, use diffusivity $\kappa = 1/20$ and final time $T= 0.1$. Note that you do not need to use Newton's method to solve the implicit equation, which is a linear system, but you should use sparse storage and an efficient linear solver (backslash in MATLAB will work).
+ \item Suppose the timestep $k$ and the space step $h$ are related by $k=2h$.
+ What do you expect for the convergence rate $O(h^p)$? Then measure it by using the exact solution from a), at the final time, and the infinity norm $||\cdot||_\infty$, and $h = 0.05, 0.02, 0.01, 0.005, 0.002, 0.001$. 
+  Make a log-log convergence plot of $h$ versus the error.
+\item Repeat parts b) and c) but with the trapezoidal rule instead of BE. (That is, implement and measure the convergence rate of Crank-Nicolson, with everything else the same.)
+\end{subproblems}
+
+\problem Consider the PDE
+\[
+u_t = \partial_x(p(x) u_x)
+\]
+where $p(x)$ is a given function. We wish to solve the PDE
+on the region $0\le x\le 1$, $0\le t\le T$ with $u=0$ at $x=0,1$
+ We will apply the following
+finite difference scheme to it:
+\[
+u_{i,j+1} = u_{i,j} + \frac{k}{h^2}[(u_{i+1,j}-u_{i,j})p_{i+\frac{1}{2}}  - 
+(u_{i,j}-u_{i-1,j})p_{i-\frac{1}{2}}]
+\]
+where $p_{i\pm\frac{1}{2}}=p(x_i \pm h/2)$.
+\begin{subproblems}
+\item Estimate the local truncation error in terms of powers of $h$ and $k$ and
+in terms of derivatives of $u$ and derivatives of $p$.  I'm looking for an
+answer akin to the estimate we derived for the heat equation of the form
+\[
+|\tau| \le \max |u_{xxxx}| \left[\frac{k}{2}+\frac{h^2}{h}\right]
+\]
+that we derived for the heat equation with no forcing term.
+
+\item Show that the method is convergent, assuming $0<p(x)k< h^2/2$.  You will
+want to revist the proof from class that the explict method for the standard
+heat equation is convergent.
+\end{subproblems}
+
+\newpage
+\problem 
+\begin{subproblems}
+\item Let 
+\[
+A=\begin{pmatrix} 5 & 6\\
+7 & 8 \end{pmatrix}
+\]
+Compute $||A||_1$ and $||A||_\infty$.
+\item Estimate $||A||_2$ as follows.  Computer generate a figure
+containng the boundary of $A(B_1)$, where $B_1$ is the Euclidean 
+ball of radius $1$.  Then use the figure to estimate the norm.
+\item Suppose $A$ is an $n\times n$ matrix, and choose $p\in [1,\infty]$.
+Show that $||A||_p=0$ if and only if $A$ is the 0 matrix.
+\item For vectors in $\Reals^n$, it is known that $||x+y||_p\le ||x||_p+||y||_p$
+for any $p\in [1,\infty]$.  This is the triangle inequality, and you need
+not prove it.  But using this fact, show that the triangle inequality
+also holds for matrix norms $||\cdot||_p$ for $p$ in the same range.
+\end{subproblems}
+
+\problem Text, problem 3.7
+
+\end{problems}
+
+\end{document}
