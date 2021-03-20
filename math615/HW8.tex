@@ -70,13 +70,13 @@ The issue is that you don't know $u_{-1}$.  But you also know that
 So you can either make $u_{-1}$ a true unknown by adding this equation to the mix, or you substitute back into the equation for the second derivative at $x=0$.
 
 In addition, implement your $O(h^2)+O(k^2)$ version of the discritization
-and test with 
-% \begin{equation}
-% \begin{align} 
-% u_0(x) &=\cos(\pi x/2) + (1-x)\\
-% \alpha &= -1
-% \end{align}
-% \end{equation}
+and test on the domain $0\le x\le 1$, $0\le t \le 0.1$ with 
+\begin{equation}
+\begin{aligned} 
+u_0(x) &=\cos(\pi x/2) + (1-x)\\
+\alpha &= -1
+\end{aligned}
+\end{equation}
 Verify you obtain the desired order of accuracy.
 
 \end{problems}
