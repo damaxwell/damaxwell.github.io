@@ -1,0 +1,84 @@
+\documentclass[minion]{homework}
+\newcommand{\Reals}{\mathbb{R}}
+\doclabel{Math F615: Homework 8}
+\docdate{Due: March 29, 2019}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\newcommand{\bfx}{\mathbf{x}}
+\newcommand{\bfv}{\mathbf{v}}
+
+\begin{document}
+
+\begin{problems}
+
+\problem  Text, 4.20
+
+\problem Text, 4.5
+
+\problem  Consider the following method for solving the advection equation 
+$u_t + au_x = 0$, where $a$ is constant:
+\[
+u_{i,j+1} = u_{i,j-1} + \frac{ak}{h}(u_{i-1,j}+u_{i+1,j})
+\]
+This is the leapfrog method.
+
+\begin{subproblems}
+\item Determine the order of accuracy of this method (in both space and time). The answer will be in the form $\tau(x,t)= O(k^p) +O(h^q)$; determine $p,q$.
+
+\item This scheme can be derived by applying the method of lines.  
+Do this as follows.
+\begin{enumerate}[i)] 
+	\item First, discretize in space using centered differences
+to obtain a system of ODEs
+\[
+U'(t) = A U(t)
+\]
+for some matrix $A$.  What are the entries of the matrix $A$
+assuming $x\in[0,1]$ is the space domain and periodic
+boundary conditions are used ($u(0,t)=u(1,t)$?
+\item Then use an ODE discretization method to derive the
+whole scheme.  What rule from Table 1.1 on page 7 should be
+applied at this step to derive the leapfrog scheme?
+\end{enumerate}
+\item What are the eigenvalues of the matrix $A$ from the previous derivation? 
+
+\item Compute the region of absolute stability for the ODE discretization
+method used in part b).  Then discuss the stability of the leap frog method
+using this information and your computation from part c).
+
+\item Implement this leapfrog method on the following periodic boundary condition problem: $x \in [0, 1], a = 0.5, T = 10, u(x, 0) = \sin(6\pi x)$. 
+To make the implementation work you will have to compute the first step by some other scheme; describe and justify what you do.
+
+\item What is the exact solution to the problem in part e)? Use
+\[
+h = 0.1, 0.05, 0.02, 0.01, 0.005, 0.002
+\]
+and $k = h$ and show a log-log convergence plot using the infinity norm for the error. What $O(h^p)$ do you expect for the rate of convergence, and what do you measure?
+\end{subproblems}
+
+\problem Text, 3.7, Redo.  You may find the following idea helpful.
+For the Neumann condition you know that $u'(0)=\alpha$.  The second-order approximation for $u_{xx}$ at $x=0$ is
+\[
+u_xx(0) = \frac{u_{-1}-2u_0 + u_1}{h^2} + O(h^2)
+\]
+
+The issue is that you don't know $u_{-1}$.  But you also know that
+\[
+\alpha = u_x(0) = \frac{u_{-1}-u_1}{2h} + O(h^2)
+\]
+
+So you can either make $u_{-1}$ a true unknown by adding this equation to the mix, or you substitute back into the equation for the second derivative at $x=0$.
+
+In addition, implement your $O(h^2)+O(k^2)$ version of the discritization
+and test with 
+% \begin{equation}
+% \begin{align} 
+% u_0(x) &=\cos(\pi x/2) + (1-x)\\
+% \alpha &= -1
+% \end{align}
+% \end{equation}
+Verify you obtain the desired order of accuracy.
+
+\end{problems}
+
+\end{document}
