@@ -1,0 +1,50 @@
+\documentclass[minion]{homework}
+\newcommand{\Reals}{\mathbb{R}}
+\doclabel{Math F615: Homework 10}
+\docdate{Due: April 12, 2021}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\newcommand{\bfx}{\mathbf{x}}
+\newcommand{\bfv}{\mathbf{v}}
+
+\begin{document}
+
+\begin{problems}
+
+\problem  Text, 5.2
+
+\problem  This variation of text, 5.3.  This problems concerns the wave equation $u_{tt}=c^2u_{xx}$ with initial data $u(x,0)$ and $u_t(x,0)$.
+\begin{subproblems}
+\item  Use the one-sided $O(h^2)$ approximation for the first
+derivative from Table 1.1 on page 7 to derive an approximation for $u_t(x,0)$.
+\item The approximation you just wrote down involves values of $u$ at timesteps $t_0$, $t_1$ and $t_2$.  The centered difference strategy for the wave equation also yields an equation involving values of $u$ at
+timesteps $t_0$, $t_1$ and $t_2$.  Combine these two equations together 
+to eliminate the values at $t_1$ to get an equation that relates values at $t_2$ to values at $t_0$.
+\item Explain why the numerical scheme you just wrote down does not satisfy the CFL condition.
+\item Instead, introduce an $O(h^2)$ approximation for the initial condition by introducing the (unknown) value of $u$ at $t_{-1}$.  This is a so-called ghost point.
+\item Combine the equation you just derived together with the 
+centered difference strategy for the wave equation to obtain a technique
+for computing an approximation of $u$ at $t_1$ from initial conditions.  
+\item Show that the equation you just derived satisfies the CFL condition.
+\end{subproblems}
+
+% condition.
+
+%  Now apply both schemes to the wave equation $u_{tt}=u_{xx}$ for $0\le x\le 1$
+% with initial conditions
+% \begin{equation}
+% \begin{aligned}
+% u(x,0) &= \sin(\pi x)\\
+% u_t(x,0) &= 0
+% \end{aligned}
+% \end{equation}
+
+% Solve for $0\le t\le 2$ with $M=60, 100, 600, 1000, 6000$ time steps and with $N=(9/20) M$ space unknowns and generate convergence plots.  What orders
+% of convergence do you observe?  Can you think of a reason to pick one of these
+% methods over the other?
+
+\problem  Text, 5.6
+
+\end{problems}
+
+\end{document}
