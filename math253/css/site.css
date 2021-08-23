@@ -40,6 +40,8 @@ table.asst-table { border: 2px solid black; border-collapse: separate; border-sp
 
 table.asst-table td { white-space: nowrap; word-break: break-all; line-height: 130%; }
 
+.seperator { border-bottom: 1px solid black; }
+
 dt { float: left; width: 30px; text-align: right; font-weight: bold; }
 
 dd { margin: 0 0 0 60px; padding: 0 0 0.5em 0; }
