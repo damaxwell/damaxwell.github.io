@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Math F490 (Senior Seminar)</title>
+   <meta http-equiv="Pragma" content="no-cache">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Expires" content="-1">
+   <!-The following magic viewport words are needed for Sarfari on mobile 
+      to make 96px=1in, really-->
+   <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/site.css">
+  </head>
+
+<body>
+
+<div class="burger-background"></div>
+<div class="sidenavburger hide-large" onclick="openNav()">&#9776;</div>
+
+<div id="nav" class="sidenav" >
+<nav role="navigation">
+<div class="sidenav-header"><a href="index.html#page-top" onclick="closeNav()"">Math F490</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="Syllabus.pdf" alt="Syllabus">Syllabus</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="index.html#announcements" alt="Announcements">Announcements</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="index.html#office-hours" alt="Office Hours">Office Hours</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="index.html#readings-and-homework" alt="Homework">Homework</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="daily-log.html" alt="Daily Log">Daily Log</a></div>
+  
+</nav>
+</div>
+
+<div id="main" class="main-body" onclick="closeNav()">
+<div class="page-header" id="page-top">Math 490: Senior Seminar</div>
+<div class="page-content"><h3 id="office-hours">Office Hours</h3>
+
+<!-- [Zoom Link](https://alaska.zoom.us/j/99797816618?pwd=UjR4RHpITFBzU2dQSGF0REVNcFpTZz09)
+ -->
+<!-- 
+|---------------:|:--------------:|
+| Monday         |   12:45-1:45   |
+| Wednesday      |   12:45-1:45   |
+| Thursday       |    9:00- 10:00 |
+ -->
+<h3 id="announcements">Announcements</h3>
+
+<ul>
+  <li>
+    <p>Here is <a href="HWDemo.tex">HWDemo.tex</a>, a template file for solutions
+written in LaTeX, along with a <a href="HWDemo-prob2.pdf">figure</a>.
+ If it works for you, you should be able to make a PDF file like <a href="HWDemo.pdf">this.</a></p>
+  </li>
+  <li>
+    <p>Here is <a href="BeginningLatex.pdf">a beginner’s guide to LaTeX</a>.  Please read it, even if you have used LaTeX before.</p>
+  </li>
+  <li>
+    <p>In this class, you may wish to use LaTeX to typeset solutions.  If you are new to using LaTeX, I can help.  Your first step is to install LaTeX; here are some installation guides.</p>
+
+    <ul>
+      <li>
+        <p><a href="LatexInstallationWindows.pdf">Latex Installation for Windows</a></p>
+      </li>
+      <li>
+        <p><a href="LatexInstallationMac.pdf">Latex Installation for Mac</a></p>
+      </li>
+    </ul>
+
+    <p>I didn’t write a guide for Linux; if you are using Linux and need help
+ just let me know.</p>
+  </li>
+</ul>
+
+<h3 id="readings-and-homework">Readings and Homework</h3>
+
+<div class="table-box">
+<table class="asst-table">
+<tr>
+	<th style="text-align: center">Week</th>
+	<th>Reading</th>
+	<th>Problems</th>
+	<th>Due</th>
+	<th>Solutions</th>
+</tr>
+
+<tr valign="top">
+	<td style="text-align: center"><p>1/14 - 1/22</p>
+</td>
+	<td><p>Chapters 1 &amp; 2</p>
+</td>
+	<td><p><a href="HW1.pdf">Homework 1</a> (<a href="HW1.tex">source</a>)</p>
+</td>
+	<td><p><strong>Wednesday</strong> 1/19</p>
+</td>
+	<td></td>
+</tr>
+
+</table>
+</div>
+
+</div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+function openNav() {
+    x = document.getElementById("nav");
+    if(x.className="sidenav") {
+      x.className += " showing";
+    }
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    x = document.getElementById("nav").className = "sidenav"
+}
+</script>
+</html>
+
