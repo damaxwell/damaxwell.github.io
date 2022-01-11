@@ -1,0 +1,1181 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Math F253 Section F02 (Calculus III)</title>
+   <meta http-equiv="Pragma" content="no-cache">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Expires" content="-1">
+   <!-The following magic viewport words are needed for Sarfari on mobile 
+      to make 96px=1in, really-->
+   <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/site.css">
+  </head>
+
+<body>
+
+<div class="burger-background"></div>
+<div class="sidenavburger hide-large" onclick="openNav()">&#9776;</div>
+
+<div id="nav" class="sidenav" >
+<nav role="navigation">
+<div class="sidenav-header"><a href="index.html#top" onclick="closeNav()">Math F251</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="quizzes.html" alt="Past Quizes">Past Quizes</a></div>
+  
+  <div class="entry"><a  onclick="closeNav()" href="exams.html" alt="Past Exams">Past Exams</a></div>
+  
+</nav>
+</div>
+
+<div id="main" class="main-body" onclick="closeNav()">
+<div class="page-header" id="page-top">Math 253: Calclus III</div>
+<div class="page-content"><h2 id="welcome">Welcome!</h2>
+
+<p>This is the Math 253 website for Dr. Maxwell’s Fall 2021 section.</p>
+
+<ul>
+  <li>
+    <p><a href="Syllabus.pdf">Syllabus</a></p>
+  </li>
+  <li>
+    <p>We will use <a href="https://campuswire.com">campuswire</a>
+for course-related discussions outside of class time. Please sign up promptly to ensure you don’t miss important announcements.  You’ll need the link and the <a href="https://canvas.alaska.edu/courses/2390/discussion_topics/44012">4 digit code</a> to sign up.</p>
+  </li>
+  <li>
+    <p>The online homework (WebAssign) can be accessed via the <a href="https://canvas.alaska.edu/courses/2390/external_tools/493">Cengage</a> link in Canvas.</p>
+  </li>
+  <li>
+    <p>Written homework will be handed in using <a href="https://canvas.alaska.edu/courses/2390/external_tools/114?display=borderless">GradeScope</a> link in Canvas.</p>
+  </li>
+  <li>
+    <p>UA has a Matlab license for students. Go
+to the <a href="https://alaska.edu/oit/software/">UA software page</a>
+to download it.</p>
+  </li>
+  <li>
+    <p>Octave is an open source alternative to Matlab. It can be downloaded
+following instructions from the <a href="https://www.gnu.org/software/octave/">Octave webpage</a>.</p>
+  </li>
+  <li>
+    <p>I’ve written a MATLAB/Octave <a href="OctaveBasics.pdf">tutorial</a>.  You can 
+use it to get your feet wet.</p>
+  </li>
+  <li>
+    <p>Here’s MATLAB’s official “Getting Started” <a href="https://www.mathworks.com/help/matlab/getting-started-with-matlab.html">tutorial</a>.
+MATLAB also has a free online <a href="https://www.mathworks.com/moler/chapters.html">text</a> Here’s another, not free, <a href="https://www.amazon.com/MATLAB-Introduction-Applications-6th/dp/111938513X">text</a></p>
+  </li>
+  <li>
+    <p>Here’s a <a href="Matlab3dPlots.pdf">tutorial</a> on how to plot in 3d in MATLAB.</p>
+  </li>
+</ul>
+
+<h3 id="office-hours">Office Hours</h3>
+
+<table class="asst-table">
+  <tbody>
+    <tr>
+      <td>Tuesday</td>
+      <td>2:00-3:00</td>
+    </tr>
+    <tr>
+      <td>Wednesday</td>
+      <td>12:48-2:00</td>
+    </tr>
+    <tr>
+      <td>Friday</td>
+      <td>12:48-2:00</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Tuesday and Wednesday by <a href="https://alaska.zoom.us/j/99797816618?pwd=UjR4RHpITFBzU2dQSGF0REVNcFpTZz09">Zoom</a>.</p>
+
+<p>Wednesday and Friday in the collaboration space in Duckering starting right after class until there are no more customers.  On Wednesday, Zoom
+office hours continue until 2pm.</p>
+
+<h3 id="daily-log">Daily Log</h3>
+
+<p>The table below contains a summary of what is covered
+each class day, along with any assignments for the day.</p>
+
+<div class="x-scroll">
+<table class="asst-table">
+<tr><th></th><th>Date</th><th>Sections</th><th>Notes</th><th>Problems</th></tr>
+
+<tr valign="top">
+  <td>
+
+<b>Week 1</b>
+    
+  </td>
+  <td>8/23</td>
+  <td>Section 12.1</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-08-23.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 1) 12.1: 22, 45</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>8/24</td>
+  <td>Section 12.2</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-08-24.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 1) 12.2: 35, 42</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>8/25</td>
+  <td>Section 12.3</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-08-25.pdf">Notes</a><br />
+      
+    
+      
+      <a href="broadcast-notes/F253-Dot-Product.pdf">Dot Product Supplement</a><br />
+      
+    
+    
+  </td>
+  <td>(WH 1) 12.3: 51</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>8/27</td>
+  <td>Sections 12.3, 12.4</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-08-27.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td></td>
+</tr>
+
+<tr valign="top">
+  <td>
+
+<b>Week 2</b>
+    
+  </td>
+  <td>8/30</td>
+  <td>Section 12.4</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-08-30.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 2) 12.4: 40</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>8/31</td>
+  <td>Section 12.5</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-08-31.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 2) 12.5: 48, 55</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>9/1</td>
+  <td>Section 12.5</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-09-01.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 2) 12.5: 61, 64</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>9/3</td>
+  <td>Section 12.5, 12.6</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-09-03.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 2) 12.6: 43</td>
+</tr>
+
+<tr valign="top">
+  <td>
+
+<b>Week 3</b>
+    
+  </td>
+  <td>9/7</td>
+  <td>Section 13.1</td>
+  <td>
+    
+  </td>
+  <td>(WH 3) 13.1: 15, 49</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>9/8</td>
+  <td>Section 13.2</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-09-08.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 3) 13.2: 28, 34</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>9/10</td>
+  <td>Section 13.2</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-09-10.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td></td>
+</tr>
+
+<tr valign="top">
+  <td>
+
+<b>Week 4</b>
+    
+  </td>
+  <td>9/13</td>
+  <td>Section 13.3</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-09-13.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 4) 13.3: 14, 67</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>9/14</td>
+  <td>Section 13.3</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-09-14.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 4) 13.3: 48, 53</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>9/15</td>
+  <td>Section 13.4</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-09-15.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 4) 13.4: 16, 31</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>9/17</td>
+  <td>Section 13.4</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-09-17.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>none</td>
+</tr>
+
+<tr valign="top">
+  <td>
+
+<b>Week 5</b>
+    
+  </td>
+  <td>9/20</td>
+  <td>Midterm Review</td>
+  <td>
+    
+  </td>
+  <td></td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>9/21</td>
+  <td>Section 14.1</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-09-21.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 5) 38, 39, 55</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>9/22</td>
+  <td>Midterm 1!</td>
+  <td>
+    
+  </td>
+  <td></td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>9/24</td>
+  <td>Section 14.2</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-09-24.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 5) 24, 40</td>
+</tr>
+
+<tr valign="top">
+  <td>
+
+<b>Week 6</b>
+    
+  </td>
+  <td>9/27</td>
+  <td>Section 14.3</td>
+  <td>
+    
+  </td>
+  <td>(WH 6) 3, 10</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>9/28</td>
+  <td>Section 14.4</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-09-28.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 6) 21, 24</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>9/29</td>
+  <td>Section 14.4</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-09-29.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 6) 36, 37</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>10/1</td>
+  <td>Section 14.5</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-10-01.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 6) 36, 37</td>
+</tr>
+
+<tr valign="top">
+  <td>
+
+<b>Week 7</b>
+    
+  </td>
+  <td>10/4</td>
+  <td>Section 14.5</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-10-04.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 7) 41, 44</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>10/5</td>
+  <td>Section 14.6</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-10-05.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 7) 30, 32</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>10/6</td>
+  <td>Section 14.6</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-10-06.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 7) 54, 56</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>10/8</td>
+  <td>Section 14.7</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-10-08.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 7) 39 [Computer plot needed], 44</td>
+</tr>
+
+<tr valign="top">
+  <td>
+
+<b>Week 8</b>
+    
+  </td>
+  <td>10/11</td>
+  <td>Section 14.7</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-10-11.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td></td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>10/12</td>
+  <td>Section 14.8</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-10-12.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 8) 14, 44</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>10/13</td>
+  <td>Section 15.1</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-10-13.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 8) 36, 48</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>10/15</td>
+  <td>Section 15.2</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-10-15.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 8) 27, 61</td>
+</tr>
+
+<tr valign="top">
+  <td>
+
+<b>Week 9</b>
+    
+  </td>
+  <td>10/18</td>
+  <td>Section 15.3</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-10-18.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 9) 35, 38</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>10/19</td>
+  <td>Section 15.4</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-10-19.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 9) 2, 10</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>10/20</td>
+  <td>Section 15.4</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-10-20.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 9) 28, 32</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>10/22</td>
+  <td>Section 15.5</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-10-22.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 9) 8, 23</td>
+</tr>
+
+<tr valign="top">
+  <td>
+
+<b>Week 10</b>
+    
+  </td>
+  <td>10/25</td>
+  <td>Midterm Review</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-10-25.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td></td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>10/26</td>
+  <td>Section 15.6</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-10-26.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 10) 14, 22</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>10/27</td>
+  <td>Midterm 2</td>
+  <td>
+    
+  </td>
+  <td>none</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>10/29</td>
+  <td>Section 15.8</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-10-29.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 10) 32ab, 44</td>
+</tr>
+
+<tr valign="top">
+  <td>
+
+<b>Week 11</b>
+    
+  </td>
+  <td>11/1</td>
+  <td>Section 15.9</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-11-01.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 11) 19, 24</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>11/2</td>
+  <td>Section 16.1</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-11-02.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 11) 4, 35</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>11/3</td>
+  <td>Section 16.2</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-11-03.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 11) 48</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>11/5</td>
+  <td>Section 16.2</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-11-05.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 11) 22, 42</td>
+</tr>
+
+<tr valign="top">
+  <td>
+
+<b>Week 12</b>
+    
+  </td>
+  <td>11/8</td>
+  <td>Section 16.3</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-11-08.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 12) 36ab</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>11/9</td>
+  <td>Section 16.3</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-11-09.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 12) 29, 30</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>11/10</td>
+  <td>Section 16.4</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-11-10.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 12) 18</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>11/12</td>
+  <td>Section 16.5</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-11-12.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 12) 22, 25</td>
+</tr>
+
+<tr valign="top">
+  <td>
+
+<b>Week 13</b>
+    
+  </td>
+  <td>11/15</td>
+  <td>Section 16.5</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-11-15.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 13) 29</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>11/16</td>
+  <td>Section 16.6</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-11-16.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 13) 22, 34</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>11/17</td>
+  <td>Section 16.6</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-11-17.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 13) 46</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>11/19</td>
+  <td>Section 16.7</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-11-19.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 13) 15, 40</td>
+</tr>
+
+<tr valign="top">
+  <td>
+
+<b>Week 14</b>
+    
+  </td>
+  <td>11/22</td>
+  <td>Section 16.7</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-11-22.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 14) 28, 43</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>11/23</td>
+  <td>Section 16.8</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-11-23.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 14) 14, 17</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>11/24</td>
+  <td>Thanksgiving Break</td>
+  <td>
+    
+  </td>
+  <td></td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>11/26</td>
+  <td>Thanksgiving Break</td>
+  <td>
+    
+  </td>
+  <td></td>
+</tr>
+
+<tr valign="top">
+  <td>
+
+<b>Week 15</b>
+    
+  </td>
+  <td></td>
+  <td></td>
+  <td>
+    
+  </td>
+  <td></td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>11/29</td>
+  <td>Section 16.8/9</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-11-29.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>(WH 15) 16.9: 4, 17</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>11/30</td>
+  <td>Section 16.9</td>
+  <td>
+    
+     
+      
+      <a href="broadcast-notes/F253-2021-11-30.pdf">Notes</a>
+    
+    
+    
+  </td>
+  <td>none</td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>12/1</td>
+  <td>Review</td>
+  <td>
+    
+  </td>
+  <td></td>
+</tr>
+
+<tr valign="top">
+  <td>
+    
+  </td>
+  <td>12/3</td>
+  <td>Review</td>
+  <td>
+    
+  </td>
+  <td></td>
+</tr>
+
+</table>
+</div>
+</div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+function openNav() {
+    x = document.getElementById("nav");
+    if(x.className="sidenav") {
+      x.className += " showing";
+    }
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    x = document.getElementById("nav").className = "sidenav"
+}
+</script>
+</html>
+
