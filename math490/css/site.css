@@ -38,10 +38,12 @@ body { font-family: Verdana, Arial, Helvetica, sans-serif; margin: 0px; }
 
 table.asst-table { border: 2px solid black; border-collapse: separate; border-spacing: 20px 10px; }
 
-table.asst-table td { white-space: nowrap; word-break: break-all; }
+table.asst-table td { white-space: nowrap; word-break: break-all; line-height: 130%; }
 
 dt { float: left; width: 30px; text-align: right; font-weight: bold; }
 
 dd { margin: 0 0 0 60px; padding: 0 0 0.5em 0; }
+
+div.x-scroll { overflow-x: scroll; -webkit-overflow-scrolling: touch; width: 100%; white-space: nowrap; }
 
 /*# sourceMappingURL=site.css.map */
