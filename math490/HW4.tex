@@ -1,0 +1,61 @@
+\documentclass[minion]{homework}
+
+\newcommand{\Reals}{\mathbb{R}}
+\doclabel{Math F490: Homework 4}
+\docdate{Due: February 7, 2022}
+\def\Quats{\mathbb{H}}
+\def\ip<#1,#2>{\left<#1,#2\right>}
+\newcommand{\vi}{\mathbf{i}}
+\newcommand{\vj}{\mathbf{j}}
+\newcommand{\vk}{\mathbf{k}}
+\renewcommand{\Re}{\mathrm{Re}}
+
+\begin{document}
+\begin{problems}
+
+\problem If $t$ is a unit quaternion then the map $w\mapsto t^{-1}w t$
+for $w$ an imaginary quaterion is a rotation.  This is the content of the
+\textbf{Rotation by conjugation} section of the text on pages 14--15.
+Moreover, as we saw in class, $w\mapsto (-t)^{-1}w(-t)$ yeilds the same
+rotation.  That is, the unit quaternions $t$ and $-t$ determine, via 
+conjugation, the same rotation.  The question now is: are there any others?  The
+following problems show that no, these are the only ones.
+
+\begin{enumerate}
+  \item Show that if $t$ is a unit quaternion
+and $t^{-1}wt=w$ for all imaginary quaternions $w$, then $t=\pm1$.
+
+  \item Now give an easy argument to show that if $t_1$ and $t_2$ are two unit quaternions such that
+$(t_1)^{-1}w t_1 = (t_2)^{-1}w t_2$ for all imaginary unit quaternions $w$,
+then $t_1=\pm t_2$.
+\end{enumerate}
+
+\problem 1.5.1
+
+\problem 1.5.2
+
+\problem For $p,q \in \Quats$, we define $\ip<p,q>=\Re(p\overline q)$,
+where $\Re(q)$ is the real part of $q$.
+\begin{subproblems}
+\item Show that if $p\in \Quats$, then $\ip<p,p>=|p|^2$.
+\item Using the facts that $\overline{ab}=\overline b \overline a$ and $\Re(\overline a) = \Re(a)$
+for all $a,b\in \Quats$, show that $\ip<p,q>=\ip<q,p>$.
+\item For $x=(x_1,x_2,x_3,x_4)\in \Reals^4$, let $Q(x)=x_1 + x_2\vi+ x_3\vj+x_4\vk$
+be its representation as a quaternion.
+Show that for $x,y\in \Reals^4$, $x\cdot y = \ip<Q(x),Q(y)>$.
+\item We say that $p$ and $q$ are orthogonal if $\ip<p,q>=0$. 
+Show that $p\in\Quats$ is orthogonal to $1$ if and only if $p$ is pure imaginary.
+% \item Suppose $s\in \Quats$.  Show that for all $p,q\in\Quats$,
+% $\ip<ps,qs> = |s|^2\ip<p,q>$.  
+% \item Show that for all $p,q\in\Quats$, $\ip<\overline p, \overline q>=\ip<p,q>$.
+% \item Suppose $s\in \Quats$.  Show that for all $p,q\in\Quats$,
+% $\ip<sp,sq> = |s|^2\ip<p,q>$.  
+% \item Suppose $u\in\Quats$ and $u\neq 0$.  Show that conjugation by $u$ takes the real quaternions to themselves.
+% \item Conclude quickly that if $u\in\Quats$ and $u\neq 0$, then
+% conjugation by $u$ takes the imaginary quaternions to themselves.
+\end{subproblems}
+
+
+\end{problems}
+
+\end{document}
