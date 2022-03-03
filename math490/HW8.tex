@@ -1,0 +1,45 @@
+\documentclass[minion]{homework}
+\usepackage{hyperref}
+\newcommand{\Reals}{\mathbb{R}}
+\doclabel{Math F490: Homework 8}
+\docdate{Due: March 14, 2022}
+\def\Quats{\mathbb{H}}
+\def\ip<#1,#2>{\left<#1,#2\right>}
+\newcommand{\vi}{\mathbf{i}}
+\newcommand{\vj}{\mathbf{j}}
+\newcommand{\vk}{\mathbf{k}}
+\renewcommand{\Re}{\mathrm{Re}}
+
+\begin{document}
+\begin{problems}
+\problem Suppose $T:\Reals^n\to\Reals^n$ is a linear map and
+$|T(u)|=|u|$ for all $u$ in $\Reals^n$.  Show that $T$ is an isometry.
+
+\problem Show that for all $u,v\in\Reals^n$,
+\[
+u\cdot v = \frac12 \left(|u-v|^2-|u|^2-|v|^2\right).
+\]
+Thus, if you can compute distances from $0$, then you can also compute dot products!
+
+
+\problem Suppose $T:\Reals^n\to\Reals^n$ is a linear map and
+$|T(u)|=|u|$ for all $u$ in $\Reals^n$.  Show that $T$ preserves
+the dot product, i.e. that for all $u,v\in\Reals^n$
+\[
+u\cdot v = T(u)\cdot T(v).
+\]
+Hint: look at the previous problem.
+
+\problem Suppose $T:\Reals^n\to\Reals^n$ is linear and that 
+\[
+T(e_i)\cdot T(e_j) = e_i\cdot e_j
+\]
+for some basis vectors $e_1,\ldots,e_n$ in $\Reals^n$.  Show that
+$T(u)\cdot T(v)=u\cdot v$ for all $u,v\in\Reals^n$.
+
+\problem 3.1.2
+
+
+\end{problems}
+
+\end{document}
