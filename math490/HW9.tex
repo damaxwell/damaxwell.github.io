@@ -1,0 +1,40 @@
+\documentclass[minion]{homework}
+\usepackage{hyperref}
+\newcommand{\Reals}{\mathbb{R}}
+\doclabel{Math F490: Homework 9}
+\docdate{Due: March 23, 2022}
+\def\Quats{\mathbb{H}}
+\def\ip<#1,#2>{\left<#1,#2\right>}
+\newcommand{\vi}{\mathbf{i}}
+\newcommand{\vj}{\mathbf{j}}
+\newcommand{\vk}{\mathbf{k}}
+\renewcommand{\Re}{\mathrm{Re}}
+
+\begin{document}
+\begin{problems}
+In the problem below you can use the following fact.  If $\alpha$ and $\beta$ 
+are complex numbers, not both zero, and if $x$ and $y$ are complex numbers
+such that
+\[
+\alpha x + \beta y = 0
+\]
+then there exists a complex number $z$ such that $(x,y)=z(-\beta,\alpha)$.
+
+\problem Suppose $A\in SU(2)$.  That is, $A$ is a $2\times 2$ complex matrix
+with $A\bar{A}^T=I$ and with $\det(A)=1$.  Show that there exist complex numbers $\alpha$
+and $\beta$ such that
+\[
+A = \begin{pmatrix} \alpha & -\beta\\ \overline{\beta} & \overline{\alpha}\end{pmatrix}
+\]
+and such that $|\alpha|^2+|\beta|^2=1$.
+
+Hint: without loss of generality you can assume $A$ has the form
+\[
+A = \begin{pmatrix} 
+\alpha & -\beta\\ \overline{\gamma} & \overline{\delta}\end{pmatrix}
+\]
+for some complex numbers $\alpha$, $\beta$, $\gamma$, $\delta$.  Now use
+the condition $A\overline{A}^T=I$.
+\end{problems}
+
+\end{document}
