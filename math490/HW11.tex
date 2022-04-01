@@ -1,0 +1,32 @@
+\documentclass[minion]{homework}
+\usepackage{hyperref}
+\newcommand{\Reals}{\mathbb{R}}
+\doclabel{Math F490: Homework 11}
+\docdate{Due: April 11, 2022}
+\def\Quats{\mathbb{H}}
+\def\ip<#1,#2>{\left<#1,#2\right>}
+\newcommand{\vi}{\mathbf{i}}
+\newcommand{\vj}{\mathbf{j}}
+\newcommand{\vk}{\mathbf{k}}
+\renewcommand{\Re}{\mathrm{Re}}
+
+\begin{document}
+\begin{problems}
+
+\problem  Let 
+\[
+R_\theta = \begin{pmatrix} \cos(\theta) & -\sin(\theta) \\
+\sin(\theta) & \cos(\theta) \end{pmatrix}.
+\]
+Let $H=\{R_\theta:\theta\in\Reals\}$.  That is, $H$ is $SO(2)$.
+\begin{enumerate}
+  \item Show that $H$ is group isomorphic to $S^1$.  You must exhibit the isomorphism,
+  show that it is a homomorphism, and show that it is bejective.  You may find it easiest
+  to make the isomorphism go from $S^1$ to $H$.
+  \item Suppose $A$ is a $2\times 2$ real matrix in $O(2)$ and $AR_\theta=R_\theta A$
+  for all $\theta$.  Show that there exists $\theta'$ with $A=R_{\theta'}$.
+  \item Conclude that $SO(2)$ is a maximal torus in $O(2)$.
+\end{enumerate}
+
+\end{problems}
+\end{document}
