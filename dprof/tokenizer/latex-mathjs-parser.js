@@ -544,6 +544,7 @@ class Parser {
     }
 
     if( t.value == 'frac' ) {
+      this.consume()
       return this.frac()
     }
 
