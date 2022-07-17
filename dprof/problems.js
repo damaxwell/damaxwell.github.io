@@ -6,6 +6,12 @@ problems = [
 },
 
 {
+  question: "\\sec(x)",
+  answer: '\\sec(x)\\tan(x)',
+  ivar: 'x'
+},
+
+{
   question: "e^{3x} + \\pi",
   answer: '3e^{3x}',
   ivar: 'x'

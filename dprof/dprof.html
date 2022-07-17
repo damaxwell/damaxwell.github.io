@@ -4,23 +4,36 @@
     <meta charset="UTF-8">
   </head>
   <body>
-<link rel="stylesheet" href="mathquill-0.10.1/mathquill.css"/>
+<link rel="stylesheet" href="mathquill-0.10.1/mathquill-basic.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="mathquill-0.10.1/mathquill.js"></script>
+<script src="mathquill-0.10.1/mathquill-basic.js"></script>
 <script src="tokenizer/node_modules/mathjs/lib/browser/math.js"></script>
 <script src="tokenizer/latex-mathjs-parser.js"></script>
 
 <p style="font-size:25px">
-  Find the derivative of:&nbsp;&nbsp; <span id='question'></span></p>
+  Compute the following derivative: &nbsp;&nbsp; <span id='question'></span></p>
 
-<p><span style="min-height: 2em; min-width:  200px; font-size: 35px; vertical-align:middle" id="answer">Next</span></p>
+<p>
+<div style="position: relative;
+padding-top: 15px;
+padding-left: 53px;
+padding-right: 35px;
+padding-bottom: 9px;
+white-space: nowrap;
+font-size: 140%;
+vertical-align: middle;">
+<span style="min-width:  200px; " id="answer"></span> 
+</div>Latex generated: <span id="debug-latex"></span></p>
 
-<p  style="min-height: 2em; font-size: 25px;" id='response'></p>
+<p style="min-height: 2em; font-size: 25px;" id='response'></p>
+
+<p>Error message: <span id="error-message"></span></p>
 
 <hr>
 
-<button style="font-size: 20px" type="button" id='reset'>Reset</button>
+<button style="font-size: 20px" type="button" id='prev'>Previous</button>
 <button style="font-size: 20px" type="button" id='next'>Next</button>
+<button style="font-size: 20px" type="button" id='reset'>Reset</button>
 
 
 <!-- <script type='module' src='dprof.js' /> -->

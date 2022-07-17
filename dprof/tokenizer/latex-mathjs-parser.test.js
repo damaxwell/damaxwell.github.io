@@ -205,7 +205,8 @@ test("-\\sin(x)", () => {
 
 test("cos poly theta", () => {
   input = "\\cos(3\\theta^5 -2\\theta +1)*(15\\theta^4-2)"
-  output = "neg[sin[variable[x]]]"
+  output = "*[cos[+[-[*[number[3],^[variable[θ],number[5]]],*[number[2],variable[θ]]],number[1]]],-[*[number[15],^[variable[θ],number[4]]],number[2]]]"
   p = new latex_parser.Parser(input)
   expect(p.parse().toString()).toBe(output);
 });
+

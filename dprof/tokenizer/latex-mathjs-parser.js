@@ -35,6 +35,7 @@ class Tokenizer  {
 
   nexttoken() {
     if( this.error != null ){
+      console.log("a")
       return new Token('Error', this.error)
     }
 
@@ -59,11 +60,11 @@ class Tokenizer  {
 
     if( num.length >0 ) {
       this.position -= 1
-      if( num === "-.") {
-        this.error = "-."
-        return new Token("Error",null)
+      if( num != '.' ) {
+        return new Token("Number", num)
       }
-      return new Token("Number", num)
+      this.position -= 1
+      c = '.'
     }
 
     if( c== '_') {
@@ -96,6 +97,17 @@ class Tokenizer  {
       if(c == ' ') {
         return new Token('Command',' ')
       }
+
+      if(c == '}') {
+        return new Token('Command','}')
+      }
+      if(c == '{') {
+        return new Token('Command','{')
+      }      
+      if(c == '%') {
+        return new Token('Other','%')
+      }
+
       while( isAlpha(c) ) {
         name += c
         c = this.next()
@@ -118,8 +130,8 @@ class Tokenizer  {
       return new Token('EndOfStream',null)
     }
 
-    this.error = c
-    return new Token('Error',null)
+    console.log("returning other")
+    return new Token('Other',c)
 
   }
 
@@ -144,6 +156,9 @@ class Node {
 
   toMathJS() {
     if( ['+','-','*','/','^'].includes(this.value) ){
+      if( this.lhs.value =='null' || this.rhs.value =='null') {
+        throw Error("You need something on both sides of '"+this.value+"'")
+      }
       return "(" + this.lhs.toMathJS() + ")" + this.value + "(" + this.rhs.toMathJS() + ")"
     }
     if( this.value == 'number' ) {
@@ -153,9 +168,20 @@ class Node {
       return this.lhs
     }
     if( this.value == 'neg' ) {
+      if(this.lhs.value == 'null') {
+        throw Error("You need to provide an argument to '-'")
+      }
       let val =  "-1*(" + this.lhs.toMathJS() + ")"
       return val
     }
+
+    if( this.value == 'pos' ) {
+      if(this.lhs.value == 'null') {
+        throw Error("You need to provide an argument to '+'")
+      }
+      return this.lhs.toMathJS()
+    }
+
 
     // Otherwise, it's a named function or an inverse of it
 
@@ -186,11 +212,23 @@ class Node {
       }
     }
 
+
+
     // Sqrt and log and pow are two argument functions potentially
     if( func_name == 'sqrt' ) {
-      if(func_node.rhs != null) {
-        return 'nthroot(' + func_node.lhs.toMathJS() + "," + func_node.rhs.toMathJS() + ")"
+      if(func_node.rhs != null) {        
+        if( func_node.rhs.value == 'null') {
+          throw Error("Radical cannot be empty")
+        }
+        if( func_node.lhs.value == 'null') {
+          throw Error("Radical index cannot be empty")
+        }
+
+        return 'nthRoot(' + func_node.rhs.toMathJS() + "," + func_node.lhs.toMathJS() + ")"
       } else {
+        if( func_node.lhs.value == 'null') {
+          throw Error("Radical cannot be empty")
+        }
         return 'sqrt('+ func_node.lhs.toMathJS() + ")"
       }
     }
@@ -203,8 +241,14 @@ class Node {
       }
     }
 
+
+
     if( func_name == 'pow' ) {
         return 'pow('+ func_node.lhs.toMathJS() + ","+ func_node.lhs.toMathJS() + ")"
+    }
+
+    if( func_node.lhs.value == 'null' ) {
+      throw Error("You need to provide an argument to '"+func_name+"'")
     }
 
     return func_name + "(" + func_node.lhs.toMathJS() + ")";
@@ -232,7 +276,8 @@ function compare(latex,answer) {
   for( z in x) {
     try {
       small = math.abs(diff.evaluate({'x': z}))
-    } catch {
+    } catch (error) {
+      console.log(error)
       return false
     }
     console.log(small)
@@ -278,6 +323,10 @@ class TokenFilter {
         return new Token('Operator','*')        
       }
  
+      if( t.value == 'backslash' ) {
+        return new Token('Other','\\')
+      }
+
       if( t.value == 'operatorname' ) {
         if( this.tokenizer.nexttoken().type != 'BeginGroup' ) {
           throw Error("Malformed operator name")
@@ -298,6 +347,14 @@ class TokenFilter {
     return t
   }
 }
+
+class UnexpectedFunctionCallError extends Error {
+  constructor(message) {
+    super(message); // (1)
+    this.name = "UnexpectedFunctionCallError"; // (2)
+  }
+}
+
 
 known_functions = [
 'sin', 'cos', 'tan', 'cot', 'sec', 'csc',
@@ -333,7 +390,10 @@ class Parser {
   }
 
   parse() {
-    return this.expression()
+    let rv = this.expression()
+    console.log(rv)
+    return rv
+    // return this.expression()
   }
 
   expression() {
@@ -350,12 +410,11 @@ class Parser {
       if( next.type == 'Operator') {
         let op = next.value
         if( (op == '+') || (op == '-') ) {
-          console.log("hit +")
           this.consume()
           let rhs = this.multiplication()
           lhs =  new Node(op,lhs,rhs)
         } else {
-          throw Error("Unexpected operator " + op)
+          break
         }
       } else {
         break
@@ -391,8 +450,12 @@ class Parser {
     return lhs
   }
 
+  // Works like multiplication except a leading unary +/- is not
+  // permitted, and function calls are not allowable as factors. 
+  // This is used for arguments to functions that are not surrounded by
+  // parentheses.
   pmultiplication() {
-    let lhs = this.ppower();
+    let lhs = this.ppower({allow_functions: false });
 
     while(true) {
       let next = this.nexttoken()
@@ -401,14 +464,14 @@ class Parser {
         let op = next.value
         if( (op == '*') ||  (op == '/') ) {
           this.consume()
-          let rhs = this.unary()
+          let rhs = this.unary({allow_functions: false })
           lhs =  new Node(op,lhs,rhs)          
         } else {
           break
         }
       } else if( next.type == 'Command' || next.type == 'OpenBrace' ||
             next.type == 'Variable' || next.type == 'Number' ) {
-          let rhs = this.ppower()
+          let rhs = this.ppower({allow_functions: false })
           lhs = new Node('*',lhs,rhs)                    
       } else {
         break
@@ -434,8 +497,9 @@ class Parser {
     return lhs
   }
 
-  ppower() {
-    let lhs = this.funcapply()
+  ppower( {allow_functions = true } = {} ) {
+
+    let lhs = this.funcapply({allow_functions: allow_functions})
 
     let next = this.nexttoken()
     if( next.type == 'Operator' ) {
@@ -451,7 +515,7 @@ class Parser {
     return lhs
   }
 
-  unary() {    
+  unary({allow_functions = true } = {} ) {    
     let t = this.nexttoken()
     if( t.type == 'Operator' ) {
       let op = t.value
@@ -461,36 +525,40 @@ class Parser {
           let lhs = this.unary()
           return new Node('neg',lhs,null)
         } else {
-          return unary()
+          let lhs = this.unary()
+          return new Node('pos',lhs,null)
         }
       } else {
-        throw Error("Unexpected operator " + op)
+        return new Node("null",null,null)
       }
     } else {
-      return this.funcapply()
+      return this.funcapply({allow_functions: allow_functions})
     }
   }
 
-  funcapply() {
+  funcapply({allow_functions = true} = {}) {
     let t = this.nexttoken()
 
     if( t.type != 'Command' ) {
       return this.primary()
     }
 
-    console.log("funcapply " + t.value)
+    if( t.value == 'frac' ) {
+      return this.frac()
+    }
+
+    if(!allow_functions) {
+      throw new UnexpectedFunctionCallError("Unexpected function call: " + t.value)
+    }
+
     if( !known_functions.includes(t.value) ) {
-      throw Error("Unknown function " + t.value)
+      throw Error("Unknown function: " + t.value)
     }
 
     this.consume()
     let fname = t.value
     let sup = null
     let sub = null
-
-    if( fname == 'frac' ) {
-      return this.frac()
-    }
 
     t = this.nexttoken()
     if( (t.type == 'OpenBrace') &&  (t.value == '[') ){
@@ -553,7 +621,15 @@ class Parser {
       }
       this.consume()
     } else {
-      arg = this.pmultiplication()
+      try {
+        arg = this.pmultiplication()
+      } catch(err) {
+        if( err instanceof UnexpectedFunctionCallError) {
+          throw Error("Parentheses needed for '" + fname + "'")
+        } else {
+          throw err
+        }
+      }
     }
 
     let base = new Node(fname,arg,null)
@@ -693,11 +769,22 @@ class Parser {
 
     if( t.type == 'OpenBrace' ) {
       this.consume()
+      let brace = t.value
+
+      t = this.nexttoken()
+      if( t.type == 'CloseBrace' ) {
+        throw Error("Parentheses cannot be empty")
+      }
+
       let inner = this.expression()
 
       t = this.nexttoken()
       if( t.type != 'CloseBrace' ) {
         throw Error("Missing closing brace")
+      }
+
+      if( (t.value == ']' && brace == '(') || (t.value == '[' && brace == ')')) {
+        throw Error("Mismatched braces: "+brace+" vs. "+t.value)
       }
 
       this.consume()
@@ -727,11 +814,18 @@ class Parser {
       return new Node('number',parseFloat(t.value),null)
     }
 
-    if( t.type == 'EndOfStream') {
-      throw Error("Unexpected end of expression.")      
+    if( t.type == 'EndGroup' || t.type =='CloseBrace' || t.type == 'EndOfStream') {
+      return new Node('null',null,null)
     }
 
-    throw Error("Unexpected token " + t)
+    if( t.type = 'Other' ) {
+      if( t.value == '.' ) {
+        throw Error("A '.' needs to be part of a number")
+      }
+      throw Error("I don't understand the '"+t.value+"' character");
+    }
+
+    throw Error("Unexpected token " + t.type + " " + t.value)
   }
 
 }
