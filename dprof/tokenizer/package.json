@@ -1,0 +1,14 @@
+{
+  "name": "latex-mathjs-parser",
+  "version": "0.0.1",
+  "description": "parse latex into math.js",
+  "main": "latex-mathjs-parser.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mathjs": "^10.6.4"
+  }
+}

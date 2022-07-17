@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+<link rel="stylesheet" href="mathquill-0.10.1/mathquill.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="mathquill-0.10.1/mathquill.js"></script>
+<script src="tokenizer/node_modules/mathjs/lib/browser/math.js"></script>
+<script src="tokenizer/latex-mathjs-parser.js"></script>
+
+<p style="font-size:25px">
+  Find the derivative of:&nbsp;&nbsp; <span id='question'></span></p>
+
+<p><span style="min-height: 2em; min-width:  200px; font-size: 35px; vertical-align:middle" id="answer">Next</span></p>
+
+<p  style="min-height: 2em; font-size: 25px;" id='response'></p>
+
+<hr>
+
+<button style="font-size: 20px" type="button" id='reset'>Reset</button>
+<button style="font-size: 20px" type="button" id='next'>Next</button>
+
+
+<!-- <script type='module' src='dprof.js' /> -->
+<script src="problems.js"></script>
+<script src="dprof.js"></script>
+
+</body>
+</html>
