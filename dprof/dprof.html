@@ -43,8 +43,35 @@ MathJax = {
 <div id="problem-set">
 </div>
 
-<script src="problems.js"></script>
+<!-- <script src="problems.js"></script> -->
 <script src="dprof.js"></script>
+<script>
+var problem_set = null
+
+console.log("call JSON")
+
+$.getJSON("./problems.json" )
+ .success( function(problems) {
+
+  problem_container = document.getElementById("problem-set")
+  console.log(problems)
+
+
+  var p_list = []
+  for (p in problems)  {
+    dprob = new DProblem(document)
+    p_list.push( dprob )
+    problem_container.appendChild(dprob.element)
+    dprob.setup(problems[p])
+    problem_container.appendChild(document.createElement("hr"))
+  }
+}).error( function(e) {
+  console.log("error")
+  console.log(e) 
+})
+
+</script>
+
 </div>
 </body>
 </html>

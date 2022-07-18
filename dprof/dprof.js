@@ -4,6 +4,10 @@ let color = {
   correct: "#4CF565",
   warn: "#FEFC8B"
 }
+const greek_to_latex = {
+    'θ' : '\\theta',
+    'alpha' : '\\alpha',
+}
 
 
 class DProblem {
@@ -100,7 +104,7 @@ class DProblem {
     let q_latex = "\\frac{d}{d"+ivar+"}" + problem.question
     this.q_field.innerHTML = "$" + q_latex + "$"
     if(MathJax.typeset != undefined) {
-      MathJax.typeset([this.xq_field]);
+      MathJax.typeset([this.q_field]);
     }
 
     this.mathField.latex('')
@@ -109,48 +113,3 @@ class DProblem {
   }
 }
 
-
-let g_prob_num = 0
-
-
-const greek_to_latex = {
-    'θ' : '\\theta',
-    'alpha' : '\\alpha',
-}
-
-var problem_set = null
-
-problem_container = document.getElementById("problem-set")
-
-var p_list = []
-for (p in problems)  {
-  dprob = new DProblem(document)
-  p_list.push( dprob )
-  problem_container.appendChild(dprob.element)
-  dprob.setup(problems[p])
-  problem_container.appendChild(document.createElement("hr"))
-}
-
-// document.getElementById("problem-set").appendChild(the_problem.element)
-
-// the_problem.setup(problems[0])
-
-// document.getElementById('reset').addEventListener('click', (ev) => {
-//   the_problem.setup(problems[g_prob_num])
-// })
-
-// document.getElementById('next').addEventListener('click', (ev) => {
-//   g_prob_num += 1
-//   if( g_prob_num >= problems.length ){
-//     g_prob_num = 0
-//   }
-//   the_problem.setup(problems[g_prob_num])
-// })
-
-// document.getElementById('prev').addEventListener('click', (ev) => {
-//   g_prob_num -= 1
-//   if( g_prob_num < 0 ){
-//     g_prob_num = problems.length - 1
-//   }
-//   the_problem.setup(problems[g_prob_num])
-// })
