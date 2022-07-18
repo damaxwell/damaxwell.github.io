@@ -38,46 +38,49 @@ MathJax = {
 <li> To get a logarithm with a different base, use the the <tt>_</tt> key to get a subscript.</li>
 </ul>
 
-<label for="pet-select">Choose a problem set:</label>
+<input type="file" id="file-uploader">
+<script type="text/javascript">
+const fileUploader = document.getElementById('file-uploader');
+fileUploader.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  console.log('files', file);
 
-<select id="select">
-    <option value="">--Please choose an option--</option>
-    <option value="problems.json">A Dummy Proficiency</option>
-    <option value="OS-section3.1.json">OpenSTAX Section 3.3</option>
-</select>
+  var reader = new FileReader();
 
-<hr>
+  reader.readAsText(file);
+
+  reader.onload = function() {
+    try {
+      var problem_set = JSON.parse((reader.result));
+    } catch(e) {
+      document.getElementById("upload-error").innerHTML="JSON Parse Error: " + e
+      set_problem_set(null)
+      return
+    }
+    set_problem_set(problem_set)
+  };
+
+  reader.onerror = function() {
+    console.log(reader.error);
+  };
+
+});
+</script>
+<p id="upload-error"></p>
+
 
 <h2 id="set-label"></h2>
 <div id="problem-set">
 </div>
 
 <script src="dprof.js"></script>
+ 
 <script>
 
-document.getElementById("select").addEventListener('change',
-  function handleChange(event) {
-
-  filename = event.target.value
-
-  if( filename == "") {
-    set_problem_set(null)
-    return
-  }
-
-  $.getJSON("./" + filename )
-   .success( function(problem_set) {
-    set_problem_set(problem_set)
-  }).error( function(e) {
-    console.log("error")
-    console.log(e) 
-  })
-})
-</script>
-
-<script type="text/javascript">
 function set_problem_set(problem_set) {
   console.log(problem_set)
+
+
 
   // Remove all previous problems
   problem_container = document.getElementById("problem-set")
@@ -105,8 +108,6 @@ function set_problem_set(problem_set) {
 }
 
 </script>
-
-
 </div>
 </body>
 </html>
