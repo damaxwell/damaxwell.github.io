@@ -43,7 +43,7 @@ problems = [
 
 {
   question: "\\sqrt{t+\\tan(\\pi t)}",
-  answer: "\\frac{\\pi}{2}\\frac{1}{\\sqrt{t+\\tan(\\pi t)}}(1+\\sec^2(\\pi t))",
+  answer: "\\frac{1}{2}\\frac{1}{\\sqrt{t+\\tan(\\pi t)}}(1+\\pi\\sec^2(\\pi t))",
   ivar: 't'
 },
 

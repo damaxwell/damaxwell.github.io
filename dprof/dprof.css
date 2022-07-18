@@ -1,4 +1,31 @@
+
 body {
   font-size: 130%;
   font-family: Verdana, Arial, Helvetica, sans-serif;
  }
+
+.container {
+  display: flex;
+  width: 400px;
+  background-color: #FFFFFF;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #000000;
+  background-color: #f0f0f0;
+}
+
+.left {
+  background-color: #ADD8E6;
+  padding:  0px;
+  min-width: 60px;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+.right{
+  padding: 20px;
+  font:  140%;
+  width: 100%;
+  border-style: solid;
+  background-color: #f0f0f0;
+}

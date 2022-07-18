@@ -3,9 +3,22 @@
   <head>
     <meta charset="UTF-8">
 <link href="dprof.css" rel="stylesheet">
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
 </head>
 
-  </head>
   <body>
 <link rel="stylesheet" href="mathquill-0.10.1/mathquill-basic.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -14,37 +27,31 @@
 <script src="tokenizer/latex-mathjs-parser.js"></script>
 
 <div class="main">
-<p>This is a mockup for a derivative self-study tool. It is very much beta.</p>
+<p>This is a mockup for a derivative self-study tool. It is very much $\beta$. Or maybe $\gamma$.</p>
 
 <ul>
-<li> Enter familiar funtions (sin, cos, log) just by typing their name.</li>
-<li> For square roots, use <tt>sqrt</tt>.</li>
-<li> For general radicals, use <tt>nthroot</tt>.</li>
+<li> Enter familiar funtions ($\sin$, $\cos$, $\log$) just by typing their name.</li>
+<li> For square roots, type <tt>sqrt</tt>.</li>
+<li> For general radicals, like $\sqrt[3]{x}$, type <tt>nthroot</tt>.</li>
 <li> The natural logarithm is <tt>ln</tt>.</li>
-<li> An undecorated <tt>log</tt> is base 10. Sorry.</li>
+<li> An undecorated <tt>log</tt> is $\log_{10}$. Sorry.</li>
 <li> To get a logarithm with a different base, use the the <tt>_</tt> key to get a subscript.</li>
 </ul>
 
 <hr>
 
-<p style="font-size:25px">
-  Compute the following derivative: &nbsp;&nbsp; <span id='question'></span></p>
+<div id="problem1">
+<p style="font-size:125%">
+  Compute the following derivative: &nbsp; <span name='question-jax'></span></p>
 
-<p>
-<div style="position: relative;
-padding-top: 15px;
-padding-left: 53px;
-padding-right: 35px;
-padding-bottom: 9px;
-white-space: nowrap;
-font-size: 140%;
-vertical-align: middle;">
-<span style="min-width:  200px; " id="answer"></span> 
-</div>Latex generated: <span id="debug-latex"></span></p>
+<div class="container">
+  <div class="left" name="feedback"></div>
+  <div class="right" name="answer"></div>
+</div>
 
-<p style="min-height: 2em; font-size: 25px;" id='response'></p>
-
-<p>Error message: <span id="error-message"></span></p>
+<p>Latex generated: <span name="debug-latex"></span></p>
+<p>Error message: <span name="error-message"></span></p>
+</div>
 
 <hr>
 
