@@ -1,0 +1,18 @@
+{
+  "title": "OpenSTAX Chapter 3.3",
+  "questions": [
+  {
+    "label": "3.3.106",
+    "question": "Compute $f'(x)$ if $f(x)=x^7+10$.",
+    "answer": "7x^6",
+    "ivar": "x"
+  },
+  {
+    "label": "3.3.107",
+    "question": "Compute $f'(x)$ if $f(x)=5x^3-x+1$.",
+    "answer": "15x^2-1",
+    "ivar": "x"
+  }
+  ]  
+}
+

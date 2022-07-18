@@ -14,14 +14,15 @@ class DProblem {
   constructor(document){
     this.element = document.createElement("div")
 
-    let prompt = document.createElement("p")
-    prompt.stype = "font-size:125%"
-    prompt.innerHTML = "Compute the following derivative: &nbsp;"
+    this.problem_label = document.createElement("p")
+    this.problem_label.className = "problem-label"
+    this.element.appendChild(this.problem_label)
 
-    this.q_field = document.createElement("span")
-    prompt.appendChild(this.q_field)
-    this.element.appendChild(prompt)
-
+    let q_field = document.createElement("p")
+    q_field.class = "question-statement"
+    q_field.innerHTML = ""
+    this.q_field = q_field
+    this.element.appendChild(q_field)
 
     let answer_block = document.createElement("div")
     answer_block.className = "container"
@@ -92,8 +93,14 @@ class DProblem {
     }
   }
 
-  setup(problem) {
+  setup(problem, number) {
     this.problem = problem
+
+    if( problem.label == undefined) {
+      this.problem_label.innerHTML = (parseFloat(number) + 1) +")"
+    } else {
+      this.problem_label.innerHTML = problem.label
+    }
 
     let ivar = problem.ivar
     let greek_ivar = greek_to_latex[ivar]
@@ -101,8 +108,7 @@ class DProblem {
       ivar = greek_ivar
     }
 
-    let q_latex = "\\frac{d}{d"+ivar+"}" + problem.question
-    this.q_field.innerHTML = "$" + q_latex + "$"
+    this.q_field.innerHTML = problem.question
     if(MathJax.typeset != undefined) {
       MathJax.typeset([this.q_field]);
     }

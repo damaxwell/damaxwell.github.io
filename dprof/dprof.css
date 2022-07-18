@@ -30,6 +30,14 @@ body {
   background-color: #f0f0f0;
 }
 
+.question-statement {
+  font-size: 125%;
+}
+
+.problem-label {
+  font-weight: bold;
+}
+
 .hovertext {
   position: relative;
   border-bottom: 1px dotted black;

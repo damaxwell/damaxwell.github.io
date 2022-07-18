@@ -38,37 +38,67 @@ MathJax = {
 <li> To get a logarithm with a different base, use the the <tt>_</tt> key to get a subscript.</li>
 </ul>
 
+<label for="pet-select">Choose a problem set:</label>
+
+<select id="select">
+    <option value="">--Please choose an option--</option>
+    <option value="problems.json">A Dummy Proficiency</option>
+    <option value="OS-section3.1.json">OpenSTAX Section 3.3</option>
+</select>
+
 <hr>
 
+<h2 id="set-label"></h2>
 <div id="problem-set">
 </div>
 
-<!-- <script src="problems.js"></script> -->
 <script src="dprof.js"></script>
 <script>
-var problem_set = null
 
-console.log("call JSON")
+document.getElementById("select").addEventListener('change',
+  function handleChange(event) {
 
-$.getJSON("./problems.json" )
- .success( function(problems) {
+  filename = event.target.value
 
+  // Remove all previous problems
   problem_container = document.getElementById("problem-set")
-  console.log(problems)
-
-
-  var p_list = []
-  for (p in problems)  {
-    dprob = new DProblem(document)
-    p_list.push( dprob )
-    problem_container.appendChild(dprob.element)
-    dprob.setup(problems[p])
-    problem_container.appendChild(document.createElement("hr"))
+  while (problem_container.firstChild) {
+    problem_container.removeChild(problem_container.lastChild);
   }
-}).error( function(e) {
-  console.log("error")
-  console.log(e) 
+
+  if( filename == "") {
+    document.getElementById("set-label").innerHTML = ""    
+    return
+  }
+
+  console.log("call JSON")
+
+  $.getJSON("./" + filename )
+   .success( function(problem_set) {
+    console.log(problem_set)
+
+    document.getElementById("set-label").innerHTML = problem_set.title
+    problem_container = document.getElementById("problem-set")
+
+    var p_list = []
+    problems = problem_set.questions
+    for (p in problems)  {
+      dprob = new DProblem(document)
+      p_list.push( dprob )
+      problem_container.appendChild(dprob.element)
+      dprob.setup(problems[p],p)
+      problem_container.appendChild(document.createElement("hr"))
+    }
+  }).error( function(e) {
+    console.log("error")
+    console.log(e) 
+  })
 })
+
+
+
+
+
 
 </script>
 
