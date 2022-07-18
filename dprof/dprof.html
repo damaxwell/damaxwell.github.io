@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+<link href="dprof.css" rel="stylesheet">
+</head>
+
   </head>
   <body>
 <link rel="stylesheet" href="mathquill-0.10.1/mathquill-basic.css"/>
@@ -9,6 +12,20 @@
 <script src="mathquill-0.10.1/mathquill-basic.js"></script>
 <script src="tokenizer/node_modules/mathjs/lib/browser/math.js"></script>
 <script src="tokenizer/latex-mathjs-parser.js"></script>
+
+<div class="main">
+<p>This is a mockup for a derivative self-study tool. It is very much beta.</p>
+
+<ul>
+<li> Enter familiar funtions (sin, cos, log) just by typing their name.</li>
+<li> For square roots, use <tt>sqrt</tt>.</li>
+<li> For general radicals, use <tt>nthroot</tt>.</li>
+<li> The natural logarithm is <tt>ln</tt>.</li>
+<li> An undecorated <tt>log</tt> is base 10. Sorry.</li>
+<li> To get a logarithm with a different base, use the the <tt>_</tt> key to get a subscript.</li>
+</ul>
+
+<hr>
 
 <p style="font-size:25px">
   Compute the following derivative: &nbsp;&nbsp; <span id='question'></span></p>
@@ -39,6 +56,6 @@ vertical-align: middle;">
 <!-- <script type='module' src='dprof.js' /> -->
 <script src="problems.js"></script>
 <script src="dprof.js"></script>
-
+</div>
 </body>
 </html>

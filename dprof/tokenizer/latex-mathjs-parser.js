@@ -35,7 +35,6 @@ class Tokenizer  {
 
   nexttoken() {
     if( this.error != null ){
-      console.log("a")
       return new Token('Error', this.error)
     }
 
@@ -130,7 +129,6 @@ class Tokenizer  {
       return new Token('EndOfStream',null)
     }
 
-    console.log("returning other")
     return new Token('Other',c)
 
   }
@@ -235,8 +233,17 @@ class Node {
 
     if( func_name == 'log' ) {
       if(func_node.rhs != null) {
+        if( func_node.lhs.value == 'null') {
+          throw Error("You need to fill in the missing base to 'log'")
+        }
+        if( func_node.rhs.value == 'null') {
+          throw Error("You need to give an argument to 'log'")
+        }
         return 'log(' + func_node.rhs.toMathJS() + "," + func_node.lhs.toMathJS() + ")"
       } else {
+        if( func_node.lhs.value == 'null') {
+          throw Error("You need to give an argument to 'log'")
+        }
         return 'log10('+ func_node.lhs.toMathJS() + ")"
       }
     }
@@ -381,7 +388,6 @@ class Parser {
     if( this.token_cache == null ) {
       this.token_cache = this.t.nexttoken()
     }
-    console.log(this.token_cache)
     return this.token_cache
   }
 
@@ -391,7 +397,7 @@ class Parser {
 
   parse() {
     let rv = this.expression()
-    console.log(rv)
+    console.log(rv.toMathJS())
     return rv
     // return this.expression()
   }
@@ -414,7 +420,7 @@ class Parser {
           let rhs = this.multiplication()
           lhs =  new Node(op,lhs,rhs)
         } else {
-          break
+          throw Error("foo")
         }
       } else {
         break
@@ -444,6 +450,9 @@ class Parser {
           let rhs = this.ppower()
           lhs = new Node('*',lhs,rhs)                    
       } else {
+        if( next.type == 'Other' ) {
+          throw Error("I don't understand " + next.value)
+        }
         break
       }
     }
@@ -540,7 +549,7 @@ class Parser {
     let t = this.nexttoken()
 
     if( t.type != 'Command' ) {
-      return this.primary()
+      return this.subscript()
     }
 
     if( t.value == 'frac' ) {
@@ -586,6 +595,9 @@ class Parser {
       t = this.nexttoken()
       if( t.type == 'Subscript' ) {
         this.consume()
+        if( fname != 'log' ) {
+          throw Error("Only 'log' can have a subscript.")
+        }        
         sub = this.funcsub()
       }
     }
@@ -646,6 +658,7 @@ class Parser {
       return new Node('^',base,sup)
     }
 
+    console.log("foo "+base)
     return base;
   }
 
@@ -659,7 +672,7 @@ class Parser {
       this.consume()
       numer = this.expression()
     } else {
-      numer = this.primary()
+      numer = this.unary()
     }
  
     if(needs_close) {
@@ -677,7 +690,7 @@ class Parser {
       this.consume()
       denom = this.expression()
     } else {
-      denom = this.primary()
+      denom = this.unary()
     }
  
     if(needs_close) {
@@ -741,31 +754,36 @@ class Parser {
     let needs_close = false
     if( t.type == 'BeginGroup' ) {
       this.consume()
-      needs_close = true
-    }
 
-    t = this.nexttoken()
-    if( t.type == 'Number' ) {
-      let sub = t
-      this.consume()
+      let inner = this.expression();
+      t = this.nexttoken()
 
-      if( needs_close ) {
-        t = this.nexttoken()
-        if( t.type == 'EndGroup' ) {          
-          this.consume()
-        } else {
-          throw Error("Missing closing brace in subscript")
-        }
+      if( inner.value != 'number' ) {
+        throw Error("Function subscript must be a positive number")
       }
-      return new Node('number',parseFloat(sub.value),null)
-    }
 
-    throw Errro("Function subscript must be a positive number")
+      if( t.type == 'EndGroup' ) {          
+        this.consume()
+      } else {
+        throw Error("Missing closing brace in subscript")
+      }
+
+      return inner      
+    }
+  }
+
+  subscript() {
+    let lhs = this.primary();
+    let t = this.nexttoken()
+    if( t.type == 'Subscript') {
+      throw Error("Only function names can have subscripts")
+    }
+    return lhs
   }
 
 
-
   primary() {
+    console.log("primary")
     let t = this.nexttoken()
 
     if( t.type == 'OpenBrace' ) {
