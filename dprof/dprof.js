@@ -7,17 +7,32 @@ let color = {
 
 
 class DProblem {
-  constructor(container) {
-    this.err_msg = container.querySelector('[name="error-message"]')
-    this.latex_debug = container.querySelector('[name="debug-latex"]')
-    this.q_field = container.querySelector('[name="question-jax"]')
+  constructor(document){
+    this.element = document.createElement("div")
 
-    this.feedback = container.querySelector('.left')
-    console.log(container)
-    console.log(this.feedback)
+    let prompt = document.createElement("p")
+    prompt.stype = "font-size:125%"
+    prompt.innerHTML = "Compute the following derivative: &nbsp;"
+
+    this.q_field = document.createElement("span")
+    prompt.appendChild(this.q_field)
+    this.element.appendChild(prompt)
+
+
+    let answer_block = document.createElement("div")
+    answer_block.className = "container"
+    
+    this.feedback = document.createElement("div")
+    this.feedback.className = "left"
+    answer_block.appendChild( this.feedback )
+
+    var answerDiv = document.createElement("div")
+    answerDiv.className = "right"
+    answer_block.appendChild( answerDiv)
+
+    this.element.appendChild(answer_block)
 
     var MQ = MathQuill.getInterface(2); // for backcompat
-    var mathFieldSpan = container.querySelector('[name="answer"]');
 
     var handlers = {
       parent: this,
@@ -33,31 +48,33 @@ class DProblem {
     }
     args.handlers = handlers
 
-    this.mathField = MQ.MathField(mathFieldSpan, args )
-      //   enter: function() { // useful event handlers
-      // }
-  };
+    this.mathField = MQ.MathField(answerDiv, args )
+
+  }
 
   on_edit() {
     this.feedback.style.backgroundColor = color.relax
+    this.feedback.innerHTML = ""
+    this.feedback.classList = ["left"]
   }
 
   on_enter() {
-    this.err_msg.innerHTML = ""
     this.feedback.style.backgroundColor = color.relax;
+    this.feedback.innerHTML = ""
+    this.feedback.classList = ["left"]
 
     let response = this.mathField.latex()
-    this. latex_debug.innerHTML = response
+    console.log("Generated answer: " + response)
 
     let answer = this.problem.answer
 
     try {
       var is_correct = compare(response, answer)
     } catch(err) {
-
       this.feedback.style.backgroundColor = color.warn;
       this.feedback.innerHTML="<img src='warn.svg' width=35px>"
-      this.err_msg.innerHTML = err.message
+      this.feedback.classList.add( "hovertext")
+      this.feedback.setAttribute("data-hover",err.message)
       return
     }
 
@@ -67,6 +84,7 @@ class DProblem {
       this.feedback.innerHTML="<img src='check.svg' width=35px>"
     } else {        
       this.feedback.style.backgroundColor = color.error;
+      this.feedback.innerHTML="<img src='ex.svg' width=25px>"
     }
   }
 
@@ -82,7 +100,7 @@ class DProblem {
     let q_latex = "\\frac{d}{d"+ivar+"}" + problem.question
     this.q_field.innerHTML = "$" + q_latex + "$"
     if(MathJax.typeset != undefined) {
-      MathJax.typeset([this.q_field]);
+      MathJax.typeset([this.xq_field]);
     }
 
     this.mathField.latex('')
@@ -100,33 +118,39 @@ const greek_to_latex = {
     'alpha' : '\\alpha',
 }
 
+var problem_set = null
 
-// var questionSpan = document.getElementById('question');
-// var questionField = MQ.StaticMath(questionSpan);
+problem_container = document.getElementById("problem-set")
 
-// var feedback = document.getElementById('feedback')
-// var mathFieldSpan = document.getElementById('answer');
+var p_list = []
+for (p in problems)  {
+  dprob = new DProblem(document)
+  p_list.push( dprob )
+  problem_container.appendChild(dprob.element)
+  dprob.setup(problems[p])
+  problem_container.appendChild(document.createElement("hr"))
+}
 
-var the_problem = new DProblem(document.getElementById("problem1"))
+// document.getElementById("problem-set").appendChild(the_problem.element)
 
-the_problem.setup(problems[0])
+// the_problem.setup(problems[0])
 
-document.getElementById('reset').addEventListener('click', (ev) => {
-  the_problem.setup(problems[g_prob_num])
-})
+// document.getElementById('reset').addEventListener('click', (ev) => {
+//   the_problem.setup(problems[g_prob_num])
+// })
 
-document.getElementById('next').addEventListener('click', (ev) => {
-  g_prob_num += 1
-  if( g_prob_num >= problems.length ){
-    g_prob_num = 0
-  }
-  the_problem.setup(problems[g_prob_num])
-})
+// document.getElementById('next').addEventListener('click', (ev) => {
+//   g_prob_num += 1
+//   if( g_prob_num >= problems.length ){
+//     g_prob_num = 0
+//   }
+//   the_problem.setup(problems[g_prob_num])
+// })
 
-document.getElementById('prev').addEventListener('click', (ev) => {
-  g_prob_num -= 1
-  if( g_prob_num < 0 ){
-    g_prob_num = problems.length - 1
-  }
-  the_problem.setup(problems[g_prob_num])
-})
+// document.getElementById('prev').addEventListener('click', (ev) => {
+//   g_prob_num -= 1
+//   if( g_prob_num < 0 ){
+//     g_prob_num = problems.length - 1
+//   }
+//   the_problem.setup(problems[g_prob_num])
+// })

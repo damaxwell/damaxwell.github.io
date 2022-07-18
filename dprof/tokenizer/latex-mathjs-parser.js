@@ -426,7 +426,6 @@ class Parser {
 
     while(true) {
       let next = this.nexttoken()
-      console.log(next)
       if( next.type == 'Operator') {
         let op = next.value
         if( (op == '+') || (op == '-') ) {
@@ -634,7 +633,6 @@ class Parser {
       this.consume()
       arg = this.expression();
       t = this.nexttoken();
-      console.log(t)
       if( t.type != 'CloseBrace' ) {
         throw Error("Missing function closing brace")
       } 
@@ -672,7 +670,6 @@ class Parser {
       return new Node('^',base,sup)
     }
 
-    console.log("foo "+base)
     return base;
   }
 
@@ -797,7 +794,6 @@ class Parser {
 
 
   primary() {
-    console.log("primary")
     let t = this.nexttoken()
 
     if( t.type == 'OpenBrace' ) {
