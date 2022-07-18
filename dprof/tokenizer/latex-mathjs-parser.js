@@ -106,6 +106,11 @@ class Tokenizer  {
       if(c == '%') {
         return new Token('Other','%')
       }
+      if(c == '&') {
+        return new Token('Other','&')
+      }
+
+
 
       while( isAlpha(c) ) {
         name += c
@@ -334,6 +339,14 @@ class TokenFilter {
         return new Token('Other','\\')
       }
 
+      if( t.value == 'ge' ) {
+        return new Token('Other','≥')
+      }
+
+      if( t.value == 'le' ) {
+        return new Token('Other','≤')
+      }
+
       if( t.value == 'operatorname' ) {
         if( this.tokenizer.nexttoken().type != 'BeginGroup' ) {
           throw Error("Malformed operator name")
@@ -397,6 +410,7 @@ class Parser {
 
   parse() {
     let rv = this.expression()
+    console.log("parsed to")
     console.log(rv.toMathJS())
     return rv
     // return this.expression()

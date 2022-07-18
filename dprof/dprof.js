@@ -8,6 +8,10 @@ function setup(problem) {
     ivar = greek_ivar
   }
 
+  document.getElementById('error-message').innerHTML = ""
+  document.getElementById('debug-latex').innerHTML = ""
+
+
   let q_latex = "\\frac{d}{d"+ivar+"}" + problem.question
   console.log(q_latex)
   questionField.latex(q_latex)
