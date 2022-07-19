@@ -216,7 +216,6 @@ class Node {
     }
 
 
-
     // Sqrt and log and pow are two argument functions potentially
     if( func_name == 'sqrt' ) {
       if(func_node.rhs != null) {        
@@ -253,7 +252,9 @@ class Node {
       }
     }
 
-
+    if( func_name == 'ln' ){
+      func_name = 'log'
+    }
 
     if( func_name == 'pow' ) {
         return 'pow('+ func_node.lhs.toMathJS() + ","+ func_node.lhs.toMathJS() + ")"
@@ -274,7 +275,7 @@ class Node {
 }
 
 
-function compare(latex,answer) {
+function compare(latex,answer,problem) {
   let guess = (new Parser(latex)).parse().toMathJSObject()
   answer = (new Parser(answer)).parse().toMathJSObject()
 
@@ -282,12 +283,19 @@ function compare(latex,answer) {
   if( math.symbolicEqual(guess,answer) ) {
     return true
   }
+  console.log("Symbolic failed")
   let diff = new math.OperatorNode('-', 'subtract', [guess, answer]);
-  x = [ 0.1, 1.2, 0.234567382, 0.66663 ]
+  ivar_val = [ 0.1, 1.2, 0.234567382, 0.66663 ]
+  const_val = [0.3, 0.1, 1.2, 0.96]
   tol = 1e-12
-  for( z in x) {
+  for( z in ivar_val) {
+    arg = { }
+    arg[problem.ivar] = ivar_val[z]
+    if(  problem.const != undefined ) {
+      arg[problem.const] = const_val[z]
+    }
     try {
-      small = math.abs(diff.evaluate({'x': z}))
+      small = math.abs(diff.evaluate(arg))
     } catch (error) {
       console.log(error)
       return false

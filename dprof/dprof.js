@@ -13,6 +13,7 @@ const greek_to_latex = {
 class DProblem {
   constructor(document){
     this.element = document.createElement("div")
+    this.element.className = "problem-container"
 
     this.problem_label = document.createElement("p")
     this.problem_label.className = "problem-label"
@@ -74,7 +75,7 @@ class DProblem {
     let answer = this.problem.answer
 
     try {
-      var is_correct = compare(response, answer)
+      var is_correct = compare(response, answer, this.problem)
     } catch(err) {
       this.feedback.style.backgroundColor = color.warn;
       this.feedback.innerHTML="<img src='warn.svg' width=35px>"

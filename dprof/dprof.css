@@ -1,12 +1,81 @@
-
 body {
-  font-size: 130%;
+  font-size: 100%;
   font-family: Verdana, Arial, Helvetica, sans-serif;
+  margin: 0px;
  }
+
+.header {
+  height: 80px;
+  background-color: #ADD8E6;
+  width: 100%;
+  margin: 0;
+}
+
+.problem-set {
+  margin:  auto;
+  width: 600px;
+}
+
+.problem-set-header {
+  width:100%; 
+  height:50px; 
+  visibility: hidden;  
+}
+.problem-set-header h3 {
+  display:inline-block; 
+  vertical-align:center
+}
+.problem-set-header img {
+  width:25px; 
+  margin-top: 10px; 
+}
+
+.help-dropdown {
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+
+.help-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  right: 0px;
+  min-width: 400px;
+  padding-right: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+
+.help-dropdown:hover .help-dropdown-content {display: block;}
+
+.help-dropdown-content li {
+  text-decoration-color: seagreen;
+   margin-bottom: 15px;  
+}
+
+
+.problem-label {
+  font-weight: bold;
+}
+
+.problem-container {
+  width:  570px;
+  font-size: 120%;
+  border-width: 3px;
+  border-radius: 15px;
+  border-style: solid;
+  padding-bottom: 25px;
+  margin-bottom: 40px;
+  padding-left: 30px;
+
+/*  padding-right: 30px;
+*/}
 
 .container {
   display: flex;
-  width: 400px;
+  width: 495px;
   background-color: #FFFFFF;
   border-style: solid;
   border-width: 2px;
@@ -34,13 +103,11 @@ body {
   font-size: 125%;
 }
 
-.problem-label {
-  font-weight: bold;
-}
 
 .hovertext {
   position: relative;
   border-bottom: 1px dotted black;
+  font-size: 80%;
 }
 
 .hovertext:before {

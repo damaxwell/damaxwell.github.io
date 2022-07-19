@@ -25,37 +25,60 @@ MathJax = {
 <script src="mathquill-0.10.1/mathquill-basic.js"></script>
 <script src="tokenizer/node_modules/mathjs/lib/browser/math.js"></script>
 <script src="tokenizer/latex-mathjs-parser.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/tom-select@2.1.0/dist/css/tom-select.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/tom-select@2.1.0/dist/js/tom-select.complete.min.js"></script>
 
-<div class="main">
-<p>This is a mockup for a derivative self-study tool. It is very much $\beta$. Or maybe $\gamma$.</p>
 
-<ul>
-<li> Enter familiar funtions ($\sin$, $\cos$, $\log$) just by typing their name.</li>
-<li> For square roots, type <tt>sqrt</tt>.</li>
-<li> For general radicals, like $\sqrt[3]{x}$, type <tt>nthroot</tt>.</li>
-<li> The natural logarithm is <tt>ln</tt>.</li>
-<li> An undecorated <tt>log</tt> is $\log_{10}$. Sorry.</li>
-<li> To get a logarithm with a different base, use the the <tt>_</tt> key to get a subscript.</li>
-</ul>
+<div class="header">
+<h2 style="padding-top: 20px; padding-left:40px; margin:0px">Derivative Practice</h2>
+</div>
 
-<label for="pet-select">Choose a problem set:</label>
+<div class="main" style="padding-left:40px">
+<p>This is a self-study tool for computing derivatives by hand. It is very much a work in progress; you are encouraged to submit bug reports and <a href="mailto:damaxwell@alaska.edu">feedback</a>.<p>
 
-<select id="select">
-    <option value="">--Please choose an option--</option>
-    <option value="problems.json">A Dummy Proficiency</option>
+<p>Choose a problem set to work on.</p>
+<select id="select-problem-set" placeholder="Select a problem set..." autocomplete="off" style="width:400px">
+    <option value="">Select a problem set...</option>
+    <option value="problems.json">Derivative Proficiency F2019 V2</option>
     <option value="OS-section3.1.json">OpenSTAX Section 3.3</option>
 </select>
+<script type="text/javascript">
+new TomSelect("#select-problem-set",{
+  create: true,
+  sortField: {
+    field: "text",
+    direction: "asc"
+  }
+});  
+</script>
 
-<hr>
-
-<h2 id="set-label"></h2>
-<div id="problem-set">
+</div>
+<div class="problem-set" id="problem-set">
+  <div class="problem-set-header">
+    <h3 id="set-label"></h3> 
+    <div class="help-dropdown">
+      <img id="help" src="question-mark.svg">
+      <div class="help-dropdown-content">
+        <ul>
+          <li> Enter familiar funtions ($\sin$, $\cos$, $\log$) just by typing their name.</li>
+          <li> For square roots, type <tt>sqrt</tt>.</li>
+          <li> For general radicals, like $\sqrt[3]{x}$, type <tt>nthroot</tt>.</li>
+          <li> The natural logarithm is <tt>ln</tt>.</li>
+          <li> An undecorated <tt>log</tt> is $\log_{10}$.</li>
+          <li> To get a logarithm with a different base, use the the <tt>_</tt> key to get a subscript.</li>
+        </ul>            
+      </div>
+    </div>
+  </div>
+  <div class="problem-list" id="problem-list"> </div>
 </div>
 
 <script src="dprof.js"></script>
+
+
 <script>
 
-document.getElementById("select").addEventListener('change',
+document.getElementById("select-problem-set").addEventListener('change',
   function handleChange(event) {
 
   filename = event.target.value
@@ -80,10 +103,12 @@ function set_problem_set(problem_set) {
   console.log(problem_set)
 
   // Remove all previous problems
-  problem_container = document.getElementById("problem-set")
-  while (problem_container.firstChild) {
-    problem_container.removeChild(problem_container.lastChild);
+  problemList = document.getElementById("problem-list")
+  while (problemList.firstChild) {
+    problemList.removeChild(problemList.lastChild);
   }
+  let header = document.getElementsByClassName("problem-set-header")[0]
+  header.style.visibility = "hidden"
 
   if(problem_set == null) {
     document.getElementById("set-label").innerHTML = ""
@@ -91,22 +116,20 @@ function set_problem_set(problem_set) {
   }
 
   document.getElementById("set-label").innerHTML = problem_set.title
-  problem_container = document.getElementById("problem-set")
+  header.style.visibility = "visible"
 
   var p_list = []
   problems = problem_set.questions
   for (p in problems)  {
     dprob = new DProblem(document)
     p_list.push( dprob )
-    problem_container.appendChild(dprob.element)
+    problemList.appendChild(dprob.element)
     dprob.setup(problems[p],p)
-    problem_container.appendChild(document.createElement("hr"))
   }
 }
 
 </script>
 
 
-</div>
 </body>
 </html>
