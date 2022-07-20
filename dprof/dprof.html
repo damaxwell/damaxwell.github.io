@@ -30,18 +30,25 @@ MathJax = {
 
 
 <div class="header">
-<h2 style="padding-top: 20px; padding-left:40px; margin:0px">Derivative Practice</h2>
+<h2>Derivative Practice</h2>
 </div>
 
-<div class="main" style="padding-left:40px">
-<p>This is a self-study tool for computing derivatives by hand. It is very much a work in progress; you are encouraged to submit bug reports and <a href="mailto:damaxwell@alaska.edu">feedback</a>.<p>
+<div class="intro" >
+<p>This is a self-study tool for computing derivatives by hand. It is a work in progress; you are encouraged to submit bug reports and <a href="mailto:damaxwell@alaska.edu">feedback</a>.<p>
 
 <p>Choose a problem set to work on.</p>
-<select id="select-problem-set" placeholder="Select a problem set..." autocomplete="off" style="width:400px">
+<div class="problem-selector">
+<select id="select-problem-set"  placeholder="Select a problem set..." autocomplete="off" >
     <option value="">Select a problem set...</option>
     <option value="problems.json">Derivative Proficiency F2019 V2</option>
     <option value="OS-section3.1.json">OpenSTAX Section 3.3</option>
 </select>
+<div class="button" id="go-button" disabled onclick="didSelectProblemSet(event)">Go</div>
+</div>
+<hr>
+</div>
+
+
 <script type="text/javascript">
 new TomSelect("#select-problem-set",{
   create: true,
@@ -60,7 +67,7 @@ new TomSelect("#select-problem-set",{
       <img id="help" src="question-mark.svg">
       <div class="help-dropdown-content">
         <ul>
-          <li> Enter familiar funtions ($\sin$, $\cos$, $\log$) just by typing their name.</li>
+          <li> Enter familiar funtions (<tt>sin</tt>, <tt>cos</tt>, <tt>log</tt>) just by typing their name.</li>
           <li> For square roots, type <tt>sqrt</tt>.</li>
           <li> For general radicals, like $\sqrt[3]{x}$, type <tt>nthroot</tt>.</li>
           <li> The natural logarithm is <tt>ln</tt>.</li>
@@ -80,27 +87,46 @@ new TomSelect("#select-problem-set",{
 
 document.getElementById("select-problem-set").addEventListener('change',
   function handleChange(event) {
+    console.log(event)
+    goButton = document.getElementById("go-button")
 
-  filename = event.target.value
+    if( event.target.value == "" ) {
+      console.log("disable")
+      goButton.setAttribute('disabled', '')
+      return
+    }
+    goButton.removeAttribute('disabled')
 
-  if( filename == "") {
-    set_problem_set(null)
+    goButton.enabled = true    
+
+  } )
+</script>
+
+<script>
+function didSelectProblemSet(event) {
+  selector = document.getElementById("select-problem-set")
+  url = selector.value
+
+  if( url == "" ) {
+    setProblemSet(null)
     return
   }
+  event.target.setAttribute('disabled','')
 
-  $.getJSON("./" + filename )
+
+
+  $.getJSON("./" + url )
    .success( function(problem_set) {
-    set_problem_set(problem_set)
+    setProblemSet(problem_set)
   }).error( function(e) {
     console.log("error")
     console.log(e) 
   })
-})
-</script>
+}
+</script>  
 
 <script type="text/javascript">
-function set_problem_set(problem_set) {
-  console.log(problem_set)
+function setProblemSet(problem_set) {
 
   // Remove all previous problems
   problemList = document.getElementById("problem-list")

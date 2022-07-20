@@ -10,6 +10,54 @@ body {
   width: 100%;
   margin: 0;
 }
+.header h2 {
+  padding-top: 20px; 
+  padding-left:40px; 
+  margin:0px
+}
+
+.intro {
+  padding-left:40px; 
+  padding-bottom: 50px;
+}
+
+.problem-selector .ts-wrapper {
+  width:400px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.problem-selector .button {
+  width: 50px; 
+  margin-left: 4px;
+  padding-top:  6px; 
+  padding-bottom: 8px;  
+
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-style: bold;
+}
+
+.problem-selector .button:hover {
+  background-color: #2F9840;
+  cursor: pointer;  
+}
+
+.problem-selector .button:disabled,
+.problem-selector .button[disabled]{
+  background-color: #cccccc;
+  color: #666666;
+  cursor: default;  
+}
+
+
+
+
 
 .problem-set {
   margin:  auto;
@@ -132,3 +180,4 @@ body {
   opacity: 1;
   visibility: visible;
 }
+
