@@ -276,9 +276,15 @@ class Node {
 
 
 function compare(latex,answer,problem) {
-  let guess = (new Parser(latex)).parse().toMathJSObject()
-  answer = (new Parser(answer)).parse().toMathJSObject()
+  let guess = (new Parser(latex)).parse()
+  console.log("Guess is")
+  console.log(guess)
+  guess = guess.toMathJSObject()
 
+  answer = (new Parser(answer)).parse()
+  console.log("Answer is")
+  console.log(answer)
+  answer = answer.toMathJSObject()
 
   if( math.symbolicEqual(guess,answer) ) {
     return true
@@ -289,7 +295,10 @@ function compare(latex,answer,problem) {
   const_val = [0.3, 0.1, 1.2, 0.96]
   tol = 1e-12
   for( z in ivar_val) {
-    arg = { }
+    console.log("test at " + ivar_val[z])
+    let arg = {
+      π:  3.141592653589793
+    }
     arg[problem.ivar] = ivar_val[z]
     if(  problem.const != undefined ) {
       arg[problem.const] = const_val[z]
@@ -304,12 +313,6 @@ function compare(latex,answer,problem) {
     if(small > 1e-6) {
       return false
     }
-    // rhs = math.evaluate(answer,{'x': z})
-    // console.log(lhs-rhs)
-    // console.log(math.evaluate(diff,{ 'x': z }))
-    // if( math.evaluate(z, { 'x': z }) > 1e-6 ) {
-    //   return false
-    // }
   }
   return true
 }
