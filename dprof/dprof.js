@@ -1,3 +1,4 @@
+
 let color = {
   relax: "#ADD8E6",
   error: "#EA3549",
@@ -7,6 +8,48 @@ let color = {
 const greek_to_latex = {
     'θ' : '\\theta',
     'alpha' : '\\alpha',
+}
+
+function compare(latex,answer,problem) {
+  let guess = (new Parser(latex)).parse()
+  console.log("Guess is")
+  console.log(guess)
+  guess = math.parse( guess.toMathJS() )
+
+  answer = (new Parser(answer)).parse()
+  console.log("Answer is")
+  console.log(answer)
+  answer = math.parse( answer.toMathJS() )
+
+  if( math.symbolicEqual(guess,answer) ) {
+    return true
+  }
+  console.log("Symbolic failed")
+  let diff = new math.OperatorNode('-', 'subtract', [guess, answer]);
+  ivar_val = [ 0.1, 1.2, 0.234567382, 0.66663 ]
+  const_val = [0.3, 0.1, 1.2, 0.96]
+  tol = 1e-12
+  for( z in ivar_val) {
+    console.log("test at " + ivar_val[z])
+    let arg = {
+      π:  3.141592653589793
+    }
+    arg[problem.ivar] = ivar_val[z]
+    if(  problem.const != undefined ) {
+      arg[problem.const] = const_val[z]
+    }
+    try {
+      small = math.abs(diff.evaluate(arg))
+    } catch (error) {
+      console.log(error)
+      return false
+    }
+    console.log(small)
+    if(small > 1e-6) {
+      return false
+    }
+  }
+  return true
 }
 
 
