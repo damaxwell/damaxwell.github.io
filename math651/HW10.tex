@@ -1,0 +1,43 @@
+\documentclass{homework651}
+\include{hwextras}
+\usepackage{graphicx}
+\usepackage[all,cmtip]{xy}
+\def\net<#1>{\left<#1\right>}
+
+\newcommand{\bbB}{\mathbb{B}}
+\doclabel{Math F651: Homework 10}
+\docdate{Due: April 14, 2023}
+\begin{document}
+\begin{problems}
+
+\problem The point of this exercise is to settle some details from the 
+proof of the Brower fixed point theorem.  We suppose $f:\bbB\to \bbB$ is
+continuous and that $f$ does not have a fixed point.
+\begin{subproblems}
+\item Prove that for all $x\in \bbB^2$ there exists a unique
+$t(x)\in[1,\infty)$ such that $f(x)+t(x)(x-f(x))\in S^1$.
+\item Define
+\[
+r(x) = f(x)+t(x)(x-f(x)),
+\]
+so $r:\bbB\to S^1$.  The graph of $r$ is a subset of $\bbB\times S^1$.  
+We wish to show that $r$ is continuous, and since $S^1$ is compact and Hausdorff
+it is enough to show that the graph of $r$ is closed.  Do so.  Hint:
+Suppose $(x_n,r(x_n))\to (x,z)\in \bbB\times S^1$.  Now show that $z=r(x)$.
+We'll discuss in the problem session what a boon the closed graph theorem is here.
+\end{subproblems}
+
+\problem Crossley 6.6
+
+\problem 4-23 (a,b)
+
+\problem Lee 8-5
+
+\problem Lee 7-2 (Start after Monday)
+
+\problem Lee 7-3 (ditto)
+
+\end{problems}
+
+\end{document}
+
