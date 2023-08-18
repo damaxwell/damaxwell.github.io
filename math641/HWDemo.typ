@@ -79,24 +79,24 @@ We start with a technical lemma.
         #lemma(<lem-refine>)[
             Suppose $B_1=B_(r_1)(x_1)$ and $B_2=B_(r_2)(x_2)$ are 
             open balls in $X$ and $x_3 in B_1 sect B_2$.  Then there is an $r>0$ such
-            that $B_r(x_3) subset.eq B_1 sect B_2$.
+            that $B_r (x_3) subset.eq B_1 sect B_2$.
         ]
         #proof[
             Let $r = min(r_1-d(x_3,x_1),r_2-d(x_3,x_2))$ and observe that $r>0$.  
-            Now suppose $z in B_r(x_3)$.  The triangle inequality implies
+            Now suppose $z in B_r (x_3)$.  The triangle inequality implies
             $
                 d(x_1,z) & <= d(x_1,x_3) + d(x_3,z) \
                          & < d(x_1,x_3) + r \
                          & <= d(x_1,x_3) + ( r_1-d(x_3,x_1) ) \
                          & = r_1
             $
-            Hence $z in B_{r_1}(x_1)=x_1$.  Similarly $z in B_2$, and hence 
-            $B_r(z) subset.eq B_1 sect B_2$.
+            Hence $z in B_(r_1)(x_1)=x_1$.  Similarly $z in B_2$, and hence 
+            $B_r (z) subset.eq B_1 sect B_2$.
         ]
     ]
     Continuing with the solution of the problem, 
     let $cal(B)$ be the collection of open balls in $X$.  Fix $x in X$ and note
-    that $union_(r>0) B_r(x)=X$.  Hence $cal(B)$ covers $X$.  Moreover, by 
+    that $union_(r>0) B_r (x)=X$.  Hence $cal(B)$ covers $X$.  Moreover, by 
     @lem-refine, $cal(B)$ satisfies the refinement property.  Hence
     by the topology construction lemma, $cal(B)$ generates a topology on $X$,
     and the open sets are simply the unions of open balls.
