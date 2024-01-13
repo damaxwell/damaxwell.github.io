@@ -65,10 +65,27 @@ julia&gt;
 
 <p>At the command line, enter the following single line.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import Pkg; Pkg.add("IJulia")
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="n">Pkg</span><span class="x">;</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"IJulia"</span><span class="x">)</span>
 </code></pre></div></div>
 
-<p>Once this is done, you can launch the JupyterLab lab application and create a new notebook using the Julia kernel.</p>
+<p>Julia will download, compile, and install the needed packages.  This
+can take a bit of time; go get a coffee.
+Once this is done, you can launch the JupyterLab application and create a new notebook using the Julia kernel.</p>
+
+<h2 id="packages">Packages</h2>
+
+<p>The course text uses a few common Julia packages, and you’ll need to install these right away. From the same command line interface you used to install <code class="language-plaintext highlighter-rouge">IJulia</code> 
+you can enter the following:</p>
+
+<div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="n">Pkg</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"LinearAlgebra"</span><span class="x">)</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"SparseArrays"</span><span class="x">)</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"Plots"</span><span class="x">)</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="n">url</span><span class="o">=</span><span class="s">"https://github.com/VMLS-book/VMLS.jl"</span><span class="x">)</span>
+</code></pre></div></div>
+<p>Alternatively, if you have JupyterLab up and running successfully, you can copy/paste the above lines in to a notebook cell and execute them there (hit <code class="language-plaintext highlighter-rouge">Shift-Return</code>).</p>
+
+<p>The first three packages (<code class="language-plaintext highlighter-rouge">LinearAlgebra</code>, <code class="language-plaintext highlighter-rouge">SparseArrays</code> and <code class="language-plaintext highlighter-rouge">Plots</code>) are standard Julia packages and the fourth is a special on written by the book’s authors: <code class="language-plaintext highlighter-rouge">VMLS</code> stands for <em>Vectors, Matrices, and Least Squares</em> in the text’s subtitle.</p>
 </div>
 </div>
 
