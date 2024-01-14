@@ -14,37 +14,59 @@
 
 <body>
 
-<div class="burger-background"></div>
-<div class="sidenavburger hide-large" onclick="openNav()">
-  <svg id="svg-1" viewBox="0 0 100 80" width="20" height="20">
-    <rect y="0"width="100" height="15" rx="10"></rect>
-    <rect y="30" width="100" height="15" rx="10"></rect>
-    <rect y="60" width="100" height="15" rx="10"></rect>
-  </svg>
-</div>
-
 <div id="nav" class="sidenav" >
 <nav role="navigation">
-<div class="sidenav-header"><a href="index.html#page-top" onclick="closeNav()"">Math F314</a></div>
+  <div class="sidenav-header">Math 314</div>
   
-  <div class="entry"><a  onclick="closeNav()" href="Syllabus.pdf" alt="Syllabus">Syllabus</a></div>
+    
+    <div class="entry"><a  onclick="closeNav()" href="Syllabus.pdf" alt="Syllabus">Syllabus</a></div>
+    
   
-  <div class="entry"><a  onclick="closeNav()" href="homework.html" alt="Homework">Homework</a></div>
+    
+    <div class="entry"><a  onclick="closeNav()" href="homework.html" alt="Homework">Homework</a></div>
+    
   
-  <div class="entry"><a  onclick="closeNav()" href="julia.html" alt="Julia Resources">Julia Resources</a></div>
+    
+    <div class="entry"><a  onclick="closeNav()" href="julia.html" alt="Julia Resources">Julia Resources</a></div>
+    
   
-  <div class="entry"><a  onclick="closeNav()" href="daily-log.html" alt="Daily Log">Daily Log</a></div>
+    
+    <div class="entry"><a  onclick="closeNav()" href="daily-log.html" alt="Daily Log">Daily Log</a></div>
+    
   
-  <div class="entry"><a  onclick="closeNav()" href="https://discord.gg/eMZdbwch" alt="Discord">Discord</a></div>
+    
+    <div class="entry"><a  onclick="closeNav()" href="https://discord.gg/eMZdbwch" alt="Discord">Discord</a></div>
+    
   
-  <div class="entry"><a  onclick="closeNav()" href="https://canvas.alaska.edu/courses/18410/pages/essential-information" alt="Canvas">Canvas</a></div>
+    
+    <div class="entry"><a  onclick="closeNav()" href="https://canvas.alaska.edu/courses/18410/pages/essential-information" alt="Canvas">Canvas</a></div>
+    
   
+
 </nav>
 </div>
 
-<div id="main" class="main-body" onclick="closeNav()">
-<div class="page-header" id="page-top">Math 314: Linear Algebra</div>
-<div class="page-content"><h3 id="daily-log">Daily Log</h3>
+<div id="main" class="main-body">
+
+  <div class="page-header" id="page-top">    
+    <div class="burger-outer hide-large">
+      <div class="burger-button" onclick="openNav()">
+        <svg id="burger-svg" viewBox="0 0 100 100" width="20" height="20">
+          <rect y="15" width="100" height="11" rx="7.5"></rect>
+          <rect y="44.5" width="100" height="11" rx="7.5"></rect>
+          <rect y="74" width="100" height="11" rx="7.5"></rect>
+        </svg>
+      </div>
+    </div>
+    <div class="page-header-title" onclick="closeNav()">
+      <a href="index.html#page-top" color="black">
+        <span class="hide-large">Math 314: Linear Algebra</span>
+        <span class="hide-small">Linear Algebra</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="page-content" onclick="closeNav()"><h3 id="daily-log">Daily Log</h3>
 
 <p>The Daily Log is a summary of what is covered
 each class day, along with any computer files (e.g. Julia files) that were
@@ -77,16 +99,31 @@ notes after the fact.  Please do not rely on them solely.</p>
 </body>
 
 <script type="text/javascript">
+// Set nav class to "sidenav showing"
 function openNav() {
-    x = document.getElementById("nav");
-    if(x.className="sidenav") {
-      x.className += " showing";
-    }
+    console.log("open nav")
+    document.getElementById("nav").className = "sidenav showing"
 }
 
-/* Set the width of the side navigation to 0 */
+// Set nav class to "sidenav" instead of "sidenav showing"
 function closeNav() {
-    x = document.getElementById("nav").className = "sidenav"
+  console.log("close nav")
+    document.getElementById("nav").className = "sidenav"
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
 </script>
 </html>
