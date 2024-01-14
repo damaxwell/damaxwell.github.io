@@ -48,6 +48,20 @@ table.asst-table { border: 2px solid black; border-collapse: separate; border-sp
 
 table.asst-table td { white-space: nowrap; word-break: break-all; line-height: 130%; }
 
+table.asst-table-v2 { border-collapse: separate; border-spacing: 0; }
+
+table.asst-table-v2 th, table.asst-table-v2 td { text-align: left; padding: 0px; padding-top: 5px; padding-bottom: 5px; }
+
+table.asst-table-v2 th { vertical-align: bottom; }
+
+table.asst-table-v2 div.due-box { padding: 0px; margin-bottom: 5px; }
+
+table.asst-table-v2 td.first-col { width: 140px; padding-right: 12px; }
+
+table.asst-table-v2 td { vertical-align: top; }
+
+table.asst-table-v2 tr:nth-child(odd) { background-color: #f2f2f2; }
+
 dt { float: left; width: 30px; text-align: right; font-weight: bold; }
 
 dd { margin: 0 0 0 60px; padding: 0 0 0.5em 0; }
