@@ -39,6 +39,7 @@ a.course-link {
   	color: #4459e2;
 }
 
+p { padding-bottom: 15px; }
 /*p {margin-left: 20px}*/
 
 html {margin-left: 20px; margin-top:20px; margin-right:20px; background: white}
