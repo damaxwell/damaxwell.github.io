@@ -100,15 +100,15 @@
 
 <p>Jupyter notebooks (named for the languages <strong>Ju</strong>lia, <strong>Py</strong>thon and <strong>R</strong>) are a convenient way to collect and present a computation.  You can intersperse your code and output with rich <a href="https://commonmark.org/help/">Markdown</a> comments.</p>
 
-<h2 id="installation">Installation</h2>
+<h2 id="julia-installation">Julia Installation</h2>
 
 <ol>
   <li>
-    <p>JupyterLab Desktop is a convenient application for viewing and authoring Jupyter notebooks.  Follow the <a href="https://github.com/jupyterlab/jupyterlab-desktop#jupyterlab-desktop">installation instructions</a> to put a copy on your computer.</p>
+    <p>JupyterLab Desktop is a convenient application for viewing and authoring Jupyter notebooks.  Follow the <a href="https://github.com/jupyterlab/jupyterlab-desktop#jupyterlab-desktop" target="_blank">installation instructions</a> to put a copy on your computer.</p>
   </li>
   <li>
-    <p>Install Julia from an <a href="https://julialang.org/downloads/#official_binaries_for_manual_download">official binary</a>.  Advanced users may prefer to use 
-a <a href="https://julialang.org/downloads/#install_julia">command line installer</a> instead. Take your pick.</p>
+    <p>Install Julia from an <a href="https://julialang.org/downloads/#official_binaries_for_manual_download" target="_blank">official binary</a>.  Advanced users may prefer to use 
+a <a href="https://julialang.org/downloads/#install_julia" target="_blank">command line installer</a> instead. Take your pick.</p>
   </li>
   <li>
     <p>Before you can start using Julia with the friendly Jupyter notebook interface,
@@ -137,14 +137,45 @@ capabilities. Launch the Julia application, which will start a command line inte
     <p>You can now launch the JupyterLab Desktop application and create a new notebook using the Julia kernel.</p>
 
     <p><img class="boxed" src="images/jupyter-launcher.png" alt="jupyter launcher" width="400" />
-<img class="boxed" src="images/jupyter-julia.png" alt="jupyter launcher" width="400" /></p>
+<img class="boxed" src="images/jupyter-julia.png" alt="julia kernel" width="400" /></p>
   </li>
 </ol>
 
-<h2 id="packages">Packages</h2>
+<h3 id="what-if-something-goes-wrong-">What if something goes wrong? 🧐</h3>
 
-<p>The course text uses a few common Julia packages, and you’ll need to install these right away. From the same command line interface you used to install <code class="language-plaintext highlighter-rouge">IJulia</code> 
-you can enter the following:</p>
+<p>Julia installation seems to be pretty reliable.  But JupyterLab Desktop may still have some kinks to be worked out, especially on Windows.</p>
+
+<p>When launching a JupyterLab session for the first time, you might see 
+an error such as:</p>
+
+<div style="border: 2px solid black; background: lightgray;">
+<p style="padding:5px">
+⚠️ Python environment not found <b>Install with the bundled installer</b> or <b>Change the default Python environment</b>.
+</p>
+</div>
+
+<p>If this happens, click on <strong>Install with the bundled installer</strong>.  Once this is done, restart JupyterLab. 🤞</p>
+
+<p>In a pinch, if you are unable to install JupyterLab Desktop, you can still use Jupyter notebooks the old school way, it will just be a little clunkier.  To do so:</p>
+
+<ol>
+  <li>
+    <p>Launch command line Julia as you did when installing <code class="language-plaintext highlighter-rouge">IJulia</code>.</p>
+  </li>
+  <li>
+    <p>At the prompt, type <code class="language-plaintext highlighter-rouge">using IJulia; jupyterlab()</code></p>
+  </li>
+</ol>
+
+<p>The first time you do this, you will be prompted whether Julia should install 
+Jupyter.  Enter <code class="language-plaintext highlighter-rouge">y</code> and press <code class="language-plaintext highlighter-rouge">Return</code> to proceed with this installation.
+When the installation is done, Julia will open a web browser tab and you’ll see JupyterLab running in your web browser. 🤞🤞</p>
+
+<h2 id="package-installation">Package Installation</h2>
+
+<p>The course text uses a few common Julia packages, and you’ll need to install these right away.  If you have JupyterLab up and running successfully, you 
+can copy/paste the following lines into a notebook cell.  Then hit <code class="language-plaintext highlighter-rouge">Shift-Return</code>
+to execute the commands in the cell.</p>
 
 <div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="n">Pkg</span>
 <span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"LinearAlgebra"</span><span class="x">)</span>
@@ -152,9 +183,20 @@ you can enter the following:</p>
 <span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"Plots"</span><span class="x">)</span>
 <span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="n">url</span><span class="o">=</span><span class="s">"https://github.com/VMLS-book/VMLS.jl"</span><span class="x">)</span>
 </code></pre></div></div>
-<p>Alternatively, if you have JupyterLab up and running successfully, you can copy/paste the above lines in to a notebook cell and execute them there (hit <code class="language-plaintext highlighter-rouge">Shift-Return</code>).</p>
+
+<p>Alternatively, you can enter these instructions in the 
+same command line interface you used to install <code class="language-plaintext highlighter-rouge">IJulia</code>.</p>
 
 <p>The first three packages (<code class="language-plaintext highlighter-rouge">LinearAlgebra</code>, <code class="language-plaintext highlighter-rouge">SparseArrays</code> and <code class="language-plaintext highlighter-rouge">Plots</code>) are standard Julia packages and the fourth is a special on written by the book’s authors: <code class="language-plaintext highlighter-rouge">VMLS</code> stands for <em>Vectors, Matrices, and Least Squares</em> in the text’s subtitle.</p>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li><a href="https://docs.julialang.org/en/v1/">Julia documentation</a></li>
+  <li>Course textbook <a href="https://web.stanford.edu/~boyd/vmls/vmls-julia-companion.pdf">Julia companion</a></li>
+  <li>Third party Jupyter notebook <a href="https://github.com/vbartle/VMLS-Companions">companions</a> for every chapter of the text.</li>
+</ul>
+
 </div>
 </div>
 
