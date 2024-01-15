@@ -3,15 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>Julia Resources</title>
-   <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+       <meta http-equiv="Pragma" content="no-cache">
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
    <meta http-equiv="Expires" content="-1">
    <!-The following magic viewport words are needed for Sarfari on mobile 
       to make 96px=1in, really-->
    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/site2.css">
-  </head>
 
+    <!-- The following allow KaTeX to be used on the page and autorender.-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              renderMathInElement(document.body, {
+                // customized options
+                // • auto-render specific keys, e.g.:
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '$.', right: '.$', display: false},
+                    {left: '\\(', right: '\\)', display: false},
+                    {left: '\\[', right: '\\]', display: true}
+                ],
+                // • rendering keys, e.g.:
+                throwOnError : false
+              });
+          });
+      </script>
+
+<!-- The following is for `highlight.js` code hightlighting -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
 <body>
 
 <div id="nav" class="sidenav" >
@@ -27,7 +55,7 @@
     
   
     
-    <div class="entry"><a  onclick="closeNav()" href="julia.html" alt="Julia Resources">Julia Resources</a></div>
+    <div class="entry"><a  onclick="closeNav()" href="julia.html" alt="Julia">Julia</a></div>
     
   
     
@@ -52,9 +80,9 @@
     <div class="burger-outer hide-large">
       <div class="burger-button" onclick="openNav()">
         <svg id="burger-svg" viewBox="0 0 100 100" width="20" height="20">
-          <rect y="15" width="100" height="11" rx="7.5"></rect>
-          <rect y="44.5" width="100" height="11" rx="7.5"></rect>
-          <rect y="74" width="100" height="11" rx="7.5"></rect>
+          <rect y="13" width="100" height="15" rx="7.5"></rect>
+          <rect y="42.5" width="100" height="15" rx="7.5"></rect>
+          <rect y="72" width="100" height="15" rx="7.5"></rect>
         </svg>
       </div>
     </div>
@@ -66,7 +94,7 @@
     </div>
   </div>
 
-  <div class="page-content" onclick="closeNav()"><h2 id="overview">Overview</h2>
+  <div class="page-content" onclick="closeNav()"><p><a href="https://julialang.org"><img height="60px" class="julialogo" src="https://julialang.org/assets/infra/logo.svg" alt="JuliaLang Logo" /></a></p>
 
 <p>The Julia programming language is open source (and hence free) scientific computing software.  You can think of it as a modern kind of MATLAB.</p>
 
@@ -87,26 +115,29 @@ a <a href="https://julialang.org/downloads/#install_julia">command line installe
 you need to run a short command in Julia itself to activate its Jupyter 
 capabilities. Launch the Julia application, which will start a command line interface like this:</p>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>               _
-   _       _ _(_)_     |  Documentation: https://docs.julialang.org
-  (_)     | (_) (_)    |
-   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
-  | | | | | | |/ _` |  |
-  | | |_| | | | (_| |  |  Version 1.9.4 (2023-11-14)
- _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
-|__/                   |
+    <div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code>               <span class="n">_</span>
+   <span class="n">_</span>       <span class="n">_</span> <span class="n">_</span><span class="x">(</span><span class="n">_</span><span class="x">)</span><span class="n">_</span>     <span class="o">|</span>  <span class="n">Documentation</span><span class="o">:</span> <span class="n">https</span><span class="o">://</span><span class="n">docs</span><span class="o">.</span><span class="n">julialang</span><span class="o">.</span><span class="n">org</span>
+  <span class="x">(</span><span class="n">_</span><span class="x">)</span>     <span class="o">|</span> <span class="x">(</span><span class="n">_</span><span class="x">)</span> <span class="x">(</span><span class="n">_</span><span class="x">)</span>    <span class="o">|</span>
+   <span class="n">_</span> <span class="n">_</span>   <span class="n">_</span><span class="o">|</span> <span class="o">|</span><span class="n">_</span>  <span class="n">__</span> <span class="n">_</span>   <span class="o">|</span>  <span class="kt">Type</span> <span class="s">"?"</span> <span class="k">for</span> <span class="n">help</span><span class="x">,</span> <span class="s">"]?"</span> <span class="k">for</span> <span class="n">Pkg</span> <span class="n">help</span><span class="o">.</span>
+  <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|/</span> <span class="n">_</span><span class="err">`</span> <span class="o">|</span>  <span class="o">|</span>
+  <span class="o">|</span> <span class="o">|</span> <span class="o">|</span><span class="n">_</span><span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="o">|</span> <span class="x">(</span><span class="n">_</span><span class="o">|</span> <span class="o">|</span>  <span class="o">|</span>  <span class="n">Version</span> <span class="mf">1.9</span><span class="o">.</span><span class="mi">4</span> <span class="x">(</span><span class="mi">2023</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">14</span><span class="x">)</span>
+ <span class="n">_</span><span class="o">/</span> <span class="o">|\</span><span class="n">__</span><span class="err">'</span><span class="n">_</span><span class="o">|</span><span class="n">_</span><span class="o">|</span><span class="n">_</span><span class="o">|\</span><span class="n">__</span><span class="err">'</span><span class="n">_</span><span class="o">|</span>  <span class="o">|</span>  <span class="n">Official</span> <span class="n">https</span><span class="o">://</span><span class="n">julialang</span><span class="o">.</span><span class="n">org</span><span class="o">/</span> <span class="n">release</span>
+<span class="o">|</span><span class="n">__</span><span class="o">/</span>                   <span class="o">|</span>
    
-julia&gt; 
+<span class="n">julia</span><span class="o">&gt;</span> 
 </code></pre></div>    </div>
     <p>At the command line, enter the following single line.</p>
 
     <div class="language-julia highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="n">Pkg</span><span class="x">;</span> <span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"IJulia"</span><span class="x">)</span>
 </code></pre></div>    </div>
 
-    <p>Julia will download, compile, and install the needed packages needed to interface with Jupyter notebooks at this point.  This can take a bit of time; go get a coffee.</p>
+    <p>Julia will then download, compile, and install the packages needed to interface with Jupyter notebooks.  This can take a bit of time; go get a coffee.</p>
   </li>
   <li>
-    <p>You can launch the JupyterLab application and create a new notebook using the Julia kernel.</p>
+    <p>You can now launch the JupyterLab Desktop application and create a new notebook using the Julia kernel.</p>
+
+    <p><img src="images/jupyter-launcher.png" alt="jupyter launcher" width="300" />
+<img src="images/jupyter-julia.png" alt="jupyter launcher" width="500" /></p>
   </li>
 </ol>
 

@@ -3,15 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>Homework Sets</title>
-   <meta http-equiv="Pragma" content="no-cache">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+       <meta http-equiv="Pragma" content="no-cache">
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
    <meta http-equiv="Expires" content="-1">
    <!-The following magic viewport words are needed for Sarfari on mobile 
       to make 96px=1in, really-->
    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/site2.css">
-  </head>
 
+    <!-- The following allow KaTeX to be used on the page and autorender.-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              renderMathInElement(document.body, {
+                // customized options
+                // • auto-render specific keys, e.g.:
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '$.', right: '.$', display: false},
+                    {left: '\\(', right: '\\)', display: false},
+                    {left: '\\[', right: '\\]', display: true}
+                ],
+                // • rendering keys, e.g.:
+                throwOnError : false
+              });
+          });
+      </script>
+
+<!-- The following is for `highlight.js` code hightlighting -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
 <body>
 
 <div id="nav" class="sidenav" >
@@ -27,7 +55,7 @@
     
   
     
-    <div class="entry"><a  onclick="closeNav()" href="julia.html" alt="Julia Resources">Julia Resources</a></div>
+    <div class="entry"><a  onclick="closeNav()" href="julia.html" alt="Julia">Julia</a></div>
     
   
     
@@ -52,9 +80,9 @@
     <div class="burger-outer hide-large">
       <div class="burger-button" onclick="openNav()">
         <svg id="burger-svg" viewBox="0 0 100 100" width="20" height="20">
-          <rect y="15" width="100" height="11" rx="7.5"></rect>
-          <rect y="44.5" width="100" height="11" rx="7.5"></rect>
-          <rect y="74" width="100" height="11" rx="7.5"></rect>
+          <rect y="13" width="100" height="15" rx="7.5"></rect>
+          <rect y="42.5" width="100" height="15" rx="7.5"></rect>
+          <rect y="72" width="100" height="15" rx="7.5"></rect>
         </svg>
       </div>
     </div>
@@ -75,13 +103,25 @@
 
 <tr>
 	<td class="first-col">
+		<div class="due-box"><b><p>HW 0</p>
+</b></div>
+		
+		<div><p><strong>Due:</strong> 1/21</p>
+</div>
+	</td>
+	<td><p>1.1, 1.2, <strong>S1.2</strong>, and this <a href="julia/HW0.ipynb">Julia problem</a></p>
+</td>
+</tr>
+
+<tr>
+	<td class="first-col">
 		<div class="due-box"><b><p>HW 1</p>
 </b></div>
 		
-		<div><p><strong>Due:</strong> 1/24</p>
+		<div><p><strong>Due:</strong> 1/26</p>
 </div>
 	</td>
-	<td><p>1.2, 1.5, 1.8, 1.9, 1.10 1.11, 1.13, 1.15, S1.7 and these <a href="HW1.ipynb">Julia Problems</a></p>
+	<td><p>1.5, 1.8, 1.9, 1.10 1.11, 1.13, 1.15, <strong>S1.7</strong> and these <a href="julia/HW1.ipynb">Julia Problems</a></p>
 </td>
 </tr>
 
@@ -95,6 +135,14 @@
 	<td></td>
 </tr> -->
 
+<h3 id="hw-1-hints">HW 1 Hints</h3>
+
+<p>Many of the problems in this set rely on Section 1.4. and the operation $a^T b$.</p>
+
+<p>You will need notation for building vectors from other vectors; see Section 1.1  In particular, the notations $0_n$, $\mathbf{1}_n$ for vectors of zeros and ones
+will be handy. You will also need subvector notation \(a_{j:k}\) and
+stacking notation, either $(a,b,c)$ or 
+\[\begin{bmatrix}a\cr b\cr c\end{bmatrix}.\]</p>
 </div>
 </div>
 
