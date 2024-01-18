@@ -26,7 +26,7 @@ body { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 110%; marg
 
 .burger-button { background-color: #8bb1ef; width: 30px; height: 30px; position: absolute; top: 50%; transform: translate(0px, -50%); }
 
-#burger-svg { display: block; margin: auto; height: 100%; }
+#burger-svg { display: block; margin: auto; margin-left: 0px; height: 100%; }
 
 .main-body { -webkit-tap-highlight-color: transparent; }
 
