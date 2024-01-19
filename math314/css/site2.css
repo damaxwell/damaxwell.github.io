@@ -2,7 +2,7 @@
 
 html { background: white; }
 
-body { font-size: 110%; font-family: Lucida Grande, Calibri, Helvetica, Ariel, sans-serif; margin: 0px; }
+body { font-size: 110%; font-family: Lucida Grande, Lucida Sans Unicode, Helvetica Neue, Kalimati, Calibri, Helvetica, Ariel, sans-serif; margin: 0px; }
 
 .sidenav { height: 100%; width: 200px; z-index: 10; position: fixed; top: 0; left: 0; overflow-x: hidden; display: block; background-color: #ccc; box-sizing: border-box; transition: 0.3s; }
 
