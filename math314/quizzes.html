@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Math F314 (Linear Algebra)</title>
+    <title>Quizzes</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
        <meta http-equiv="Pragma" content="no-cache">
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -91,136 +91,30 @@
       </div>
     </div>
     <div class="page-header-title" onclick="closeNav()">
-      
+      <a href="index.html#page-top" color="black">
         <span class="hide-large">Math 314: Linear Algebra</span>
         <span class="hide-small">Linear Algebra</span>
-      
+      </a>
     </div>
   </div>
 
-  <div class="page-content" onclick="closeNav()"><h2 class="top-heading"><img src="images/arrows.png" height="50px" style=" vertical-align:top; padding-right: 10px" /> Spring 2024</h2>
+  <div class="page-content" onclick="closeNav()"><h2 id="quizzes">Quizzes</h2>
 
-<p>Linear algebra is <strong>useful</strong>. Practical. Maybe the <strong>most applicable math you can learn</strong>. It’s at the heart of many computer applications of math (numerical differential equations, computer graphics, big data, machine learning). The Spring 2024 edition of Math 314 will emphasize the practical side of linear algebra.</p>
+<p>Links to this semester’s quizzes and solutions appear here.</p>
 
-<h2 id="textbook">Textbook</h2>
+<table class="asst-table-v2">
+<!-- style = "display: inline-block;vertical-align: top" -->
+<!-- <tr><th> Spring 2024 </th> <th> Blank </th> <th> Solutions </th></tr>
+-->
 
-<ul>
-  <li>
-    <p><a href="https://web.stanford.edu/~boyd/vmls/">Free text</a> by Stanford/UCLA engineers Stephen Boyd and Lieven Vanderberghe.<br />
-Hard copies are nice to use, though, and the book is not expensive. Treat yourself to one!</p>
-  </li>
-  <li>
-    <p>Additional supplementary <a href="https://web.stanford.edu/~boyd/vmls/vmls-additional-exercises.pdf">exercises</a>.  Some of these will appear in the homework.</p>
-  </li>
-  <li>
-    <p>Julia language <a href="https://web.stanford.edu/~boyd/vmls/vmls-julia-companion.pdf">companion</a> for the textbook.</p>
-  </li>
-  <li>
-    <p>Stanford course <a href="https://stanford.edu/class/engr108/">website</a> associated with the text.</p>
-  </li>
-</ul>
-
-<h2 id="office-hours">Office Hours</h2>
-
-<p>Office hours will be held in the Engineering Tutoring Lab, Duckering 243.</p>
-
-<p>I’ll also fire up a <a href="https://alaska.zoom.us/j/99797816618?pwd=UjR4RHpITFBzU2dQSGF0REVNcFpTZz09">Zoom</a> session at the same time.</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>Monday</td>
-      <td>1:00-2:00</td>
-    </tr>
-    <tr>
-      <td>Tuesday</td>
-      <td>1:00-2:00</td>
-    </tr>
-    <tr>
-      <td>Wednesday</td>
-      <td>10:30- 11:30</td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- ## Readings and Homework -->
-
-<!-- ### Office Hours
-
-[Zoom Link](https://alaska.zoom.us/j/99797816618?pwd=UjR4RHpITFBzU2dQSGF0REVNcFpTZz09)
-
-
-|---------------:|:--------------:|
-| Monday         |   1:00-2:00    |
-| Tuesday        |   1:00-2:00    |
-| Wednesday      |   10:30- 11:30 |
-
-### Announcements
-
-* Here are [notes](RiemannIntegral.pdf) on the Riemann integral.
-
-* Here are [notes](Weierstrass.pdf) on the Weierstrass Approximation Theorem.
-
-is [Weider.tex](HWDemo.tex), a template file for solutions
-written in LaTeX.
-
-* There is a new typsetting system, [Typst](https://typst.app), that aims 
-  to eventually rival LaTeX. It's fast and has a clean syntax with modern programming capabilities. Although it is still immature (its public beta started last winter),
-  I'm pretty impressed with its potential.  I'll be using it myself for day-to-day
-  typesetting this semester.  You might want to use it for your solutions, either 
-  via the [web app](https://typst.app) (with instant preview!), or by 
-  [installing the compiler](https://github.com/typst/typst#installation)). 
-  You'll want the [course template](math641-typst.zip) to get started. In case you
-  are curious:
-    - The [source file](HWDemo.typ) for some demo solutions.
-    - The [PDF results](HWDemo.pdf).
-
-* Here is [HWDemo.tex](HWDemo.tex), a template file for solutions
-written in LaTeX.
-
-*  We will use [Discord]()
-   for course-related discussions outside of class time. Please sign up promptly to ensure you don't miss important announcements.
-
-### Readings and Homework
-
-<div class="table-box">
-<table class="asst-table">
 <tr>
-	<th style="text-align: center">Week</th>
-	<th>Problems</th>
-	<th>Due</th>
-</tr>
-
-<tr valign="top">
-	<td  style="text-align: center">
-</td>
-	<td><p>1.1, 1.2, <strong>S1.3</strong>, and this <a href="julia/HW0.ipynb">Julia problem</a></p>
-</td>
-	<td><p>1/21</p>
-</td>
-</tr>
-
-<tr valign="top">
-	<td  style="text-align: center">
-</td>
-	<td><p>1.5, 1.8, 1.9, 1.10 1.11, 1.13, 1.15, <strong>S1.7</strong> and these <a href="julia/HW1.ipynb">Julia Problems</a></p>
-</td>
-	<td><p>1/26</p>
-</td>
-</tr>
-
-<tr valign="top">
-	<td  style="text-align: center">
-</td>
-	<td><p>2.1, 2.2, 2.4, 2.5, 2.6, 2.8, 2.9, 2.10 and these <a href="julia/HW2.ipynb">Julia Problems</a></p>
-</td>
-	<td><p>1/1</p>
-</td>
+<td>Quiz 1</td>
+<td> <a href="quizzes/Quiz1.pdf">Blank</a></td>
+<td> <a href="quizzes/Quiz1Sols.pdf">Solutions</a></td>
 </tr>
 
 </table>
-</div>
- -->
+
 </div>
 </div>
 
