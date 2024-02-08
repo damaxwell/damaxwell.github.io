@@ -4,7 +4,7 @@ html { background: white; }
 
 body { font-size: 110%; font-family: Lucida Grande, Lucida Sans Unicode, Helvetica Neue, Kalimati, Calibri, Helvetica, Ariel, sans-serif; margin: 0px; }
 
-.sidenav { height: 100%; width: 200px; z-index: 10; position: fixed; top: 0; left: 0; overflow-x: hidden; display: block; background-color: #ccc; box-sizing: border-box; transition: 0.3s; }
+.sidenav { height: 100%; width: 200px; z-index: 10; position: fixed; top: 50px; padding-top: 15px; left: 0; overflow-x: hidden; display: block; background-color: #ccc; box-sizing: border-box; transition: 0.3s; }
 
 .entry a { padding: 4px 8px 4px 20px; font-size: 120%; text-decoration: none; display: block; color: #4459e2; }
 
@@ -16,7 +16,7 @@ body { font-size: 110%; font-family: Lucida Grande, Lucida Sans Unicode, Helveti
 
 .sidenav-header a:visited { color: black; }
 
-.page-header { height: 50px; background-color: #8bb1ef; font-size: 120%; font-weight: bold; line-height: 50px; padding-left: 20px; position: relative; }
+.page-header { height: 50px; background-color: #8bb1ef; font-size: 120%; font-weight: bold; line-height: 50px; padding-left: 20px; position: fixed; top: 0; left: 0; width: 100%; }
 
 .page-header a { padding: 0; color: black; text-decoration: none; }
 
@@ -28,7 +28,9 @@ body { font-size: 110%; font-family: Lucida Grande, Lucida Sans Unicode, Helveti
 
 #burger-svg { display: block; margin: auto; margin-left: 0px; height: 100%; }
 
-.main-body { -webkit-tap-highlight-color: transparent; }
+.main-body { -webkit-tap-highlight-color: transparent; margin-top: 50px; }
+
+.page-content { padding-top: 1px; }
 
 .page-content a { color: #4459e2; text-decoration: none; }
 
@@ -36,7 +38,7 @@ body { font-size: 110%; font-family: Lucida Grande, Lucida Sans Unicode, Helveti
 
 @media (max-width: 767px) { .sidenav { width: 0; } .sidenav.showing { width: 200px; } .hide-small { display: none !important; } .main-body { margin-left: 0px; } .page-header { padding-right: 5px; } .page-header-title { padding-left: 40px; width: 100%; } .page-content { padding-left: 20px; padding-right: 20px; } }
 
-@media (min-width: 768px) { .hide-large { display: none !important; } .sidenav { width: 200px; } .main-body { margin-left: 200px; } .page-header { padding-right: 20px; } .page-header-title { padding-left: 5px; width: 100%; } .page-content { margin-left: 50px; margin-right: 50px; } h2.top-heading { margin-top: 50px; } }
+@media (min-width: 768px) { .hide-large { display: none !important; } .sidenav { width: 200px; } .main-body { margin-left: 200px; } .page-header { padding-right: 20px; } .page-header-title { padding-left: 5px; width: 100%; } .page-content { margin-left: 50px; margin-right: 50px; } }
 
 pre code { background-color: #eee; border: 2px solid #999; display: block; padding: 20px; overflow-x: scroll; }
 
