@@ -1,0 +1,597 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Quizzes</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+       <meta http-equiv="Pragma" content="no-cache">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Expires" content="-1">
+   <!-The following magic viewport words are needed for Sarfari on mobile 
+      to make 96px=1in, really-->
+   <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/site2.css">
+
+    <!-- The following allow KaTeX to be used on the page and autorender.-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              renderMathInElement(document.body, {
+                // customized options
+                // • auto-render specific keys, e.g.:
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '$.', right: '.$', display: false},
+                    {left: '\\(', right: '\\)', display: false},
+                    {left: '\\[', right: '\\]', display: true}
+                ],
+                // • rendering keys, e.g.:
+                throwOnError : false
+              });
+          });
+      </script>
+
+<!-- The following is for `highlight.js` code highlighting -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+<div class="page-header" id="page-top">
+  <div class="burger-outer hide-large">
+    <div class="burger-button" onclick="toggleNav()">
+      <svg id="burger-svg" viewBox="0 0 100 100" width="20" height="20">
+        <rect y="13" width="100" height="15" rx="7.5"></rect>
+        <rect y="42.5" width="100" height="15" rx="7.5"></rect>
+        <rect y="72" width="100" height="15" rx="7.5"></rect>
+      </svg>
+    </div>
+  </div>
+  <div class="page-header-title" onclick="closeNav()">
+    <a href="index.html#page-top" color="black">
+      <span class="hide-large">Math 253: Calculus III</span>
+      <span class="hide-small">Math 253: Calculus III</span>
+    </a>
+  </div>
+</div>
+
+<div id="main" class="main-body">
+
+    <div id="nav" class="sidenav" >
+      <nav role="navigation">
+        <!-- <div class="sidenav-header">
+          <a href="index.html#page-top" color="black">
+          Math 253
+          </a>
+        </div> -->
+            
+          
+          <div class="entry"><a  onclick="closeNav()" href="Syllabus.pdf" alt="Syllabus">Syllabus</a></div>
+          
+        
+          
+          <div class="entry"><a  onclick="closeNav()" href="homework.html" alt="Homework">Homework</a></div>
+          
+        
+          
+          <div class="entry"><a  onclick="closeNav()" href="quizzes.html" alt="Quizzes">Quizzes</a></div>
+          
+        
+          
+          <div class="entry"><a  onclick="closeNav()" href="daily-log.html" alt="Daily Log">Daily Log</a></div>
+          
+        
+          
+          <div class="entry"><a  onclick="closeNav()" href="https://discord.gg/jUtWgey37q" alt="Discord">Discord</a></div>
+          
+        
+          
+          <div class="entry"><a  onclick="closeNav()" href="https://canvas.alaska.edu/courses/21598" alt="Canvas">Canvas</a></div>
+          
+        
+      
+      </nav>
+    </div>
+    
+
+  <div class="page-content" onclick="closeNav()"><h2 id="quizzes">Quizzes</h2>
+
+<p>Links to this semester’s quizzes, and solutions, will appear here as they are completed.</p>
+
+<table style="display: inline-block;vertical-align: top" class="asst-table-v2">
+<tr><th> Fall 2022 </th> <th> Blank </th> <th> Solutions </th></tr>
+
+<tr>
+<td>Quiz 1</td>
+<td> <a href="quizzes/2022-Fall/Quiz1.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Fall/Quiz1Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 2</td>
+<td> <a href="quizzes/2022-Fall/Quiz2.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Fall/Quiz2Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 3</td>
+<td> <a href="quizzes/2022-Fall/Quiz3.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Fall/Quiz3Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 4</td>
+<td> <a href="quizzes/2022-Fall/Quiz4.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Fall/Quiz4Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 5</td>
+<td> <a href="quizzes/2022-Fall/Quiz5.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Fall/Quiz5Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 6</td>
+<td> <a href="quizzes/2022-Fall/Quiz6.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Fall/Quiz6Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 7</td>
+<td> <a href="quizzes/2022-Fall/Quiz7.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Fall/Quiz7Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 8</td>
+<td> <a href="quizzes/2022-Fall/Quiz8.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Fall/Quiz8Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 9</td>
+<td> <a href="quizzes/2022-Fall/Quiz9.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Fall/Quiz9Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 10</td>
+<td> <a href="quizzes/2022-Fall/Quiz10.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Fall/Quiz10Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 11</td>
+<td> <a href="quizzes/2022-Fall/Quiz11.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Fall/Quiz11Sols.pdf">Solutions</a></td>
+</tr>
+
+</table>
+
+<h3 id="sample-past-quizzes">Sample past quizzes</h3>
+
+<p>These are quizzes from past semesters with different instructors.  They can be a helpful study aid.</p>
+
+<div>
+
+<table style="display: inline-block;vertical-align: top" class="asst-table-v2">
+<tr><th> Spring 2022 </th> <th> Blank </th> <th> Solutions </th></tr>
+
+<tr>
+<td>Quiz 1</td>
+<td> <a href="quizzes/2022-Spring/qu01_253_2022.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Spring/solns_qu01_253_2022.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 2</td>
+<td> <a href="quizzes/2022-Spring/qu02_253_2022.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Spring/solns_qu02_253_2022.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 3</td>
+<td> <a href="quizzes/2022-Spring/qu03_253_2022.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Spring/solns_qu03_253_2022.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 5</td>
+<td> <a href="quizzes/2022-Spring/qu05-253-2022.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Spring/solns_qu05_253_2022.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 6</td>
+<td> <a href="quizzes/2022-Spring/qu06_253_2022.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Spring/solns_qu06_253_2022.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 7</td>
+<td> <a href="quizzes/2022-Spring/qu07-253-2022.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Spring/solns_qu07_253_2022.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 9</td>
+<td> <a href="quizzes/2022-Spring/qu09-253-2022.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Spring/solns_qu09_253_2022.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 10</td>
+<td> <a href="quizzes/2022-Spring/qu10-253-2022.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Spring/solns_qu10_253_2022.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 11</td>
+<td> <a href="quizzes/2022-Spring/qu11-253-2022.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Spring/solns_qu11_253_2022.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 12</td>
+<td> <a href="quizzes/2022-Spring/qu12-253-2022.pdf">Blank</a></td>
+<td> <a href="quizzes/2022-Spring/solns_qu12_253_2022.pdf">Solutions</a></td>
+</tr>
+
+</table>
+
+
+<table style="display: inline-block;vertical-align: top" class="asst-table-v2">
+<tr><th> Fall 2021 </th> <th> Blank </th> <th> Solutions </th></tr>
+
+<tr>
+<td>Quiz 1</td>
+<td> <a href="quizzes/2021-Fall/Quiz1.pdf">Blank</a></td>
+<td> <a href="quizzes/2021-Fall/Quiz1Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 2</td>
+<td> <a href="quizzes/2021-Fall/Quiz2.pdf">Blank</a></td>
+<td> <a href="quizzes/2021-Fall/Quiz2Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 3</td>
+<td> <a href="quizzes/2021-Fall/Quiz3.pdf">Blank</a></td>
+<td> <a href="quizzes/2021-Fall/Quiz3Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 4</td>
+<td> <a href="quizzes/2021-Fall/Quiz4.pdf">Blank</a></td>
+<td> <a href="quizzes/2021-Fall/Quiz4Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 5</td>
+<td> <a href="quizzes/2021-Fall/Quiz5.pdf">Blank</a></td>
+<td> <a href="quizzes/2021-Fall/Quiz5Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 6</td>
+<td> <a href="quizzes/2021-Fall/Quiz6.pdf">Blank</a></td>
+<td> <a href="quizzes/2021-Fall/Quiz6Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 7</td>
+<td> <a href="quizzes/2021-Fall/Quiz7.pdf">Blank</a></td>
+<td> <a href="quizzes/2021-Fall/Quiz7Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 8</td>
+<td> <a href="quizzes/2021-Fall/Quiz8.pdf">Blank</a></td>
+<td> <a href="quizzes/2021-Fall/Quiz8Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 9</td>
+<td> <a href="quizzes/2021-Fall/Quiz9.pdf">Blank</a></td>
+<td> <a href="quizzes/2021-Fall/Quiz9Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 10</td>
+<td> <a href="quizzes/2021-Fall/Quiz10.pdf">Blank</a></td>
+<td> <a href="quizzes/2021-Fall/Quiz10Sols.pdf">Solutions</a></td>
+</tr>
+
+<tr>
+<td>Quiz 11</td>
+<td> <a href="quizzes/2021-Fall/Quiz11.pdf">Blank</a></td>
+<td> <a href="quizzes/2021-Fall/Quiz11Sols.pdf">Solutions</a></td>
+</tr>
+
+</table>
+
+
+
+<table style="display: inline-block;vertical-align: top" class="asst-table-v2">
+
+
+<tr>
+<td>
+        
+                <b>Spring 2021</b>
+        
+</td>
+<td> <a href="quizzes/2021-Spring/solns_qu01-253-2021.pdf">Quiz 1</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2021-Spring/solns_qu02-253-2021.pdf">Quiz 2</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2021-Spring/solns_qu03-253-2021.pdf">Quiz 3</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2021-Spring/solns_qu04-253-2021.pdf">Quiz 4</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2021-Spring/solns_qu05-253-2021.pdf">Quiz 5</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2021-Spring/solns_qu06-253-2021.pdf">Quiz 6</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2021-Spring/solns_qu07-253-2021.pdf">Quiz 7</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2021-Spring/solns_qu08-253-2021.pdf">Quiz 8</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2021-Spring/solns_qu09-253-2021.pdf">Quiz 9</a></td>
+</tr>
+
+</table>
+
+
+
+<table style="display: inline-block;vertical-align: top" class="asst-table-v2">
+
+
+<tr>
+<td>
+        
+                <b>Fall 2018</b>
+        
+</td>
+<td> <a href="quizzes/2018-Fall/M253Q1sols.pdf">Quiz 1</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Fall/M253Q2sols.pdf">Quiz 2</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Fall/M253Q3sols.pdf">Quiz 3</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Fall/M253Q4sols.pdf">Quiz 4</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Fall/M253Q5sols.pdf">Quiz 5</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Fall/M253Q6sols.pdf">Quiz 6</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Fall/M253Q7sols.pdf">Quiz 7</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Fall/M253Q8sols.pdf">Quiz 8</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Fall/M253Q9sols.pdf">Quiz 9</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Fall/M253Q10sols.pdf">Quiz 10</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Fall/M253Q11sols.pdf">Quiz 11</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Fall/M253Q12sols.pdf">Quiz 12</a></td>
+</tr>
+
+</table>
+
+
+
+<table style="display: inline-block;vertical-align: top" class="asst-table-v2">
+
+
+<tr>
+<td>
+        
+                <b>Spring 2018</b>
+        
+</td>
+<td> <a href="quizzes/2018-Spring/Q1.pdf">Quiz 1</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Spring/Q2.pdf">Quiz 2</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Spring/Q3.pdf">Quiz 3</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Spring/Q4.pdf">Quiz 4</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Spring/Q5.pdf">Quiz 5</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Spring/Q6.pdf">Quiz 6</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Spring/Q7.pdf">Quiz 7</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Spring/Q8.pdf">Quiz 8</a></td>
+</tr>
+
+<tr>
+<td>
+        
+</td>
+<td> <a href="quizzes/2018-Spring/Q9.pdf">Quiz 9</a></td>
+</tr>
+
+</table>
+
+</div>
+</div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+// Set nav class to "sidenav showing"
+function toggleNav() {
+    console.log("open nav")
+    nav = document.getElementById("nav")
+    if( nav.className == "sidenav" ) {
+      nav.className = "sidenav showing"
+    } else {
+      nav.className = "sidenav"
+    }
+}
+
+// Set nav class to "sidenav" instead of "sidenav showing"
+function closeNav() {
+  console.log("close nav")
+    document.getElementById("nav").className = "sidenav"
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+</html>
+
