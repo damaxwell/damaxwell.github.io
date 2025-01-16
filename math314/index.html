@@ -1,109 +1,134 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Math F314 (Linear Algebra)</title>
+
+    <!-- Cache control -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
-       <meta http-equiv="Pragma" content="no-cache">
-   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-   <meta http-equiv="Expires" content="-1">
-   <!-The following magic viewport words are needed for Sarfari on mobile 
-      to make 96px=1in, really-->
-   <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/site2.css">
-
-    <!-- The following allow KaTeX to be used on the page and autorender.-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-        <script>
-          document.addEventListener("DOMContentLoaded", function() {
-              renderMathInElement(document.body, {
-                // customized options
-                // • auto-render specific keys, e.g.:
-                delimiters: [
-                    {left: '$$', right: '$$', display: true},
-                    {left: '$', right: '$', display: false},
-                    {left: '$.', right: '.$', display: false},
-                    {left: '\\(', right: '\\)', display: false},
-                    {left: '\\[', right: '\\]', display: true}
-                ],
-                // • rendering keys, e.g.:
-                throwOnError : false
-              });
-          });
-      </script>
-
-<!-- The following is for `highlight.js` code highlighting -->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+    
+    <!-- Site styles -->
+    <!-- Note version: needs updating if there are changes-->
+    <link rel="stylesheet" href="css/site2.css?v=dev">
+    
+    <!-- KaTeX for math rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+    
+    <!-- Highlight.js for code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 </head>
+
 <body>
-
-<div class="page-header" id="page-top">
-  <div class="burger-outer hide-large">
-    <div class="burger-button" onclick="toggleNav()">
-      <svg id="burger-svg" viewBox="0 0 100 100" width="20" height="20">
-        <rect y="13" width="100" height="15" rx="7.5"></rect>
-        <rect y="42.5" width="100" height="15" rx="7.5"></rect>
-        <rect y="72" width="100" height="15" rx="7.5"></rect>
-      </svg>
-    </div>
-  </div>
-  <div class="page-header-title" onclick="closeNav()">
-    
-      <span class="hide-large">Math 314: Linear Algebra</span>
-      <span class="hide-small">Math 314: Linear Algebra</span>
-    
-  </div>
-</div>
-
-<div id="main" class="main-body">
-
-    <div id="nav" class="sidenav" >
-      <nav role="navigation">
-        <!-- <div class="sidenav-header">
-          <a href="index.html#page-top" color="black">
-          Math 314
-          </a>
-        </div> -->
+    <!-- Header with navigation toggle -->
+    <header class="page-header" id="page-top">
+        <div class="burger-outer hide-large">
+            <button class="burger-button" onclick="toggleNav()" aria-label="Toggle navigation">
+                <svg id="burger-svg" viewBox="0 0 100 100" width="20" height="20">
+                    <rect y="13" width="100" height="15" rx="7.5"></rect>
+                    <rect y="42.5" width="100" height="15" rx="7.5"></rect>
+                    <rect y="72" width="100" height="15" rx="7.5"></rect>
+                </svg>
+            </button>
+        </div>
+        <div class="page-header-title" onclick="closeNav()">
             
-          
-          <div class="entry"><a  onclick="closeNav()" href="Syllabus.pdf" alt="Syllabus">Syllabus</a></div>
-          
-        
-          
-          <div class="entry"><a  onclick="closeNav()" href="homework.html" alt="Homework">Homework</a></div>
-          
-        
-          
-          <div class="entry"><a  onclick="closeNav()" href="quizzes.html" alt="Quizzes">Quizzes</a></div>
-          
-        
-          
-          <div class="entry"><a  onclick="closeNav()" href="julia.html" alt="Julia">Julia</a></div>
-          
-        
-          
-          <div class="entry"><a  onclick="closeNav()" href="daily-log.html" alt="Daily Log">Daily Log</a></div>
-          
-        
-          
-          <div class="entry"><a  onclick="closeNav()" href="https://discord.gg/XHUvkqYp" alt="Discord">Discord</a></div>
-          
-        
-          
-          <div class="entry"><a  onclick="closeNav()" href="https://canvas.alaska.edu/courses/24156" alt="Canvas">Canvas</a></div>
-          
-        
-      
-      </nav>
-    </div>
-    
+                <span class="hide-large">Math 314: Linear Algebra</span>
+                <span class="hide-small">Math 314: Linear Algebra</span>
+            
+        </div>
+    </header>
 
-  <div class="page-content" onclick="closeNav()"><h2 class="top-heading"><img src="images/arrows.png" height="50px" style=" vertical-align:top; padding-right: 10px" /> Spring 2024</h2>
+    <!-- Main content area -->
+    <div id="main" class="main-body">
+        <!-- Side navigation -->
+        <div id="nav" class="sidenav">
+            <nav role="navigation">
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
+                               href="assets/Syllabus.pdf"
+                               alt="Syllabus">
+                                Syllabus
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
+                               href="homework.html"
+                               alt="Homework">
+                                Homework
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
+                               href="quizzes.html"
+                               alt="Quizzes">
+                                Quizzes
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
+                               href="julia.html"
+                               alt="Julia">
+                                Julia
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
+                               href="daily-log.html"
+                               alt="Daily Log">
+                                Daily Log
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
+                               href="https://discord.gg/XHUvkqYp"
+                               alt="Discord">
+                                Discord
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
+                               href="https://canvas.alaska.edu/courses/24156"
+                               alt="Canvas">
+                                Canvas
+                            </a>
+                        </div>
+                    
+                
+            </nav>
+        </div>
+
+        <!-- Page content -->
+        <div class="page-content" onclick="closeNav()">
+            <h2 class="top-heading"><img src="images/arrows.png" height="50px" style=" vertical-align:top; padding-right: 10px" /> Spring 2024</h2>
 
 <p>Linear algebra is <strong>useful</strong>. Practical. Maybe the <strong>most applicable math you can learn</strong>. It’s at the heart of many computer applications of math (numerical differential equations, computer graphics, big data, machine learning). The Spring 2025 edition of Math 314 will emphasize the practical side of linear algebra.</p>
 
@@ -155,43 +180,11 @@ Hard copies are nice to use, though, and the book is not expensive. Treat yourse
   <li>Office hours will appear here when settled.</li>
 </ul>
 
-</div>
-</div>
 
+        </div>
+    </div>
+
+    <!-- Site JavaScript -->
+    <script src="assets/js/main.js"></script>
 </body>
-
-<script type="text/javascript">
-// Set nav class to "sidenav showing"
-function toggleNav() {
-    console.log("open nav")
-    nav = document.getElementById("nav")
-    if( nav.className == "sidenav" ) {
-      nav.className = "sidenav showing"
-    } else {
-      nav.className = "sidenav"
-    }
-}
-
-// Set nav class to "sidenav" instead of "sidenav showing"
-function closeNav() {
-  console.log("close nav")
-    document.getElementById("nav").className = "sidenav"
-}
-
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-</script>
 </html>
-
