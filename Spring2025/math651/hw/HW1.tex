@@ -1,0 +1,42 @@
+\documentclass[minion]{homework651}
+\input{hwextras}
+
+% A macro for a decorated right arrow (indicating the kind of convergence)
+\newcommand\converges[1]{\mathrel{\mathop{\longrightarrow}\limits_{#1}}}
+
+\doclabel{Math F651: Homework 1}
+\docdate{Due: January 22, 2025}
+
+\begin{document}
+\begin{problems}
+\problem Prove that every ball $B_r(x)$ in a metric space $(X,d)$ is an open set.
+
+\problem Let $V$ be a subset of a metric space $(X,d)$.  The set of limit
+points of $V$ are those points $x$ that can be written as a the limit of a 
+sequence of points in $V$.  Show that a set $V\subseteq X$ is closed if and only if
+it contains its limit points.
+
+\problem Let $d_1$ and $d_2$ be two metrics on a set $X$.  Show that the following
+conditions are equivalent.
+\begin{subproblems}
+\item For every sequence $\{ p_i\}_{i=1}^\infty$, if $p_i\converges{d_2} p$ 
+then $p_i\converges{d_1} p$.
+\item For every function $f:X\rightarrow \Reals$, if $f$ is continuous with 
+respect to $d_1$ then $f$ is continuous with respect to $d_2$.
+\item For every set $V$, if $V$ is closed with respect to $d_1$ then
+$V$ is closed with respect to $d_2$.
+\item For every set $U$, if $U$ is open with respect to $d_1$ then
+$U$ is open with respect to $d_2$.
+\end{subproblems}
+
+{\it Hint:} You might want to show $\;{\rm a)} \iff {\rm b)}\;$ and $\;{\rm a)} \Longrightarrow {\rm c)} \Longrightarrow {\rm d)} 
+\Longrightarrow {\rm a)}$.
+
+\problem Lee, Problem 2-1
+
+\problem Lee, Exercise (Not Problem) 2.6
+
+
+\end{problems}
+
+\end{document}
