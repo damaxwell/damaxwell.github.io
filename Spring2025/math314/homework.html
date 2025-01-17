@@ -14,7 +14,6 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     
     <!-- Site styles -->
-    <!-- Note version: needs updating if there are changes-->
     <link rel="stylesheet" href="assets/css/main.css">
     
     <!-- KaTeX for math rendering -->
@@ -27,7 +26,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 </head>
 
-<body>
+<body class="default">
     <!-- Header with navigation toggle -->
     <header class="page-header" id="page-top">
         <div class="burger-outer hide-large">
@@ -52,87 +51,86 @@
     </header>
 
     <!-- Main content area -->
-    <div id="main" class="main-body">
+    <div id="main" class="primary-body">
         <!-- Side navigation -->
-        <div id="nav" class="sidenav">
-            <nav role="navigation">
+        <nav id="nav" role="navigation">
+            
                 
-                    
-                        <div class="entry">
-                            <a onclick="closeNav()" 
-                               href="assets/Syllabus.pdf"
-                               alt="Syllabus">
-                                Syllabus
-                            </a>
-                        </div>
-                    
+                    <div class="entry">
+                        <a onclick="closeNav()" 
+                            href="assets/Syllabus.pdf"
+                            alt="Syllabus">
+                            Syllabus
+                        </a>
+                    </div>
                 
-                    
-                        <div class="entry">
-                            <a onclick="closeNav()" 
-                               href="homework.html"
-                               alt="Homework">
-                                Homework
-                            </a>
-                        </div>
-                    
+            
                 
-                    
-                        <div class="entry">
-                            <a onclick="closeNav()" 
-                               href="quizzes.html"
-                               alt="Quizzes">
-                                Quizzes
-                            </a>
-                        </div>
-                    
+                    <div class="entry">
+                        <a onclick="closeNav()" 
+                            href="homework.html"
+                            alt="Homework">
+                            Homework
+                        </a>
+                    </div>
                 
-                    
-                        <div class="entry">
-                            <a onclick="closeNav()" 
-                               href="julia.html"
-                               alt="Julia">
-                                Julia
-                            </a>
-                        </div>
-                    
+            
                 
-                    
-                        <div class="entry">
-                            <a onclick="closeNav()" 
-                               href="daily-log.html"
-                               alt="Daily Log">
-                                Daily Log
-                            </a>
-                        </div>
-                    
+                    <div class="entry">
+                        <a onclick="closeNav()" 
+                            href="quizzes.html"
+                            alt="Quizzes">
+                            Quizzes
+                        </a>
+                    </div>
                 
-                    
-                        <div class="entry">
-                            <a onclick="closeNav()" 
-                               href="https://discord.gg/XHUvkqYp"
-                               alt="Discord">
-                                Discord
-                            </a>
-                        </div>
-                    
+            
                 
-                    
-                        <div class="entry">
-                            <a onclick="closeNav()" 
-                               href="https://canvas.alaska.edu/courses/24156"
-                               alt="Canvas">
-                                Canvas
-                            </a>
-                        </div>
-                    
+                    <div class="entry">
+                        <a onclick="closeNav()" 
+                            href="julia.html"
+                            alt="Julia">
+                            Julia
+                        </a>
+                    </div>
                 
-            </nav>
-        </div>
+            
+                
+                    <div class="entry">
+                        <a onclick="closeNav()" 
+                            href="daily-log.html"
+                            alt="Daily Log">
+                            Daily Log
+                        </a>
+                    </div>
+                
+            
+                
+                    <div class="entry">
+                        <a onclick="closeNav()" 
+                            href="https://discord.gg/XHUvkqYp"
+                            alt="Discord">
+                            Discord
+                        </a>
+                    </div>
+                
+            
+                
+                    <div class="entry">
+                        <a onclick="closeNav()" 
+                            href="https://canvas.alaska.edu/courses/24156"
+                            alt="Canvas">
+                            Canvas
+                        </a>
+                    </div>
+                
+            
+        </nav>
 
         <!-- Page content -->
-        <div class="page-content" onclick="closeNav()">
-            <h2 id="homework-sets">Homework Sets</h2>
+        <div class="page-margins">
+            <div class="page-content" onclick="closeNav()">
+                <h2 id="homework-sets">Homework Sets</h2>
 
 <p>Most problems come from the course text.  For example, problem 1.9 is problem 9 of Chapter 1. Problems with an <strong>S</strong> in front refer to the <a href="https://web.stanford.edu/~boyd/vmls/vmls-additional-exercises.pdf">supplemental</a> problems.</p>
 
@@ -174,6 +172,8 @@
 	<td></td>
 </tr> -->
 
+<div class="card">
+    
 <h3 id="hw-1-hints">HW 1 Hints</h3>
 
 <p>Many of the problems in this set rely on Section 1.4. and the operation $a^T b$.</p>
@@ -183,6 +183,9 @@ will be handy. You will also need subvector notation \(a_{j:k}\) and
 stacking notation, either $(a,b,c)$ or 
 \[\begin{bmatrix}a\cr b\cr c\end{bmatrix}.\]</p>
 
+</div>
+
+            </div>
         </div>
     </div>
 
