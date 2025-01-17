@@ -8,7 +8,7 @@ body { font-family: Lucida Grande, Lucida Sans Unicode, Helvetica Neue, Kalimati
 
 .sidenav { height: 100%; position: fixed; top: 50px; left: 0; z-index: 10; padding-top: 15px; overflow-x: hidden; display: block; background-color: #e2e2e2; transition: 0.3s; }
 
-.entry a { padding: 4px 8px 4px 20px; font-size: 120%; text-decoration: none; display: block; color: #2070b0; transition: background-color 0.2s ease; }
+.entry a { padding: 8px 8px 8px 20px; font-size: 120%; text-decoration: none; display: block; color: #2070b0; transition: background-color 0.2s ease; }
 
 .entry a:hover { background-color: #84b6d9; }
 
@@ -43,6 +43,8 @@ body { font-family: Lucida Grande, Lucida Sans Unicode, Helvetica Neue, Kalimati
 pre code { background-color: #eee; border: 2px solid #999; display: block; padding: 20px; overflow-x: scroll; }
 
 img.boxed { border: 2px solid black; overflow-x: scroll; vertical-align: bottom; display: inline-block; margin-top: 6px; margin-right: 6px; }
+
+.card { margin-top: 20px; margin-bottom: 20px; border-radius: 8px; padding-right: 20px; padding-left: 20px; border: 3px solid #84b6d9; }
 
 .asst-table { border-collapse: separate; border-spacing: 0; border: 2px solid black; border-radius: 4px; }
 
