@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Math F651 (Topology)</title>
+    <title>Math F314 (Linear Algebra)</title>
 
     <!-- Cache control -->
     <meta http-equiv="Pragma" content="no-cache">
@@ -15,7 +15,7 @@
     
     <!-- Site styles -->
     <!-- Note version: needs updating if there are changes-->
-    <link rel="stylesheet" href="css/site2.css?v=dev">
+    <link rel="stylesheet" href="assets/css/main.css">
     
     <!-- KaTeX for math rendering -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
@@ -41,8 +41,8 @@
         </div>
         <div class="page-header-title" onclick="closeNav()">
             
-                <span class="hide-large">Math 651: Topology</span>
-                <span class="hide-small">Math 651: Topology</span>
+                <span class="hide-large">Math 314: Linear Algebra</span>
+                <span class="hide-small">Math 314: Linear Algebra</span>
             
         </div>
     </header>
@@ -76,6 +76,26 @@
                     
                         <div class="entry">
                             <a onclick="closeNav()" 
+                               href="quizzes.html"
+                               alt="Quizzes">
+                                Quizzes
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
+                               href="julia.html"
+                               alt="Julia">
+                                Julia
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
                                href="daily-log.html"
                                alt="Daily Log">
                                 Daily Log
@@ -86,7 +106,7 @@
                     
                         <div class="entry">
                             <a onclick="closeNav()" 
-                               href="https://discord.gg/8xgFjpcv"
+                               href="https://discord.gg/XHUvkqYp"
                                alt="Discord">
                                 Discord
                             </a>
@@ -96,7 +116,7 @@
                     
                         <div class="entry">
                             <a onclick="closeNav()" 
-                               href="https://canvas.alaska.edu/courses/24201"
+                               href="https://canvas.alaska.edu/courses/24156"
                                alt="Canvas">
                                 Canvas
                             </a>
@@ -108,44 +128,61 @@
 
         <!-- Page content -->
         <div class="page-content" onclick="closeNav()">
-            <h2 id="spring-2025">Spring 2025</h2>
-
-<p>Topology is the study of continuity, broadly generalizing concepts first encountered in calculus. This course progresses from point-set topology, with an emphasis on topological manifolds, to the beginnings of algebraic topology — 
-a profound field that bridges algebraic structures and topological objects.</p>
-
-<h3 id="latex-resources">LaTeX Resources</h3>
+            <h2> Spring 2024</h2>
+<p><img src="images/arrows.png" height="80px" style="float: left; padding-right: 20px; padding-bottom: 10px;" /></p>
+<div>
+<p>
+Linear algebra is <b>useful</b>. Practical. Maybe the <b>most applicable math you can learn</b>. It’s at the heart of many computer applications of math (numerical differential equations, computer graphics, big data, machine learning). The Spring 2025 edition of Math 314 will emphasize the practical side of linear algebra.
+</p>
+</div>
+<h2 id="textbook">Textbook</h2>
 
 <ul>
   <li>
-    <p>Here is <a href="HWDemo.tex">HWDemo.tex</a>, a template file for solutions
-written in LaTeX.  Before you compile it you’ll also need to download and place
-in the same directory</p>
-
-    <ul>
-      <li><a href="homework651.cls">class file</a></li>
-      <li><a href="hwextras.tex">additional macros</a></li>
-    </ul>
-
-    <p>If all works well, your results from LaTeX compilation should 
-make a PDF file like <a href="HWDemo.pdf">this.</a></p>
+    <p><a href="https://web.stanford.edu/~boyd/vmls/">Free text</a> by Stanford/UCLA engineers Stephen Boyd and Lieven Vanderberghe.<br />
+Hard copies are nice to use, though, and the book is not expensive. Treat yourself to one!</p>
+  </li>
+  <li>
+    <p>Additional supplementary <a href="https://web.stanford.edu/~boyd/vmls/vmls-additional-exercises.pdf">exercises</a>.  Some of these will appear in the homework.</p>
+  </li>
+  <li>
+    <p>Julia language <a href="https://web.stanford.edu/~boyd/vmls/vmls-julia-companion.pdf">companion</a> for the textbook.</p>
+  </li>
+  <li>
+    <p>Stanford course <a href="https://stanford.edu/class/engr108/">website</a> associated with the text.</p>
   </li>
 </ul>
 
-<h3 id="office-hours">Office Hours</h3>
+<h2 id="labs">Labs</h2>
+
+<ul>
+  <li>Labs will appear here when they become available.</li>
+</ul>
+
+<!-- * Lab 1 is available! You'll want:
+  - The [instructions](Lab1.pdf)
+  - The companion [Jupyter notebook](julia/Lab1.ipynb)
+<p></p>
+* Lab 2 is available! You'll want:
+  - The [instructions](Lab2.pdf)
+  - The companion [Jupyter notebook](julia/Lab2.ipynb)
+<p></p>
+* Lab 3 is available! It's due 3/29. You'll want:
+  - The [instructions](Lab3.pdf)
+  - The companion [Jupyter notebook](julia/Lab3.ipynb)
+  - The [data file](julia/lab3.mat)
+<p></p>
+* Lab 4 is available! It's due 4/26. You'll want:
+  - The [instructions](Lab4.pdf)
+  - The companion [Jupyter notebook](julia/Lab4.ipynb)
+  - The [data file](julia/lab4.mat) -->
+
+<h2 id="office-hours">Office Hours</h2>
 
 <ul>
   <li>Office hours will appear here when settled.</li>
 </ul>
 
-<!-- [Zoom Link](https://alaska.zoom.us/j/99797816618?pwd=UjR4RHpITFBzU2dQSGF0REVNcFpTZz09)
- -->
-
-<!-- 
-|---------------:|:--------------:|
-| Monday         |   12:45-1:45   |
-| Wednesday      |   12:45-1:45   |
-| Thursday       |    9:00- 10:00 |
- -->
 
         </div>
     </div>

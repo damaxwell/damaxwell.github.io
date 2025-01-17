@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quizzes</title>
+
+    <!-- Cache control -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Site styles -->
+    <!-- Note version: needs updating if there are changes-->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- KaTeX for math rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+    
+    <!-- Highlight.js for code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+
+<body>
+    <!-- Header with navigation toggle -->
+    <header class="page-header" id="page-top">
+        <div class="burger-outer hide-large">
+            <button class="burger-button" onclick="toggleNav()" aria-label="Toggle navigation">
+                <svg id="burger-svg" viewBox="0 0 100 100" width="20" height="20">
+                    <rect y="13" width="100" height="15" rx="7.5"></rect>
+                    <rect y="42.5" width="100" height="15" rx="7.5"></rect>
+                    <rect y="72" width="100" height="15" rx="7.5"></rect>
+                </svg>
+            </button>
+        </div>
+        <div class="page-header-title" onclick="closeNav()">
+            
+                <a href="index.html#page-top">
+            
+                <span class="hide-large">Math 314: Linear Algebra</span>
+                <span class="hide-small">Math 314: Linear Algebra</span>
+            
+                </a>
+            
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <div id="main" class="main-body">
+        <!-- Side navigation -->
+        <div id="nav" class="sidenav">
+            <nav role="navigation">
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
+                               href="assets/Syllabus.pdf"
+                               alt="Syllabus">
+                                Syllabus
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
+                               href="homework.html"
+                               alt="Homework">
+                                Homework
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
+                               href="quizzes.html"
+                               alt="Quizzes">
+                                Quizzes
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
+                               href="julia.html"
+                               alt="Julia">
+                                Julia
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
+                               href="daily-log.html"
+                               alt="Daily Log">
+                                Daily Log
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
+                               href="https://discord.gg/XHUvkqYp"
+                               alt="Discord">
+                                Discord
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
+                               href="https://canvas.alaska.edu/courses/24156"
+                               alt="Canvas">
+                                Canvas
+                            </a>
+                        </div>
+                    
+                
+            </nav>
+        </div>
+
+        <!-- Page content -->
+        <div class="page-content" onclick="closeNav()">
+            <h2 id="quizzes">Quizzes</h2>
+
+<p>Links to this semester’s quizzes and solutions appear here.</p>
+
+<table class="asst-table-v2">
+<!-- style = "display: inline-block;vertical-align: top" -->
+<!-- <tr><th> Spring 2024 </th> <th> Blank </th> <th> Solutions </th></tr>
+-->
+
+</table>
+
+
+        </div>
+    </div>
+
+    <!-- Site JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

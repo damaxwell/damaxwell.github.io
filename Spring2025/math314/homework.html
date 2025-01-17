@@ -15,7 +15,7 @@
     
     <!-- Site styles -->
     <!-- Note version: needs updating if there are changes-->
-    <link rel="stylesheet" href="css/site2.css?v=dev">
+    <link rel="stylesheet" href="assets/css/main.css">
     
     <!-- KaTeX for math rendering -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
@@ -43,8 +43,8 @@
             
                 <a href="index.html#page-top">
             
-                <span class="hide-large">Math 651: Topology</span>
-                <span class="hide-small">Math 651: Topology</span>
+                <span class="hide-large">Math 314: Linear Algebra</span>
+                <span class="hide-small">Math 314: Linear Algebra</span>
             
                 </a>
             
@@ -80,6 +80,26 @@
                     
                         <div class="entry">
                             <a onclick="closeNav()" 
+                               href="quizzes.html"
+                               alt="Quizzes">
+                                Quizzes
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
+                               href="julia.html"
+                               alt="Julia">
+                                Julia
+                            </a>
+                        </div>
+                    
+                
+                    
+                        <div class="entry">
+                            <a onclick="closeNav()" 
                                href="daily-log.html"
                                alt="Daily Log">
                                 Daily Log
@@ -90,7 +110,7 @@
                     
                         <div class="entry">
                             <a onclick="closeNav()" 
-                               href="https://discord.gg/8xgFjpcv"
+                               href="https://discord.gg/XHUvkqYp"
                                alt="Discord">
                                 Discord
                             </a>
@@ -100,7 +120,7 @@
                     
                         <div class="entry">
                             <a onclick="closeNav()" 
-                               href="https://canvas.alaska.edu/courses/24201"
+                               href="https://canvas.alaska.edu/courses/24156"
                                alt="Canvas">
                                 Canvas
                             </a>
@@ -114,7 +134,7 @@
         <div class="page-content" onclick="closeNav()">
             <h2 id="homework-sets">Homework Sets</h2>
 
-<p>Most problems come from the course text.</p>
+<p>Most problems come from the course text.  For example, problem 1.9 is problem 9 of Chapter 1. Problems with an <strong>S</strong> in front refer to the <a href="https://web.stanford.edu/~boyd/vmls/vmls-additional-exercises.pdf">supplemental</a> problems.</p>
 
 <div>
 <table class="asst-table">
@@ -122,25 +142,25 @@
 
 <tr>
 	<td class="first-col">
-		<div class="asst-title-box"><b><p>HW 1</p>
+		<div class="asst-title-box"><b><p>HW 0</p>
 </b></div>
 		
-		<div class="due-box"><p><strong>Due:</strong> 1/25</p>
+		<div class="due-box"><p><strong>Due:</strong> 1/19</p>
 </div>
 	</td>
-	<td><p><a href="hw/HW1.pdf">Problems</a><br /><a href="hw/HW1.tex">LaTeX source</a></p>
+	<td><p>1.1, 1.2, <strong>S1.3</strong>, and this <a href="julia/HW0.ipynb">Julia problem</a></p>
 </td>
 </tr>
 
 <tr>
 	<td class="first-col">
-		<div class="asst-title-box"><b><p>HW 2</p>
+		<div class="asst-title-box"><b><p>HW 1</p>
 </b></div>
 		
-		<div class="due-box"><p><strong>Due:</strong> 1/25</p>
+		<div class="due-box"><p><strong>Due:</strong> 1/24</p>
 </div>
 	</td>
-	<td><p><a href="HW1.pdf">HW1</a><br /><a href="HW1.tex">LaTeX source</a></p>
+	<td><p>1.5, 1.8, 1.9, 1.10 1.11, 1.13, 1.15, <strong>S1.7</strong> and these <a href="julia/HW1.ipynb">Julia Problems</a></p>
 </td>
 </tr>
 
@@ -154,6 +174,14 @@
 	<td></td>
 </tr> -->
 
+<h3 id="hw-1-hints">HW 1 Hints</h3>
+
+<p>Many of the problems in this set rely on Section 1.4. and the operation $a^T b$.</p>
+
+<p>You will need notation for building vectors from other vectors; see Section 1.1  In particular, the notations $0_n$, $\mathbf{1}_n$ for vectors of zeros and ones
+will be handy. You will also need subvector notation \(a_{j:k}\) and
+stacking notation, either $(a,b,c)$ or 
+\[\begin{bmatrix}a\cr b\cr c\end{bmatrix}.\]</p>
 
         </div>
     </div>
