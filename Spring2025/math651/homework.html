@@ -15,7 +15,7 @@
     
     <!-- Site styles -->
     <!-- Note version: needs updating if there are changes-->
-    <link rel="stylesheet" href="css/site2.css?v=dev">
+    <link rel="stylesheet" href="assets/css/main.css">
     
     <!-- KaTeX for math rendering -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
@@ -112,35 +112,19 @@
 
         <!-- Page content -->
         <div class="page-content" onclick="closeNav()">
-            <h2 id="homework-sets">Homework Sets</h2>
+            <h3 id="homework">Homework</h3>
 
-<p>Most problems come from the course text.</p>
-
-<div>
+<div style=""><div>
 <table class="asst-table">
 <tr> <th> Assignment </th> <th> Problems </th> </tr>
 
 <tr>
 	<td class="first-col">
-		<div class="asst-title-box"><b><p>HW 1</p>
-</b></div>
 		
-		<div class="due-box"><p><strong>Due:</strong> 1/25</p>
-</div>
+		<p><b>HW 1</b><br /><strong>Due:</strong>1/25</p>
+
 	</td>
 	<td><p><a href="hw/HW1.pdf">Problems</a><br /><a href="hw/HW1.tex">LaTeX source</a></p>
-</td>
-</tr>
-
-<tr>
-	<td class="first-col">
-		<div class="asst-title-box"><b><p>HW 2</p>
-</b></div>
-		
-		<div class="due-box"><p><strong>Due:</strong> 1/25</p>
-</div>
-	</td>
-	<td><p><a href="HW1.pdf">HW1</a><br /><a href="HW1.tex">LaTeX source</a></p>
 </td>
 </tr>
 
@@ -153,6 +137,28 @@
 </td>
 	<td></td>
 </tr> -->
+ </div>
+
+<h3 id="latex-resources">LaTeX Resources</h3>
+
+<ul>
+  <li>
+    <p>You may find this template for solutions written in LaTeX is helpful:</p>
+
+    <ul>
+      <li><a href="HWDemo.tex">HWDemo.tex</a></li>
+    </ul>
+
+    <p>Before you compile it you’ll also need to download and place in the same directory:</p>
+
+    <ul>
+      <li><a href="homework651.cls">class file</a></li>
+      <li><a href="hwextras.tex">additional macros</a></li>
+    </ul>
+
+    <p>If all works well, your results from LaTeX compilation should make a PDF file like <a href="HWDemo.pdf">this.</a></p>
+  </li>
+</ul>
 
 
         </div>
