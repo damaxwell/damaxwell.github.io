@@ -1,0 +1,363 @@
+---
+---
+// Base Variables
+// -------------
+
+// Typography
+$header-font-stack: Lucida Grande, Lucida Sans Unicode, Helvetica Neue, 
+                    Kalimati, Calibri, Helvetica, Arial, sans-serif;
+
+// $header-font-stack: system-ui, -apple-system, 'Segoe UI', Roboto, 
+// 'Helvetica Neue', Arial, sans-serif;                    
+
+// Layout
+$header-height: 50px;
+$breakpoint-small: 768px;
+
+// Spacing
+$space-thin: 5px;
+$space-mobile: 20px;
+$space-desktop: 50px;
+
+// Colors
+// TODO: Better names!
+$color-cornflower: #2070b0;
+$color-cornflower-pale: #84b6d9;
+$color-gray-light: #e2e2e2;
+
+// Base Styles
+// -----------
+// Standard CSS reset for "new box model".  
+// Otherwise padding affects size.
+* { 
+  box-sizing: border-box; 
+}
+
+html { 
+  background: white; 
+}
+
+body { 
+  font-family: $header-font-stack;
+  font-size: 110%;
+  // Standard CSS resets
+  margin: 0;
+  padding: 0;
+}
+
+// Default layout has a header on the top and a main body below.
+body.default {
+  display: grid;
+
+  // Use min-height instead of height to not constrain contents.
+  min-height: 100vh;
+  
+  // Header takes up its natural size, primary-content is the rest.  
+  grid-template-rows: auto 1fr;  
+
+  // The non-header row has this class to accommodate the nav (left) and the rest
+  .primary-body {
+    display: grid;
+    grid-template-columns: auto 1fr;  // Nav takes up natural width
+    position: relative;  // Make this a positioning context for children (needed for nav on mobile)
+  }
+}
+
+
+// Navigation
+// ---------
+
+nav {
+  z-index: 10;
+  padding-top: 15px;
+  overflow-x: hidden;
+  background-color: $color-gray-light;
+  width: fit-content;
+  min-width: 150px;
+  max-width: 300px;
+}
+
+.entry {
+  a {
+    padding: 8px 8px 8px 20px;
+    font-size: 120%;
+    text-decoration: none;
+    display: block;
+    color: $color-cornflower;
+    transition: background-color 0.2s ease;  // Smooth color change
+
+    &:hover {
+      background-color: $color-cornflower-pale;
+    }
+  }
+}
+
+// Header Components
+// ----------------
+.page-header {
+  height: $header-height;
+  background-color: $color-cornflower-pale;
+  font-size: 120%;
+  font-weight: bold;
+  line-height: $header-height;
+  padding-left: $space-mobile;
+  // width: 100%;
+
+  a {
+    padding: 0;
+    color: black;
+    text-decoration: none;
+
+    &:visited {
+      color: black;
+    }
+  }
+}
+
+// Navigation Toggle (Burger Menu)
+// -----------------------------
+.burger-outer {
+  float: left;
+  width: 30px;
+  height: 100%;
+  position: relative;
+}
+
+.burger-button {
+  background-color: $color-cornflower-pale;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  transition: opacity 0.3s ease;  // Slightly faster than menu
+  
+  &:active {
+    opacity: 0.5;  // Quick visual feedback
+  }
+ 
+  &:focus {
+    outline: none;
+  }
+}
+
+#burger-svg {
+  display: block;
+  margin: auto;
+  margin-left: 0;
+  height: 100%;
+}
+
+// Main Content
+// -----------
+
+.page-content {
+  padding-top: 1px;  // Prevent margin collapse?
+
+  a {
+    color: $color-cornflower;
+    text-decoration: none;
+    transition: 0.2s ease;  // Smooth decoration change
+
+    &:hover {
+      text-decoration: underline;
+    }    
+   
+  }
+
+  li {
+    margin-bottom: 0.4em;
+  }
+
+}
+
+// Responsive Design
+// ----------------
+@media (max-width: $breakpoint-small) {
+
+  nav { 
+    // Position on left and from top to bottom of container
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    // Start invisible and with no interactions.
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    
+    &.showing {
+      // Fade in and start interactions
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  // Make .page-margins a pass-through doing nothing
+  .page-margins {
+    display: block;
+  }
+  
+  // Page content takes up full width, minus padding.
+  .page-content {
+    padding-left: $space-mobile;
+    padding-right: $space-mobile;
+    grid-column: 1 / -1;
+  }
+
+  .page-header {
+    padding-right: $space-thin;
+  }
+
+  .page-header-title {
+    padding-left: 40px;
+    width: 100%;
+  }
+
+  .hide-small {
+    display: none !important;
+  }
+
+}
+
+@media (min-width: $breakpoint-small) {
+
+  nav {
+    grid-column: 1;
+  }
+
+  .page-margins {
+    display: grid;
+    grid-template-columns: 
+      minmax($space-desktop, 1fr)
+      minmax(auto, 800px) 
+      minmax($space-desktop, 2fr);    
+  }
+  
+  .page-content {
+    grid-column: 2
+  }
+
+  .page-header {
+    padding-right: 20px;
+  }
+
+  .page-header-title {
+    padding-left: $space-thin;
+    width: 100%;
+  }
+
+  .hide-large {
+    display: none !important;
+  }
+
+}
+// Code Blocks
+// ----------
+pre code {
+  background-color: #eee;
+  border: 2px solid #999;
+  display: block;
+  padding: 20px;
+  overflow-x: scroll;
+}
+
+// Images
+// ------
+img.boxed {
+  border: 2px solid black;
+  overflow-x: scroll;
+  vertical-align: bottom;
+  display: inline-block;
+  margin-top: 6px;
+  margin-right: 6px;
+}
+
+.card {
+  margin-top: 20px;
+  margin-bottom: 20px; 
+  border-radius: 8px; 
+  padding-right: 20px; 
+  padding-left: 20px; 
+  border: 3px solid $color-cornflower-pale
+}
+
+// Tables
+// ------
+.asst-table {
+
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid black;
+  border-radius: 4px;      // Slightly rounded corners
+
+  // border: 1px solid #555;  // Lighter gray border
+  // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  // Subtle depth
+
+
+  th, td {
+    text-align: left;
+    padding: 10px;
+  }
+
+  th {
+    vertical-align: bottom;
+  }
+
+  td {
+    vertical-align: top;
+    // padding-left: 5px;
+  }
+
+  td.first-col {
+    width: 130px;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #e2e2e2;
+  }
+  p {
+    line-height: 1.5em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+}
+
+
+// Utilities
+// ---------
+div.x-scroll {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  white-space: nowrap;
+}
+
+// Accordion
+// --------
+.accordion {
+  padding: 4px 8px 4px 20px;
+  font-size: 120%;
+  text-decoration: none;
+  display: block;
+  color: $color-cornflower;
+  cursor: pointer;
+  transition: 0.4s;
+
+  &:hover {
+    background-color: $color-cornflower-pale;
+  }
+}
+
+.accordion-panel {
+  padding: 0 18px;
+  background-color: $color-gray-light;
+  display: none;
+  overflow: hidden;
+}
