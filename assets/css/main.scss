@@ -61,6 +61,7 @@ body.default {
     grid-template-columns: auto 1fr;  // Nav takes up natural width
     position: relative;  // Make this a positioning context for children (needed for nav on mobile)
   }
+
 }
 
 
@@ -201,6 +202,8 @@ nav {
   // Make .page-margins a pass-through doing nothing
   .page-margins {
     display: block;
+    // Allow width to be less than content's preferred size.
+    min-width: 0;
   }
   
   // Page content takes up full width, minus padding.
