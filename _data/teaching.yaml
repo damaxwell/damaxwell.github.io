@@ -1,0 +1,478 @@
+- term: "Spring 2025"
+  courses:
+    - title: "Math F314: Linear Algebra"
+      url: "Spring2025/math314"
+    - title: "Math F651: Topology"
+      url: "Spring2025/math651"
+
+- term: "Fall 2024"
+  courses:
+    - title: "Math F253: Calculus III"
+      url: "Fall2024/math253"
+    - title: "ES/Math F186: Applied Engineering Mathematics"
+      external-url: "https://canvas.alaska.edu/courses/21263"
+
+- term: "Spring 2024"
+  courses:
+    - title: "Math F314: Linear Algebra"
+      url: "Spring2024/math314"
+    - title: "ES/Math F194: Applied Engineering Mathematics"
+      external-url: "https://canvas.alaska.edu/courses/18217"
+
+- term: "Fall 2023"
+  courses:
+    - title: "Math F641: Real Analysis"
+      url: "Fall2023/math641"
+    - title: "ES/Math F194: Applied Engineering Mathematics"
+      external-url: "https://canvas.alaska.edu/courses/16658"
+
+- term: "Spring 2023"
+  courses:
+    - title: "Math F651: Topology"
+      url: "Spring2023/math651"
+
+- term: "Fall 2022"
+  courses:
+    - title: "Math F253: Calculus III"
+      url: "Fall2022/math253"
+    - title: "ES/Math F193: Applied Engineering Mathematics"
+      external-url: "https://canvas.alaska.edu/courses/10623"
+
+- term: "Spring 2022"
+  courses:
+    - title: "Math F305: Geometry"
+      url: "Spring2022/math305"
+    - title: "Math F490: Senior Seminar"
+      url: "Spring2022/math490"
+
+- term: "Fall 2021"
+  courses:
+    - title: "Math F253: Calculus III"
+      url: "Fall2021/math253"
+    - title: "Math F641: Real Analysis"
+      url: "Fall2021/math641"
+
+- term: "Spring 2021"
+  courses:
+    - title: "Math F251: Calculus I"
+      url: "Spring2021/math251"
+    - title: "Math F615: Numerical Differential Equations"
+      url: "Spring2021/math615"
+
+- term: "Fall 2020"
+  courses:
+    - title: "Math F401: Real Analysis"
+      url: "Fall2020/math401"
+    - title: "Math F426: Numerical Analysis"
+      url: "Fall2020/math426"
+
+- term: "Spring 2019"
+  courses:
+    - title: "Math F490: Senior Seminar"
+      url: "Spring2019/math490"
+    - title: "Math F615: Numerical Differential Equations"
+      url: "Spring2019/math615"
+
+- term: "Fall 2018"
+  courses:
+    - title: "Math F251: Calculus I"
+      url: "Fall2018/math251"
+    - title: "Math F658: Special and General Relativity"
+      url: "Fall2018/math658"
+
+- term: "Spring 2018"
+  courses:
+    - title: "Math F251: Calculus I"
+      url: "Spring2018/math251"
+    - title: "Math F617: Functional Analysis"
+      url: "Spring2018/math617"
+
+- term: "Fall 2017"
+  courses:
+    - title: "Math F314: Linear Algebra"
+      url: "Fall2017/math314"
+    - title: "Math F641: Real Analysis"
+      url: "Fall2017/math641"
+
+# # <p><h2>Spring 2017 Courses</h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #       <tr><td>
+# #           <a href="math412/index.html">Math F412: Differential Geometry</a>
+# #       </td></tr>
+# #       <tr><td>
+# #           <a href="math651/index.html">Math F651: Topology</a>
+# #       </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+# # <br />
+
+# # <p><h2>Spring 2016 Courses</h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #       <tr><td>
+# #           <a href="math305/index.html">Math F305: Geometry</a>
+# #       </td></tr>
+# #       <tr><td>
+# #           <a href="math665/index.html">Math F665: Partial Differential Equations</a>
+# #       </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+# # <br />
+
+# # <p><h2>Spring 2015 Courses</h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #       <tr><td>
+# #           <a href="AY2014/math490/index.html">Math F490: Senior Seminar</a>
+# #       </td></tr>
+# #       <tr><td>
+# #           <a href="AY2014/math651/index.html">Math F651: Topology</a>
+# #       </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+# # <p><h2>Fall 2014 Courses</h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #       <tr><td>
+# #           <a href="AY2014/math302/index.html">Math F302: Differential Equations</a>
+# #       </td></tr>
+# #       <tr><td>
+# #           <a href="AY2014/math665/index.html">Math F665: Topics in Mathematics (Special and General Relativity)</a>
+# #       </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+# # <br />
+
+
+# # <p><h2>Spring 2013 Courses</h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #       <tr><td>
+# #           <a href=AY2012/math215/index.html>Math F215 Introduction to Mathematical Proofs</a>
+# #       </td></tr>
+# #       <tr><td>
+# #           <a href=AY2012/math412/index.html>Math F412 Differential Geometry</a>
+# #       </td></tr>
+
+# #       <tr><td>
+# #           Math F306 History and Philosophy of Math (guest appearance          <a href=Kepler2viaNewton.pdf>worksheet</a>)
+# #       </td></tr>
+
+# #     </table>
+# # </td></tr>
+# # </table>
+# # <br />
+
+# # <p><h2>Fall 2012 </h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #       <tr><td>
+# #           <a href=AY2012/math200/index.html>Math F200 Calculus I</a>
+# #       </td></tr>
+# #       <tr><td>
+# #           <a href=AY2012/math314/index.html>Math F314 Linear Algebra</a>
+# #       </td></tr>
+
+# #     <tr><td>
+# # <p>
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+
+# # <p><h2>Spring 2012 </h2>
+# # <table>
+
+# #   <tr><td width=25></td><td>
+# #       <table cellpadding=2>
+# #         <tr><td>
+# #             <a href=AY2011/math215/index.html>Math F215 Introduction to Mathematical Proofs</a>
+# #         </td></tr>
+# #         <tr><td>
+# #             <a href=AY2011/math617/index.html>Math F617 Functional Analysis</a>
+# #         </td></tr>
+# #     <tr><td>
+# #        <p> 
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+# # <p><h2>Fall 2011 </h2>
+# # <table>
+
+# #   <tr><td width=25></td><td>
+# #       <table cellpadding=2>
+# #         <tr><td>
+# #             <a href=AY2011/math302/index.html>Math F302 Differential Equations</a>
+# #         </td></tr>
+# #         <tr><td>
+# #             <a href=AY2011/math641/index.html>Math F641 Real Analysis</a>
+# #         </td></tr>
+# #     <tr><td>
+# #        <p> 
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+# # <p><h2>Spring 2011 </h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+
+# # <tr><td>
+# #     <a href=AY2010/math651/index.html>Math F651 Topology</a>
+# # </td></tr>
+
+# #     <tr><td>
+# #        <p> 
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+
+
+# # <body bgcolor="#ffffff">
+# # <p><h2>Fall 2010 </h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+
+# # <tr><td>
+# #     <a href=AY2010/math302/index.html>Math F302 Differential Equations</a>
+# # </td></tr>
+# # <tr><td>
+# #     <a href=AY2010/math655/index.html>Math F655 Theory of Surfaces</a>
+# # </td></tr>
+
+# #     <tr><td>
+# #        <p> 
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+# # <body bgcolor="#ffffff">
+# # <p><h2>Spring 2010 </h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #     <tr><td>
+# #         <a href=AY2009/math412/index.html>Math F200 Calculus I</a>
+# #     </td></tr>
+# #     <tr><td>
+# #         <a href=AY2009/math651/index.html>Math F302 Differential Equations</a>
+# #     </td></tr>
+# #     <tr><td>
+# #        <p> 
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+
+# # <body bgcolor="#ffffff">
+# # <p><h2>Fall 2009 </h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #     <tr><td>
+# #         <a href=AY2009/math412/index.html>Math F401 Introduction to Real Analysis</a>
+# #     </td></tr>
+# #     <tr><td>
+# #         <a href=AY2009/math651/index.html>Math F641 Real Analysis</a>
+# #     </td></tr>
+# #     <tr><td>
+# #        <p> 
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+
+# # <body bgcolor="#ffffff">
+# # <p><h2>Spring 2009 </h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #     <tr><td>
+# #         <a href=AY2008/math412/index.html>Math F412 Differential Geometry</a>
+# #     </td></tr>
+# #     <tr><td>
+# #         <a href=AY2008/math651/index.html>Math F651 Topology</a>
+# #     </td></tr>
+# #     <tr><td>
+# #        <p> 
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+
+# # <p><h2>Fall 2008 </h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #     <tr><td>
+# #         <a href=AY2008/math401/index.html>Math F401 Real Analysis</a>
+# #     </td></tr>
+# #     <tr><td>
+# #         <a href=AY2008/math612/index.html>Math F612 Functional Analysis</a>
+# #     </td></tr>
+# #     <tr><td>
+# #        <p> 
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+
+# # <p><h2>Spring 2008 </h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #     <tr><td>
+# #         <a href=AY2007/math200/index.html>Math F200 Calculus I</a>
+# #     </td></tr>
+# #     <tr><td>
+# #         <a href=AY2007/math305/index.html>Math F305 Geometry</a>
+# #     </td></tr>
+# #     <tr><td>
+# #        <p> 
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+
+# # <p><h2>Fall 2007 </h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #     <tr><td>
+# #         <a href=AY2007/math401/index.html>Math F401 Advanced Calculus</a>
+# #     </td></tr>
+# #     <tr><td>
+# #         <a href=AY2007/math641/index.html>Math F641 Real Analysis</a>
+# #     </td></tr>
+# #     <tr><td>
+# #        <p> 
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+
+# # <p><h2>Spring 2007 </h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #     <tr><td>
+# #         <a href=AY2006/math651/index.html>Math F651 Topology</a>
+# #     </td></tr>
+# #        <p> 
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+# # <p><h2>Fall 2006 </h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #     <tr><td>
+# #         <a href=AY2006/math401/index.html>Math F401 Advanced Calculus</a>
+# #     </td></tr>
+# #     <tr><td>
+# #         <a href=AY2006/math608/index.html>Math F608 Partial Differential Equations</a>
+# #     </td></tr>
+# #     <tr><td>
+# #        <p> 
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+
+
+# # <p><h2>Spring 2006 </h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #     <tr><td>
+# #         <a href=AY2005/math215/index.html>Math F215 Introduction to Mathematical Proofs</a>
+# #     </td></tr>
+# #     <tr><td>
+# #         <a href=AY2005/math305/index.html>Math F305 Geometry</a>
+# #     </td></tr>
+# #     <tr><td>
+# #         <a href=AY2005/math490/index.html>Math F490 Senior Seminar (Number Theory)</a>
+# #     </td></tr>
+# #     <tr><td>
+# #        <p> 
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+
+# # <p><h2>Fall 2005 </h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #     <tr><td>
+# #         <a href=AY2005/math200/index.html>Math F200X Calculus I</a>
+# #     </td></tr>
+# #     <tr><td>
+# #         <a href=AY2005/math641/index.html>Math F641 Real Analysis I</a>
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+
+
+# # <p><h2>Spring 2005</h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #     <tr><td>
+# #         <a href=AY2004/math412/index.html>Math 412 Differential Geometry</a>
+# #     </td></tr>
+# #     <tr><td>
+# #         <a href=AY2004/math651/index.html>Math 651 Topology</a>
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+# # <p><h2>Fall 2004</h2>
+# # <table>
+# # <tr><td width=25></td><td>
+# #     <table cellpadding=2>
+# #     <tr><td>
+# #         <a href=AY2004/math200/index.html>Math 200 Calculus I</a>
+# #     </td></tr>
+# #     <tr><td>
+# #         <a href=AY2004/math307/index.html>Math 307 Discrete Mathematics</a>
+# #     </td></tr>
+# #     </table>
+# # </td></tr>
+# # </table>
+
+# # </html>

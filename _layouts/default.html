@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ page.title }}</title>
+
+    <!-- Cache control -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Site styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- KaTeX for math rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+    
+    <!-- Highlight.js for code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+
+<body class="default">
+    <!-- Header with navigation toggle -->
+    <header class="page-header" id="page-top">
+        <div class="burger-outer hide-large">
+            <button class="burger-button" onclick="toggleNav()" aria-label="Toggle navigation">
+                <svg id="burger-svg" viewBox="0 0 100 100" width="20" height="20">
+                    <rect y="13" width="100" height="15" rx="7.5"></rect>
+                    <rect y="42.5" width="100" height="15" rx="7.5"></rect>
+                    <rect y="72" width="100" height="15" rx="7.5"></rect>
+                </svg>
+            </button>
+        </div>
+        <div class="page-header-title" onclick="closeNav()">
+            {% unless page.is_root %}
+                <a href="index.html#page-top">
+            {% endunless %}
+                <span class="hide-large">{{ site.data.toc.small-screen-title }}</span>
+                <span class="hide-small">{{ site.data.toc.large-screen-title }}</span>
+            {% unless page.is_root %}
+                </a>
+            {% endunless %}
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <div id="main" class="primary-body">
+        <!-- Side navigation -->
+        <nav id="nav" role="navigation">
+            {% for item in site.data.toc.docs %}
+                {% if item.children %}
+                    <div class="accordion">{{ item.title }}</div>
+                    <div class="accordion-panel">
+                        {% for child in item.children %}
+                            <div class="entry">
+                                <a onclick="closeNav()" 
+                                    href="{% if child.url %}{{ child.url }}{% else %}#{{ child.anchor }}{% endif %}"
+                                    alt="{{ child.title }}">
+                                    {{ child.title }}
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="entry">
+                        <a onclick="closeNav()" 
+                            href="{% if item.url %}{{ item.url }}{% else %}#{{ item.anchor }}{% endif %}"
+                            alt="{{ item.title }}">
+                            {{ item.title }}
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </nav>
+
+        <!-- Page content -->
+        <div class="page-margins">
+            <div class="page-content" onclick="closeNav()">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Site JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

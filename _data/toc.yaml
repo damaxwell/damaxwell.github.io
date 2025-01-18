@@ -1,0 +1,20 @@
+large-screen-title: "David Maxwell's Homepage"
+small-screen-title: 'David Maxwell'
+short_title: 'David Maxwell'
+
+docs:
+
+- title: About
+  url: about.html
+
+- title: Courses
+  url: courses.html
+
+- title: Research
+  url: research.html
+
+- title: CV
+  url: assets/cv.pdf
+
+- title: Curios
+  url: curios.html

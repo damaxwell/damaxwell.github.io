@@ -1,0 +1,61 @@
+- category: "initial-data"
+  pubs:
+    - citation: "D. Maxwell, <i>Conformal parameterizations of Kasner spacetimes</i>, preprint, 2014"
+
+    - citation: "D. Maxwell, <i>The conformal method and the conformal-thin sandwich methods are the same</i>, preprint, 2014"
+      arxiv: "arxiv:1402.5585"
+
+    - citation: "D. Maxwell, <i>A model problem for conformal parameterizations of the Einstein constraint equations</i>, 
+  Comm. Math. Phys., vol. 302, no. 3, pp. 697&mdash;736, 2011."
+      arxiv: "arxiv:0909.5674"
+
+    - citation: "D. Maxwell, <i>A class of solutions of the vacuum Einstein constraint equations with freely specified 
+  mean curvature</i>, Math. Res. Lett. 16 (2009), no. 4, 627 - 645."
+      arxiv: "arXiv:0804.0874"
+
+    - citation: "D. Maxwell, <i>Rough solutions of the Einstein constraint equations</i>, 
+  J. Reine Ang. Math., 590 (2006), 1 - 30"
+      arxiv: "gr-qc/0405088"
+
+    - citation: "D. Maxwell, <i>Solutions of the Einstein constraint equations with apparent horizon boundaries</I>, Comm. Math. Phys. 256 (2005), 561 - 583."
+      arxiv: "gr-qc/0307117"
+
+    - citation: "D. Maxwell, <i>Rough solutions of the Einstein constraint equations on compact manifolds</i>, J. Hyp. Diff. Eq. 2 (2005), 521 - 546."
+      arxiv: "gr-qc/0506085"
+
+    - citation: "J. Isenberg, D. Maxwell, D. Pollack, <i>A gluing construction for non-vacuum solutions of the Einstein constraint equations</i>, to appear Adv. Theor. Math. Phys., (2005)."
+      arxiv: "gr-qc/0501083"
+
+    - citation: "D. Maxwell, <i>Initial Data for Black Holes and Rough Spacetimes</i>, Dissertation,
+  University of Washington, 2004" 
+      file: "pubs/maxwell-dissertation.pdf"
+
+- category: "glaciology"
+  pubs:
+    - citation: "M. Habermann, M. Truffer, and D. Maxwell, <i>Changing basal conditions during the speed-up of Jakobshavn Isbræ, Greenland</i>, The Cryosphere, vol. 7, no. 6, pp. 1679&mdash;1692, 2013"
+
+    - citation: "M. Habermann, D. Maxwell, and M. Truffer, <i>Reconstruction of basal properties in ice sheets using iterative inverse methods</i>, Journal of Glaciology, vol. 58, pp. 795&mdash;807, 2012"
+
+    - citation: "D. Maxwell, Kozlov-Maz'ya iteration as a form of Landweber iteration, (to appear: Inverse Problems and Imaging)"
+
+    - citation: "D. Maxwell, M. Truffer, and S. Avdonin, 
+<a href='pubs/aguposter.pdf'>Inverse Methods for Reconstructing Basal Boundary Data</a>
+Poster, AGU Fall Meeting, 2008."
+
+    - citation: "D. Maxwell, M. Truffer, S. Avdonin, and M. Steuffer, <i>
+An iterative scheme for determining glacier velocities and stresses</i>, 
+J. Glac., 54 (2008), 888&mdash;898."
+
+    - citation: "S. Avdonin, V. Kozlov, D. Maxwell, and M. Truffer. <i>Iterative methods for solving a nonlinear 
+boundary inverse problem in glaciology</i>, J. Inverse Ill-Posed Problems, 2008"
+
+- category: "nn-fluids"
+  pubs:
+    - citation: "D. Maxwell, <i>A regularity technique for nonlinear Stokes-like elliptic 
+systems</i>, 
+Navier-Stokes Equations and Related Nonlinear Problems
+(H. Amann, G.P. Galdi, K. Pileckas and V.A. Solonnikov eds.), 
+VSP, 1998, pp. 165-181."
+    - citation: "D. Maxwell, <i>On the regularity of a model non-Newtonian fluid</i>, MSc Thesis,
+University of British Columbia, 1997"
+      url: "pubs/maxwell-msc-thesis.pdf"
