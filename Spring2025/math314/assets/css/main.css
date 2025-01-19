@@ -38,7 +38,7 @@ nav { z-index: 10; padding-top: 15px; overflow-x: hidden; background-color: #e2e
 
 .page-content li { margin-bottom: 0.4em; }
 
-@media (max-width: 768px) { nav { position: absolute; top: 0; bottom: 0; left: 0; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; } nav.showing { opacity: 1; pointer-events: auto; } .page-margins { display: block; } .page-content { padding-left: 20px; padding-right: 20px; grid-column: 1 / -1; } .page-header { padding-right: 5px; } .page-header-title { padding-left: 40px; width: 100%; } .hide-small { display: none !important; } }
+@media (max-width: 768px) { nav { position: absolute; top: 0; bottom: 0; left: 0; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; } nav.showing { opacity: 1; pointer-events: auto; } .page-margins { display: block; min-width: 0; } .page-content { padding-left: 20px; padding-right: 20px; grid-column: 1 / -1; } .page-header { padding-right: 5px; } .page-header-title { padding-left: 40px; width: 100%; } .hide-small { display: none !important; } }
 
 @media (min-width: 768px) { nav { grid-column: 1; } .page-margins { display: grid; grid-template-columns: minmax(50px, 1fr) minmax(auto, 800px) minmax(50px, 2fr); } .page-content { grid-column: 2; } .page-header { padding-right: 20px; } .page-header-title { padding-left: 5px; width: 100%; } .hide-large { display: none !important; } }
 
