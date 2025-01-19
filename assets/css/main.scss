@@ -190,7 +190,7 @@ nav {
     // Start invisible and with no interactions.
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.2s ease;
     
     &.showing {
       // Fade in and start interactions
@@ -281,10 +281,17 @@ nav {
     margin: 0;
   }
 
+   // Clear the float
+   &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
   // Wide screen layout
   @media (min-width: $breakpoint-small) {
     display: flex;
-    gap: 20px;
+    gap: 5px;
     
     .left-content {
       float: none;
