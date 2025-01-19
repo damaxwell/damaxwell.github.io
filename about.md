@@ -31,7 +31,7 @@ It's based on the [Wright State Model](https://engineering-computer-science.wrig
   * Material targeted to sophomore engineering classes
   * Hands-on labs, programming, and other fun bits
 
-Oh, and sometimes I call [contra](https://contraborealis.org) and square dances.
+What else? Well, I like oranges 🍊 a lot. Also giraffes 🦒. Oh, and sometimes I call [contra](https://contraborealis.org) and square dances.
 
 Anyway, enjoy the site. Poke around. Maybe drop me a line. And have a nice day!
 
