@@ -260,6 +260,39 @@ nav {
   }
 
 }
+
+// Top of course page content
+.course-header {
+
+  margin-top: 30px;
+
+  // Default (mobile) layout
+  .left-content {
+    float: left;
+    margin: 0 20px 20px 0;
+  }
+  
+  h2 {
+    margin: 0 0 20px 0;
+  }
+  
+  p {
+    line-height: 1.4em;
+    margin: 0;
+  }
+
+  // Wide screen layout
+  @media (min-width: $breakpoint-small) {
+    display: flex;
+    gap: 20px;
+    
+    .left-content {
+      float: none;
+      flex-shrink: 0;
+    }
+  }
+}
+
 // Code Blocks
 // ----------
 pre code {
