@@ -4,11 +4,10 @@ title: David Maxwell
 is_root: true
 ---
 <div style="display: flex; align-items: flex-start; gap: 30px; margin-top: 30px;">
-    <div  >
-        <img src="maxwell.jpg" style="height: 150px; border-radius: 10px;">
+    <div style="flex-shrink: 1;">
+        <img src="maxwell.jpg" style="height: 150px; width: auto; max-height: 150px; max-width: min(150px, 30vw); border-radius: 10px; object-fit: cover;">
     </div>
-    <div>
-        <!-- <h2 style="margin-top:0px;"> David Maxwell</h2>-->
+    <div style="flex: 1; min-width: 0;">
         <p style="margin-top: 0px">
         <b>Professor of Mathematics</b><br>
         <b>University of Alaska Fairbanks</b>
