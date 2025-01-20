@@ -30,6 +30,25 @@ nav { z-index: 10; padding-top: 15px; overflow-x: hidden; background-color: #e2e
 
 #burger-svg { display: block; margin: auto; margin-left: 0; height: 100%; }
 
+.profile-container { margin-top: 30px; }
+
+.profile-container .mobile-only { display: none; }
+
+.profile-container .layout-container { display: flex; align-items: flex-start; gap: 30px; }
+
+.profile-container .layout-container .image-container img { height: 150px; width: auto; max-height: 150px; border-radius: 10px; object-fit: cover; }
+
+.profile-container .layout-container .text-content { flex: 1; min-width: 0; }
+
+.profile-container .layout-container .text-content .title-text { margin-top: 0; }
+
+.profile-container .layout-container .text-content .contact-info p { margin-top: 0; }
+
+.profile-container .tiny-break { display: none; }
+
+/* For screens narrower than 400px */
+@media (max-width: 390px) { .profile-container { margin-top: 20px; } .profile-container .mobile-only { display: block; margin-bottom: 15px; } .profile-container .desktop { display: none; } .profile-container .title-text { line-height: 1.4em; } .profile-container .layout-container { gap: 20px; } .profile-container .layout-container .image-container img { max-width: 100px; } .profile-container .tiny-break { display: inline; } }
+
 .page-content { padding-top: 1px; }
 
 .page-content a { color: #2070b0; text-decoration: none; transition: 0.2s ease; }
@@ -38,7 +57,7 @@ nav { z-index: 10; padding-top: 15px; overflow-x: hidden; background-color: #e2e
 
 .page-content li { margin-bottom: 0.4em; }
 
-@media (max-width: 768px) { nav { position: absolute; top: 0; bottom: 0; left: 0; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; } nav.showing { opacity: 1; pointer-events: auto; } .page-margins { display: block; min-width: 0; } .page-content { padding-left: 20px; padding-right: 20px; grid-column: 1 / -1; } .page-header { padding-right: 5px; } .page-header-title { padding-left: 40px; width: 100%; } .hide-small { display: none !important; } }
+@media (max-width: 768px) { nav { position: absolute; top: 0; bottom: 0; left: 0; opacity: 0; pointer-events: none; transition: opacity 0.2s ease; } nav.showing { opacity: 1; pointer-events: auto; } .page-margins { display: block; min-width: 0; } .page-content { padding-left: 20px; padding-right: 20px; grid-column: 1 / -1; } .page-header { padding-right: 5px; } .page-header-title { padding-left: 40px; width: 100%; } .hide-small { display: none !important; } }
 
 @media (min-width: 768px) { nav { grid-column: 1; } .page-margins { display: grid; grid-template-columns: minmax(50px, 1fr) minmax(auto, 800px) minmax(50px, 2fr); } .page-content { grid-column: 2; } .page-header { padding-right: 20px; } .page-header-title { padding-left: 5px; width: 100%; } .hide-large { display: none !important; } }
 
@@ -50,7 +69,9 @@ nav { z-index: 10; padding-top: 15px; overflow-x: hidden; background-color: #e2e
 
 .course-header p { line-height: 1.4em; margin: 0; }
 
-@media (min-width: 768px) { .course-header { display: flex; gap: 20px; } .course-header .left-content { float: none; flex-shrink: 0; } }
+.course-header::after { content: ''; display: block; clear: both; }
+
+@media (min-width: 768px) { .course-header { display: flex; gap: 5px; } .course-header .left-content { float: none; flex-shrink: 0; } }
 
 pre code { background-color: #eee; border: 2px solid #999; display: block; padding: 20px; overflow-x: scroll; }
 
