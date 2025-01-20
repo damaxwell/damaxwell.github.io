@@ -12,7 +12,17 @@ nav { z-index: 10; padding-top: 15px; overflow-x: hidden; background-color: #e2e
 
 .entry a { padding: 8px 8px 8px 20px; font-size: 120%; text-decoration: none; display: block; color: #2070b0; transition: background-color 0.2s ease; }
 
+.entry a.active { border-left: 3px solid #5d9fcd; }
+
 .entry a:hover { background-color: #84b6d9; }
+
+.nav-divider { margin-left: 20px; /* Aligns with the text padding */ margin-top: 5px; margin-bottom: 5px; width: 100px; height: 2px; background-color: #84b6d9; }
+
+.faculty-home { margin-top: auto; }
+
+.faculty-home a { font-size: 80%; }
+
+.faculty-home a:hover { background-color: #71aad3; }
 
 .page-header { height: 50px; background-color: #84b6d9; font-size: 120%; font-weight: bold; line-height: 50px; padding-left: 20px; }
 
