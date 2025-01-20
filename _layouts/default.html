@@ -38,14 +38,10 @@
             </button>
         </div>
         <div class="page-header-title" onclick="closeNav()">
-            {% unless page.is_root %}
                 <a href="index.html#page-top">
-            {% endunless %}
                 <span class="hide-large">{{ site.data.toc.small-screen-title }}</span>
                 <span class="hide-small">{{ site.data.toc.large-screen-title }}</span>
-            {% unless page.is_root %}
                 </a>
-            {% endunless %}
         </div>
     </header>
 
@@ -68,8 +64,12 @@
                         {% endfor %}
                     </div>
                 {% else %}
+                    {% if item.url %}
+                        {% assign full_item_url = page.dir | append: item.url %}
+                    {% endif %}
                     <div class="entry">
                         <a onclick="closeNav()" 
+                            {% if page.url == full_item_url %}class="active"{% endif %}
                             href="{% if item.url %}{{ item.url }}{% else %}#{{ item.anchor }}{% endif %}"
                             alt="{{ item.title }}">
                             {{ item.title }}
@@ -77,6 +77,16 @@
                     </div>
                 {% endif %}
             {% endfor %}
+            {% unless site.is_root %}
+                <div class="nav-divider"></div>
+                <div class="entry faculty-home">
+                    <a onclick="closeNav()" 
+                    href="/index.html"
+                    alt="Faculty Home">
+                        David Maxwell
+                    </a>
+                </div>
+            {% endunless %}
         </nav>
 
         <!-- Page content -->

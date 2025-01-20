@@ -1,4 +1,4 @@
 # Build settings
 active_term: "Spring 2025"
-
+is_root: true # Main course site is_root, children sites are not.
 markdown: kramdown
