@@ -1,7 +1,8 @@
 # soon
-* ifclaude
 * get in touch with Meli
-
+* DONE ifclaude
+* add all pubs
+* responsive main page
 
 # someday
 

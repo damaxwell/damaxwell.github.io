@@ -31,7 +31,7 @@ It's based on the [Wright State Model](https://engineering-computer-science.wrig
   * Material targeted to sophomore engineering classes
   * Hands-on labs, programming, and other fun bits
 
-What else? Well, I like oranges 🍊 a lot. Also giraffes 🦒.
+What else? Well, I like oranges 🍊. A lot.
 
 Oh, and sometimes I call [contra](https://contraborealis.org) and square dances.
 

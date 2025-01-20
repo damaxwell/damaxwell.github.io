@@ -3,7 +3,7 @@ layout: default
 title: David Maxwell
 is_root: true
 ---
-<div style="display: flex; align-items: flex-start; gap: 30px; margin-top: 30px;">
+<!-- <div style="display: flex; align-items: flex-start; gap: 30px; margin-top: 30px;">
     <div style="flex-shrink: 1;">
         <img src="maxwell.jpg" style="height: 150px; width: auto; max-height: 150px; max-width: min(150px, 30vw); border-radius: 10px; object-fit: cover;">
     </div>
@@ -17,7 +17,35 @@ is_root: true
         <b>E-mail:</b> <a href="mailto:damaxwell@alaska.edu">damaxwell@alaska.edu</a><br>
         </p>
     </div>
+</div> -->
+
+<div class="profile-container">
+    <div class="title-section mobile-only">
+        <p class="title-text">
+            <b>Professor of Mathematics</b><br>
+            <b>University of Alaska Fairbanks</b>
+        </p>
+    </div>
+    
+    <div class="layout-container">
+        <div class="image-container">
+            <img src="maxwell.jpg" alt="Profile photo">
+        </div>
+        <div class="text-content">
+            <div class="title-section desktop">
+                <p class="title-text">
+                    <b>Professor of Mathematics</b><br>
+                    <b>University of Alaska Fairbanks</b>
+                </p>
+            </div>
+            <div class="contact-info">
+                <p> <span style="margin-right: 0.2em"><b>Office:</b></span><span class="tiny-break"><br></span> Chapman 308C</p>
+                <p> <span style="margin-right: 0.2em"><b>E-mail:</b></span><span class="tiny-break"><br></span> <a href="mailto:damaxwell@alaska.edu">damaxwell@alaska.edu</a></p>
+            </div>
+        </div>
+    </div>
 </div>
+
 
 ## Current Courses
 <!-- <div class="card"> -->

@@ -13,6 +13,7 @@ $header-font-stack: Lucida Grande, Lucida Sans Unicode, Helvetica Neue,
 // Layout
 $header-height: 50px;
 $breakpoint-small: 768px;
+$breakpoint-phone-portrait: 390px;
 
 // Spacing
 $space-thin: 5px;
@@ -151,6 +152,86 @@ nav {
   margin: auto;
   margin-left: 0;
   height: 100%;
+}
+
+// Profile section at top of main page
+
+.profile-container {
+  margin-top: 30px;
+
+  .mobile-only {
+      display: none;
+  }
+
+  .layout-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+
+      .image-container {
+          img {
+              height: 150px;
+              width: auto;
+              max-height: 150px;
+              // max-width: min(150px, 30vw);
+              border-radius: 10px;
+              object-fit: cover;
+          }
+      }
+
+      .text-content {
+          flex: 1;
+          min-width: 0;
+
+          .title-text {
+              margin-top: 0;
+          }
+
+          .contact-info {
+            p {
+              margin-top: 0;
+            }
+          }
+      }
+  }
+
+  .tiny-break {
+      display: none;
+  }
+}
+
+/* For screens narrower than 400px */
+@media (max-width: $breakpoint-phone-portrait) {
+  .profile-container {
+    margin-top: 20px;
+
+      .mobile-only {
+          display: block;
+          margin-bottom: 15px;
+      }
+
+      .desktop {
+          display: none;
+      }
+
+      .title-text {
+        line-height: 1.4em;
+      }
+
+      .layout-container {
+          gap: 20px;
+
+          .image-container {
+              img {
+                  max-width: 100px;
+              }
+          }
+      }
+
+      .tiny-break {
+          display: inline;
+      }
+  }
 }
 
 // Main Content
