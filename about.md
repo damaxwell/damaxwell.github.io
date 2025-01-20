@@ -28,10 +28,9 @@ My favorite teaching task these days is Applied Engineering Mathematics,
 a preparatory course for  first-year engineering majors. 
 It's based on the [Wright State Model](https://engineering-computer-science.wright.edu/research/engineering-mathematics-topics-and-materials):
   * All-applied content, co-taught with the [College of Engineering and Mines](https://www.uaf.edu/cem/)
-  * Material targeted to sophomore engineering classes
   * Hands-on labs, programming, and other fun bits
 
-What else? Well, I like oranges 🍊. A lot.
+What else? Well, I like oranges. 🍊 A lot.
 
 Oh, and sometimes I call [contra](https://contraborealis.org) and square dances.
 
