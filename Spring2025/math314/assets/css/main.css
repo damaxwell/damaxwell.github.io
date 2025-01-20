@@ -30,6 +30,25 @@ nav { z-index: 10; padding-top: 15px; overflow-x: hidden; background-color: #e2e
 
 #burger-svg { display: block; margin: auto; margin-left: 0; height: 100%; }
 
+.profile-container { margin-top: 30px; }
+
+.profile-container .mobile-only { display: none; }
+
+.profile-container .layout-container { display: flex; align-items: flex-start; gap: 30px; }
+
+.profile-container .layout-container .image-container img { height: 150px; width: auto; max-height: 150px; border-radius: 10px; object-fit: cover; }
+
+.profile-container .layout-container .text-content { flex: 1; min-width: 0; }
+
+.profile-container .layout-container .text-content .title-text { margin-top: 0; }
+
+.profile-container .layout-container .text-content .contact-info p { margin-top: 0; }
+
+.profile-container .tiny-break { display: none; }
+
+/* For screens narrower than 400px */
+@media (max-width: 390px) { .profile-container { margin-top: 20px; } .profile-container .mobile-only { display: block; margin-bottom: 15px; } .profile-container .desktop { display: none; } .profile-container .title-text { line-height: 1.4em; } .profile-container .layout-container { gap: 20px; } .profile-container .layout-container .image-container img { max-width: 100px; } .profile-container .tiny-break { display: inline; } }
+
 .page-content { padding-top: 1px; }
 
 .page-content a { color: #2070b0; text-decoration: none; transition: 0.2s ease; }
