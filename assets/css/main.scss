@@ -44,6 +44,16 @@ body {
   // Standard CSS resets
   margin: 0;
   padding: 0;
+
+  // Ensure transitions don't happen when navigating away from the page.
+  // The 'navigating' class will be added by a javascript listener.
+  .navigating nav {
+    transition: none !important;
+  }
+
+   // Tap highlight prevention on iOS
+   -webkit-tap-highlight-color: transparent;
+
 }
 
 // Default layout has a header on the top and a main body below.
@@ -86,10 +96,10 @@ nav {
     text-decoration: none;
     display: block;
     color: $color-cornflower;
-    transition: background-color 0.2s ease;  // Smooth color change
+    transition: background-color 0.1s ease;  // Smooth color change
 
     &.active {
-      border-left: 3px solid darken($color-cornflower-pale,10)
+      border-left: 4px solid darken($color-cornflower-pale,10)
     }
 
     &:hover {
@@ -105,18 +115,13 @@ nav {
   width: 100px;
   height: 2px;
   background-color: $color-cornflower-pale;
-  //rgba(0, 0, 0, 0.1);  /* Subtle light gray */
 }
-
-.nav-separator {
-}
-
 
 .faculty-home {
   margin-top: auto;  // Push to bottom in flex context
   
   a {
-      font-size: 80%;  // Slightly smaller than course nav
+      font-size: 80%;  // Smaller than course nav
       
       &:hover {
           background-color: darken($color-cornflower-pale, 5%);
@@ -167,7 +172,7 @@ nav {
   padding: 0;
   cursor: pointer;
 
-  transition: opacity 0.3s ease;  // Slightly faster than menu
+  transition: opacity 0.1s ease;  // Slightly faster than menu
   
   &:active {
     opacity: 0.5;  // Quick visual feedback
@@ -503,7 +508,7 @@ div.x-scroll {
   display: block;
   color: $color-cornflower;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.3s;
 
   &:hover {
     background-color: $color-cornflower-pale;
