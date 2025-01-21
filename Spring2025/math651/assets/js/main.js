@@ -35,3 +35,10 @@ function toggleNav() {
 function closeNav() {
     document.getElementById("nav").classList.remove("showing");
 }
+
+// Prevent transitions when navigating away from the page.
+document.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A' && e.target.href) {
+        document.body.classList.add('navigating');
+    }
+});
