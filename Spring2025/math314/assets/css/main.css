@@ -2,7 +2,9 @@
 
 html { background: white; }
 
-body { font-family: Lucida Grande, Lucida Sans Unicode, Helvetica Neue, Kalimati, Calibri, Helvetica, Arial, sans-serif; font-size: 110%; margin: 0; padding: 0; }
+body { font-family: Lucida Grande, Lucida Sans Unicode, Helvetica Neue, Kalimati, Calibri, Helvetica, Arial, sans-serif; font-size: 110%; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+body .navigating nav { transition: none !important; }
 
 body.default { display: grid; min-height: 100vh; grid-template-rows: auto 1fr; }
 
@@ -10,9 +12,9 @@ body.default .primary-body { display: grid; grid-template-columns: auto 1fr; pos
 
 nav { z-index: 10; padding-top: 15px; overflow-x: hidden; background-color: #e2e2e2; width: fit-content; min-width: 150px; max-width: 300px; }
 
-.entry a { padding: 8px 8px 8px 20px; font-size: 120%; text-decoration: none; display: block; color: #2070b0; transition: background-color 0.2s ease; }
+.entry a { padding: 8px 8px 8px 20px; font-size: 120%; text-decoration: none; display: block; color: #2070b0; transition: background-color 0.1s ease; }
 
-.entry a.active { border-left: 3px solid #5d9fcd; }
+.entry a.active { border-left: 4px solid #5d9fcd; }
 
 .entry a:hover { background-color: #84b6d9; }
 
@@ -32,7 +34,7 @@ nav { z-index: 10; padding-top: 15px; overflow-x: hidden; background-color: #e2e
 
 .burger-outer { float: left; width: 30px; height: 100%; position: relative; }
 
-.burger-button { background-color: #84b6d9; width: 30px; height: 30px; position: absolute; top: 50%; transform: translate(0, -50%); border: none; padding: 0; cursor: pointer; transition: opacity 0.3s ease; }
+.burger-button { background-color: #84b6d9; width: 30px; height: 30px; position: absolute; top: 50%; transform: translate(0, -50%); border: none; padding: 0; cursor: pointer; transition: opacity 0.1s ease; }
 
 .burger-button:active { opacity: 0.5; }
 
@@ -105,7 +107,7 @@ img.boxed { border: 2px solid black; overflow-x: scroll; vertical-align: bottom;
 
 div.x-scroll { overflow-x: scroll; -webkit-overflow-scrolling: touch; width: 100%; white-space: nowrap; }
 
-.accordion { padding: 4px 8px 4px 20px; font-size: 120%; text-decoration: none; display: block; color: #2070b0; cursor: pointer; transition: 0.4s; }
+.accordion { padding: 4px 8px 4px 20px; font-size: 120%; text-decoration: none; display: block; color: #2070b0; cursor: pointer; transition: 0.3s; }
 
 .accordion:hover { background-color: #84b6d9; }
 
