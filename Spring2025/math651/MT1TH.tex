@@ -1,0 +1,91 @@
+\documentclass{homework651}
+\include{hwextras}
+\def\ra{\rightarrow}
+\def\Reals{\mathbb{R}}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[all,cmtip]{xy}
+\geometry{top=1in, bottom=0.75in, left=1in, right=1in}
+
+\doclabel{Math F651: Take Home Midterm}
+\docdate{Due: 10:00pm March 7, 2025}
+
+\begin{document}
+See \textbf{Rules} on following page.
+
+\begin{problems}
+\problem Suppose $q: X\to Y$ is a quotient map and that each fiber of $q$ is connected.
+Show that if $Y$ is connected, then so is $X$.
+
+\problem A subset $A$ of a topological space $X$ is said to be nowhere dense if $\mathrm{Int}\; \overline{A} = \emptyset$.
+\begin{subproblems}
+\item Let $U$ be an open subset of a topological space. Prove that $\partial U$ is closed and nowhere dense.
+\item Let $V$ be a closed and nowhere dense set. Show that $V$ is the boundary of an open set.
+\end{subproblems}
+
+
+\problem Let $f$ and $g$ be continuous maps from a topological space $X$ to a Hausdorff
+space $Y$.  Suppose $f=g$ on a dense subset of $X$. Prove that $f=g$. 
+
+\problem {\color{blue} Exercise 4.38}
+
+\problem Let $G$ be an algebraic group.  We say that $G$ is a {\bf topological group}
+if in addition $G$ is a topological space
+such that that the multiplication
+map $m:G\times G\ra G$ and the inversion map $i:G\ra G$ defined by $m(g,h)=g\cdot h$ and $i(g)=g^{-1}$
+are continuous.
+\begin{subproblems}
+\item
+Suppose $G$ is an algebraic group and a topological space.  Show that $G$ is a 
+topological group if and only if the map $f:G\times G\ra G$ defined by $f(g,h)=g h^{-1}$
+is continuous.
+\item Let $G$ be a topological group and let $H$ be a subgroup.  Show that $\overline H$ is
+a subgroup.  Hint: that map $f$ from the previous part is continuous. 
+
+\end{subproblems}
+
+\problem Suppose the spaces $X_\alpha$, $\alpha in I$ are all connected
+and nonempty, and let $a$ be a point in $X=\prod_{\alpha in I} X_\alpha$.
+\begin{subproblems}
+\item Given any finite set $K\subset I$, let $X_K$ denote the subspace
+of $X$ where $x_\alpha = a_\alpha$ for all $\alpha\not in K$.  Show that 
+each $X_K$ is connected.
+\item Show that $Y = \cup_{K} X_K$ is connected.
+\item Show that $\overline Y = X$ and conclude that $X$ is connected.
+\end{subproblems}
+
+\begin{wrapfigure}{r}{1.0in}
+    \vskip-0.5cm
+    \includegraphics[height=1.8in]{Suspension.pdf}
+    \end{wrapfigure}
+    \problem
+    Let $X$ be a topological space.  The {\bf suspension} of $X$, denoted by
+    $\Sigma X$, is the quotient of $X\times [-1,1]$ where all points of the form $(x,1)$
+    are identified, and all points of the form $(x,-1)$ are identified.  
+    Determine, with proof, a familiar space that is homeomorphic to $\Sigma S^n$.
+    
+\problem Lee Problem 4-4
+
+\problem Lee Problem 4-5
+
+\problem Lee Problem 4-11
+
+\newpage
+{\bf  Rules and format:}
+\begin{itemize}
+
+\item You are welcome to discuss this exam with me (David Maxwell) to ask for hints and so forth.
+\item You are not permitted to use any form of AI to assist you in any part of this exam.
+\item  If you find a suspected error or misprint, please contact me as soon as possible and I will
+communicate it to the class if needed.
+\item You my not discuss the exam with anyone else until after the due date/time.
+\item You are permitted to reference Lee or any other topology text you like.  If you use
+another text, you must cite it when you use it.
+\item You may not consult any internet resources, including search engines.
+\item Each problem is weighted equally.
+\item The due date/time is absolutely firm.
+\item The problem session on March 7 will be a hints session.
+\end{itemize}
+
+\end{problems}
+\end{document}
