@@ -77,7 +77,7 @@ is_root: true
 	<table class="asst-table">
 		<tr><td>Lecture I</td><td><a href="llm/UAF-LLM-2024.pdf">Slides</a></td><td><a href="https://media.uaf.edu/media/t/1_nsfqik10">Video</a></td>
 		</tr>
-		<tr><td>Lecture II</td><td><a href="llm/UAF-LLM-2024.pdf">Slides</a></td><td><a href="https://media.uaf.edu/media/t/1_nsfqik10">Video</a></td>
+		<tr><td>Lecture II</td><td><a href="llm/UAF-Transformer-2024.pdf">Slides</a></td><td><a href="https://media.uaf.edu/media/t/1_ayym2mob">Video</a></td>
 		</tr>
 	</table>
 
