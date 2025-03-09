@@ -1,0 +1,56 @@
+\documentclass[minion]{homework651}
+\include{hwextras}
+
+\def\calB{\mathcal{B}}
+\DeclareMathOperator{\Int}{\mathrm{Int}}
+
+\doclabel{Math F651: Homework 7}
+\docdate{Due: March 22, 2023}
+%\docauthor{Your Name Here}
+
+\begin{document}
+
+Note: The book has Exercises, which are interspersed among the
+prose, and Problems, which appear at the ends of the chapters.
+It can be easy to confuse the two.  Exercises are denoted in blue.
+
+
+\begin{problems}
+
+
+\problem Problem 4-11 b) (Just the connected part; the path connected is similar)
+
+\problem Problem 4-9 [Modified]
+Let $M$ be an $n$-manifold.
+\begin{subproblems}
+\item Show that each component of $M$ is a (connected) manifold.
+\item Show that there are at most countably many components.
+\item Suppose $f:M\to Z$ is a map into a topoogical space $Z$. Show
+that $f$ is continuous if and only if its restriction to each component is.
+\item Read Theorem 3.41.  Then conclude that an $n$-manifold is homeomorphic
+to a disjoint union of countably many connected $n$-manifolds.
+\end{subproblems}
+
+\problem Let $f:X\rightarrow Y$ where $X$ is compact and $Y$ is Hausdorff.  Show that
+$f$ is continuous if and only if the graph of $f$ is closed in $X\times Y$.  The graph
+of $f$ is $G_f=\{(x,f(x)):x\in X\}$.
+
+\problem If $(X,d)$ is a metric space, a function $f:X\rightarrow X$ is an isometry if
+for all $x,y\in X$, $d(f(x),f(y))=d(x,y)$.  Show that every isometry is continuous and injective.
+Then show that if  $X$ is compact and $f$ is an isometry 
+then $f$ is surjective  as well and quickly conclude that $f$ is a homeomorphism. Hint:
+Show that $a$ is not in the image of $f$, then for some $\epsilon>0$, $B_\epsilon(a)$
+is also not in the image of $f$.  Then show that if $x_0=a$, $x_1=f(x_0)$, etc, then 
+$d(x_n,x_m)>\epsilon$ for $n\neq m$.
+
+\problem Show that if $p$ and $q$ are elements of the interior of the closed unit ball 
+$$
+\mathbb B^n=\{x\in \Reals^n:|x|\le 1\},
+$$
+then there is a homeomorphism $\phi:\mathbb B^n\ra \mathbb B^n$ such that $\phi(p)=q$ and such that $\phi(x)=x$ for all $x$
+with $|x|=1$.  Be as rigorous as you can, but avoid writing a tome.
+
+\problem 3.22a You'll need to read the material on pages 78--80 first.
+
+\end{problems}
+\end{document}
