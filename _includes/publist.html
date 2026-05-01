@@ -1,0 +1,18 @@
+<div class="card">
+    {%for topic in site.data.pubs %}
+    {%if topic.category == include.topic %}
+    <ul type="none" style = "padding-left:0px;">
+        {%for pub in topic.pubs%}
+        <li style="margin-bottom:20px; margin-left:0px;">{{pub.citation}}
+        {%if pub.arxiv %}
+            <a href="http://arxiv.org/abs/{{pub.arxiv}}">(arXiv)</a>
+        {%endif%}
+        {%if pub.file %}
+            <a href="{{pub.file}}">(PDF)</a>
+        {%endif%}
+        </li>
+        {%endfor%}
+    </ul>
+    {%endif%}
+    {%endfor%}
+</div>

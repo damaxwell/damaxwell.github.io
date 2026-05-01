@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ page.title }}</title>
+
+    <!-- Cache control -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">    
+    <!-- Site styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- KaTeX for math rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+    
+    <!-- Highlight.js for code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+
+<body class="default">
+    <!-- Header with navigation toggle -->
+    <header class="page-header" id="page-top">
+        <div class="page-header-title"">
+                <a href="index.html#page-top">
+                {{ site.data.toc.large-screen-title }}
+                </a>
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <div id="main" class="primary-body">
+
+        <!-- Page content -->
+        <div class="page-margins">
+            <div class="page-content" onclick="closeNav()">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Site JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
